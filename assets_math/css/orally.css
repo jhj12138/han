@@ -1,0 +1,333 @@
+@media(max-width: 1580px){
+  #orally-result{
+    border:3px solid #ffffff;
+  }
+  .score{
+    font-size: 18px !important;
+  }
+
+  .question-num-txt{
+    font-size: 14px !important;
+  }
+}
+
+@-webkit-keyframes rubberBand {0% {-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}30% {-webkit-transform: scale3d(1.15, 0.75, 1);transform: scale3d(1.15, 0.75, 1);}40% {-webkit-transform: scale3d(0.75, 1.15, 1);transform: scale3d(0.75, 1.15, 1);}50% {-webkit-transform: scale3d(1.15, 0.85, 1);transform: scale3d(1.15, 0.85, 1);}65% {-webkit-transform: scale3d(.95, 1.05, 1);transform: scale3d(.95, 1.05, 1);}75% {-webkit-transform: scale3d(1.05, .95, 1);transform: scale3d(1.05, .95, 1);}100% {-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}}
+  
+@keyframes rubberBand {0% {-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}30% {-webkit-transform: scale3d(1.15, 0.75, 1);transform: scale3d(1.15, 0.75, 1);}40% {-webkit-transform: scale3d(0.75, 1.15, 1);transform: scale3d(0.75, 1.15, 1);}50% {-webkit-transform: scale3d(1.15, 0.85, 1);transform: scale3d(1.15, 0.85, 1);}65% {-webkit-transform: scale3d(.95, 1.05, 1);transform: scale3d(.95, 1.05, 1);}75% {-webkit-transform: scale3d(1.05, .95, 1);transform: scale3d(1.05, .95, 1);}100% {-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}}
+
+.unit .out-border {
+  position: relative;
+  z-index: 10;
+  width: 71%;
+  margin-top: -1%;
+  margin-left: 16%;
+  height: 97%;
+  /* overflow: hidden; */
+}
+
+
+.orally-board{
+  position: absolute;
+  left: 50%;
+  top: 23%;
+  z-index: 5;
+  transform: translate(-50%,-50%);
+  width: 75%;
+  height: 36%;
+}
+.orally-board > img{
+  width: 100%;
+}
+
+.unit .answer-ani-imgs {
+  width: 100.3%;
+  height: 96.3%;
+  background-image: url('../images/ks/kousuan-bg.png');
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  background-position:50% 50%;
+  overflow: hidden;
+}
+
+.orally-top{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6%;
+  font-size: 400%;
+  color: #ffffff;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 25%;
+}
+
+
+#orally-result{
+  display: flex;
+  width: 30%;
+  height: 100%;
+  background-color: #3e4d5b;
+  /* position: absolute; */
+  border-radius: .6vw;
+  align-items: center;
+  justify-content: center;
+  border:.3vw solid #ffffff;
+  /* top: 1%;
+  left: 87%; */
+}
+
+.orally-botton{
+  position: absolute;
+  /* left: 16%; */
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35%;
+  width: 73%;
+}
+
+.orally-btn-top,.orally-btn-button{
+  display: flex;
+  align-items: center;
+  margin-bottom: .5%;
+  justify-content: center;
+}
+
+.orally-btns{
+  width: 11%;
+  margin-right: .5%;
+  height: 30%;
+  cursor: pointer;
+}
+
+/* .orally-btns:hover{
+  filter: brightness(2);
+} */
+.clear-btn{
+  width: 22%;
+  margin-left: 3%;
+  cursor: pointer;
+  position: relative;
+}
+
+.clear-btns{
+  width: 22%;
+  margin-left: 3%;
+  cursor: pointer;
+  position: relative;
+}
+
+.unit .clear-btn .remove-txt{
+  position: absolute;
+  z-index: 5;
+  width: 70%;
+  height: 83%;
+  /* top:10%;
+  left:5% */
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%,-50%);
+}
+
+.unit .clear-btns .determine-txt{
+  position: absolute;
+  z-index: 5;
+  width: 70%;
+  height: 83%;
+  /* top:10%;
+  left:5% */
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%,-50%);
+}
+
+
+/* .clear-btn:hover{
+  filter: brightness(1.5);
+} */
+
+
+
+
+.scoreboard{
+  position: absolute;
+  left: 2%;
+  top: 6%;
+  z-index: 5;
+  width: 9%;
+}
+
+.scoreboard .score{
+  position: absolute;
+  top: 58%;
+  left: 69%;
+  color: #895362;
+  font-size: 140%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+.question-num{
+  position: absolute;
+  right: 2%;
+  top: 6%;
+  z-index: 5;
+  width: 9%;
+}
+
+.question-num-txt{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 50%;
+  top: 49%;
+  transform: translate(-50%,-50%);
+  font-size: 120%;
+}
+.question-num-txt span:nth-of-type(1){
+  color: #5e1529;
+  white-space: nowrap;
+}
+
+.question-num-txt span:nth-of-type(2){
+  color: #026e6e;
+}
+
+.question-num-txt span:nth-of-type(3){
+  color: #5e1529;
+}
+
+.declare{
+  position: absolute;
+  right: 1%;
+  bottom: 10%;
+  width: 43%;
+  height: 33%;
+  z-index: 5;
+}
+
+.declare .declare-ins{
+  position: absolute;
+  right: 8%;
+  bottom: 137%;
+  width: 180%;
+  display: none;
+}
+
+.declare .declare-instxt{
+  position: absolute;
+  right: 5%;
+  bottom: -22%;
+  width: 26%;
+  cursor: pointer;
+}
+.declare .instructions-txts{
+  position: absolute;
+  top:10%;
+  left: 16%;
+  width: 70% !important;
+  height: 70% !important;
+}
+
+
+.declare .declare-instxt:hover > img{
+  /* filter: brightness(1.2);
+  transform: scale(1.1); 
+  -webkit-transform: scale(1.1) */
+}
+.declare .declare-instxt:hover .instructions-txts{
+  animation: rubberBand 1s linear; -webkit-animation: rubberBand 1s linear;
+}
+.declare .declare-instxt:hover .declare-ins{
+  display: block;
+}
+
+.baskstands{
+  position: absolute;
+  width: 22%;
+  left: 40%;
+  top: 40.2%;
+  z-index: 4;
+}
+
+.baskstands .basketry{
+
+}
+
+.baskstands .rim{
+  position: absolute;
+  width: 30%;
+  left: 36%;
+  top: 65%;
+  height: 50%;
+}
+
+/* 投篮没有成功 */
+.ks-ani-gif{ 
+  position: absolute;
+  left: 18.3%;
+  bottom: 1%;
+  width: 63%;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.ks-ani-gif-2{
+  position: absolute;
+  left: 18.2%;
+  bottom: 1.8%;
+  width: 63%;
+  height: 68%;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.ks-ani-gif-3{
+  position: absolute;
+  left: 18.3%;
+  bottom: 1.8%;
+  width: 63%;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.ks-ani-gif-3 > img{
+  animation: myMove .5s infinite;
+  -webkit-animation: myMove .5s infinite;
+}
+
+@keyframes myMove {
+  0% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px)
+  }
+
+  50% {
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px)
+  }
+
+  100% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px)
+  }
+}
+
+/* @-webkit-keyframes myMove {
+  0% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%)
+  }
+
+  50% {
+    transform: translateY(1%);
+    -webkit-transform: translateY(1%)
+  }
+
+  100% {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%)
+  }
+} */

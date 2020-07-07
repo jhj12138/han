@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定数字判断</title>
+</head>
+<style>
+#sub1-1-6 {
+    outline: none;
+    appearance: none;
+    border: none;
+    text-align: center;
+    width: 2vw;
+}
+</style>
+<body>
+    <div class="">
+        小朋友排队洗手，小红前买有18人，小红后面有9人，这队伍一共有（<input type="text" id="sub1-1-6">）人
+    </div>
+    <button id="submit" onclick="submit()">提交</button>
+
+    <script>
+        var right = 27;
+        
+        function submit() {
+            var sub6 = document.getElementById('sub1-1-6')  
+            if(right = sub6.value) {
+                alert('正确')
+            }else {
+                alert('错误')
+            }
+        }
+    </script>
+</body>
+</html>

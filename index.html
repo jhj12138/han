@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>二上数学人教版</title>
+  <meta charset=utf-8>
+  <meta name="keywords" content="小学数学">
+  <meta name="description" content="小学数学">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./assets_math/css/style.css">
+  <link rel="stylesheet" href="./assets_math/css/animate.css">
+</head>
+
+<body>
+  <div class = "iall">
+    <!-- 背景 -->
+    <img src = "./assets_math/images/index/index_bg.png" alt="数学">
+    <audio src="./assets_math/audio/index-bg-audio.mp3" alt="背景音乐" loop  muted id="index-audios"></audio>
+    <div class = "index-container">
+      <!-- 背景上的元素 -->
+      <img src="./assets_math/images/index/tree_left.png" alt="" class = "index-tree-left">
+      <img src="./assets_math/images/index/index_audio_stop.png" alt="" class="index-audio-stop" onclick="stopAudio()">
+      <img src="./assets_math/images/index/tree_flag.png" alt="" class="index-tree-flag">
+      <img src="./assets_math/images/index/index_store.png" alt="" class="index-store">
+      <img src="./assets_math/images/index/index_grass.png" alt="" class="index-grass">
+      <!-- <img src="./assets_math/images/index/index_black.png" alt="" class="index-blackboard"> -->
+      <!-- 著作及使用说明 -->
+      <div class = "handel-buttons">
+        <img src="./assets_math/images/index/tree_right.png" alt="" class = "index-tree-right">
+        <div class = "handel-book-btn">
+          <img src="./assets_math/images/index/index-zhuzuo.png" alt="">
+        </div>
+        <div class = "handel-use-btn">
+          <img src="./assets_math/images/index/index-shiyong.png" alt="">
+        </div>
+      </div>
+      <!-- 介绍弹框 -->
+      <div class="masking"></div>
+      <div class="jieshao">
+          <div class="jox">
+              <div class="out alltime"><img src="./assets_math/images/index/index-tui.png" alt="数学"></div>
+              <div class="img">
+                  <img src="./assets_math/images/index/index-maksthat.png" alt="数学">
+              </div>
+          </div>	
+      </div>
+      <!-- 返回按钮 -->
+      <div class="index-return">
+        <img src="./assets_math/images/index/index_return.png" alt="" class="index-return-img1">
+        <img src="./assets_math/images/index/index_return_txt.png" alt="" class="index-return-txt">
+      </div>
+      <!-- 底部按钮 -->
+      <div class="u_list">
+        <div class="u_list_box">
+          <a href="javascript:void(0);" tabid = '1'>
+            <img src="./assets_math/images/index/index_btn1_peu.png" alt="" class="u_list_img1 active-unit">
+            <img src="./assets_math/images/index/index_btn1.png" alt="" class="u_list_img2">
+            <img src="./assets_math/images/index/index_btn1_txt.png" alt="" class="u_list_txt1">
+          </a>
+        </div>
+        <div class="u_list_box">
+          <a href="javascript:void(0);" tabid = '2'>
+            <img src="./assets_math/images/index/index_bth2_peu.png" alt="" class="u_list_img3">
+            <img src="./assets_math/images/index/index_btn2.png" alt="" class="u_list_img4">
+            <img src="./assets_math/images/index/index_btn2_txt.png" alt="" class="u_list_txt2">
+          </a>
+        </div>
+        <div class="u_list_box">
+          <a href="javascript:void(0);" tabid = '3'>
+            <img src="./assets_math/images/index/index_bth3_peu.png" alt="" class="u_list_img5">
+            <img src="./assets_math/images/index/index_btn3.png" alt="" class="u_list_img6">
+            <img src="./assets_math/images/index/index_btn3_txt.png" alt="" class="u_list_txt3">
+          </a>
+        </div>
+        <div class="u_list_box">
+          <a href="javascript:void(0);" tabid = '4'>
+            <img src="./assets_math/images/index/index_btn4_peu.png" alt="" class="u_list_img7">
+            <img src="./assets_math/images/index/index_btn4.png" alt="" class="u_list_img8">
+            <img src="./assets_math/images/index/index_btn4_txt.png" alt="" class="u_list_txt4">
+          </a>
+        </div>
+        <div class="u_list_box">
+          <a href="javascript:void(0);" tabid = '5'>
+            <img src="./assets_math/images/index/index_bth5_peu.png" alt="" class="u_list_img9">
+            <img src="./assets_math/images/index/index_btn5.png" alt="" class="u_list_img10">
+            <img src="./assets_math/images/index/index_btn5_txt.png" alt="" class="u_list_txt5">
+          </a>
+        </div>
+        <div class="u_list_box">
+          <a href="javascript:void(0);" tabid = '6'>
+            <img src="./assets_math/images/index/index_btn6_peu.png" alt="" class="u_list_img11">
+            <img src="./assets_math/images/index/index_btn6.png" alt="" class="u_list_img12">
+            <img src="./assets_math/images/index/index_btn6_txt.png" alt="" class="u_list_txt6">
+          </a>
+        </div>
+        <div class="u_list_box">
+          <a href="javascript:void(0);" tabid = '7'>
+            <img src="./assets_math/images/index/index_bth7_peu.png" alt="" class="u_list_img13">
+            <img src="./assets_math/images/index/index_btn7.png" alt="" class="u_list_img14">
+            <img src="./assets_math/images/index/index_btn7_txt.png" alt="" class="u_list_txt7">
+          </a>
+        </div>
+        <div class="u_list_box">
+          <a href="javascript:void(0);" tabid = '8'>
+            <img src="./assets_math/images/index/index_btn8_peu.png" alt="" class="u_list_img15">
+            <img src="./assets_math/images/index/index_btn8.png" alt="" class="u_list_img16">
+            <img src="./assets_math/images/index/index_btn8_txt.png" alt="" class="u_list_txt8">
+          </a>
+        </div>
+      </div>
+      <!-- 练习单元 -->
+      <div class="pract-unit">
+        <div class="pract-box">
+          <a href="">
+            <img src="./assets_math/images/index/index-unit1.png" alt="" class="pract-box-img1">
+            <img src="" alt="" class="pract-box-img2">
+          </a>
+        </div>
+        <div class="pract-box">
+          <a href="">
+            <img src="./assets_math/images/index/index-unit2.png" alt="" class="pract-box-img3">
+            <img src="./assets_math/images/index/index_unit2_yu.png" alt="" class="pract-box-imgyu">
+            <img src="./assets_math/images/index/index-unit-txt2.png" alt="" class="pract-box-img4">
+          </a>
+        </div>
+        <div class="pract-box">
+          <a href="">
+            <img src="./assets_math/images/index/index-unit3.png" alt="" class="pract-box-img5">
+            <img src="./assets_math/images/index/index-unit3-m.png" alt="" class="pract-box-paiz">
+            <img src="./assets_math/images/index/index-unit-txt4.png" alt="" class="pract-box-img6">
+          </a>
+        </div>
+        <div class="pract-box">
+          <a href="">
+            <img src="./assets_math/images/index/index-unit4.png" alt="" class="pract-box-img7">
+            <img src="./assets_math/images/index/index-unit-txt4.png" alt="" class="pract-box-img8">
+          </a>
+        </div>
+        <div class="pract-box">
+          <a href="">
+            <img src="./assets_math/images/index/index-unit5.png" alt="" class="pract-box-img9">
+            <img src="./assets_math/images/index/index-unit-txt5.png" alt="" class="pract-box-img10">
+          </a>
+        </div>
+        <div class="pract-box">
+          <a href="">
+            <img src="./assets_math/images/index/index-unit6.png" alt="" class="pract-box-img11">
+            <img src="./assets_math/images/index/index-unit-txt6.png" alt="" class="pract-box-img12">
+          </a>
+        </div>
+        <div class="pract-box">
+          <a href="">
+            <img src="./assets_math/images/index/index-unit7.png" alt="" class="pract-box-img13">
+            <img src="" alt="" class="pract-box-img14">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 引入jq -->
+  <script type='text/javascript' src='./assets_math/js/jquery-1.11.3.min.js'></script>
+  <script type="text/javascript">
+  var stops = true
+    $(function () {
+      $("#index-audios")[0].muted = false;
+      $("#index-audios")[0].play();
+    // index-audios
+    })
+    function stopAudio(){
+      if (stops) {
+        stops = false
+        $("#index-audios")[0].pause();
+        $(".index-audio-stop").attr('src','./assets_math/images/index/index_audio_play.png')
+      } else if (!stops) {
+        stops = true
+        $("#index-audios")[0].play();
+        $(".index-audio-stop").attr('src','./assets_math/images/index/index_audio_stop.png')
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    var active_unit = 1;
+    var flag = true
+    $(function () {
+      if (active_unit == 1) {
+        $(".pract-box-img6").attr('src','./assets_math/images/index/index-unit-txt1.png')
+        $('.pract-box').eq(2).show().addClass('animate__animated animate__backInDown')
+        $('.pract-box').eq(2).children().attr('href', './assets_math/test-1-clear.html')
+      }
+      //点击出现介绍
+      $('.handel-use-btn').on('click', function () {
+          $(".iall .jieshao").stop(true,false).fadeIn()
+          $('.masking').stop(true,false).fadeIn()
+      })
+
+      //点击关闭弹窗
+      $(".iall .jieshao .jox .out").on('click',function(){
+				$(".iall .jieshao").stop(true,false).fadeOut();
+          $('.masking').stop(true,false).fadeOut()
+			});
+      // 获取tab ID
+      $(".u_list_box a").click(function(){
+        $(this).children().eq(0).addClass("active-unit")
+        $(this).parent().siblings().children().children().removeClass("active-unit")
+        if (!flag) return
+        flag = false
+        var itemId =parseInt($(this).attr("tabid"));
+        active_unit = itemId
+        switch (itemId) {
+          case 1:
+            hideAll()
+            setTimeout(function () {
+              $(".pract-box-img6").attr('src','./assets_math/images/index/index-unit-txt1.png')
+              $('.pract-box').eq(2).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(2).children().attr('href', './assets_math/test-1-clear.html')
+              flag = true
+            },500)
+            break;
+          case 2:
+            hideAll()
+            setTimeout(function () {
+              $(".pract-box-img4").attr('src','./assets_math/images/index/index-unit-txt6.png')
+              $(".pract-box-img6").attr('src','./assets_math/images/index/index-unit-txt2.png')
+              $(".pract-box-img8").attr('src','./assets_math/images/index/index-unit-txt3.png')
+              $(".pract-box-img10").attr('src','./assets_math/images/index/index-unit-txt4.png')
+              $('.pract-box').eq(1).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(2).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(3).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(4).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(2).children().attr('href', './assets_math/test-2-clear.html')
+              $('.pract-box').eq(3).children().attr('href', './assets_math/test-3-clear.html')
+              $('.pract-box').eq(4).children().attr('href', './assets_math/test-4-clear.html')
+              $('.pract-box').eq(6).children().attr('href', './assets_math/test-5-clear.html')
+              $('.pract-box').eq(1).children().attr('href', './assets_math/test-6-clear.html')
+              $('.pract-box').eq(0).children().attr('href', './assets_math/test-cs1-strong.html')
+            },500)
+            setTimeout(function() {
+              $(".pract-box-img2").attr('src','./assets_math/images/index/danyuanzice.png')
+            },1500)
+            setTimeout(function() {
+              $(".pract-box-img14").attr('src','./assets_math/images/index/index-unit-txt5.png')
+              flag = true
+            },1500)
+            break;
+          case 3:
+            hideAll()
+            setTimeout(function () {
+              $(".pract-box-img6").attr('src','./assets_math/images/index/index-unit-txt8.png')
+              $('.pract-box').eq(2).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(2).children().attr('href', './assets_math/test-8-clear.html')
+              flag = true
+            },500)
+            break;
+          case 4:
+            hideAll()
+            setTimeout(function () {
+              $(".pract-box-img4").attr('src','./assets_math/images/index/index-unit-txt13.png')
+              $(".pract-box-img6").attr('src','./assets_math/images/index/index-unit-txt9.png')
+              $(".pract-box-img8").attr('src','./assets_math/images/index/index-unit-txt10.png')
+              $(".pract-box-img10").attr('src','./assets_math/images/index/index-unit-txt11.png')
+              $(".pract-box-img12").attr('src','./assets_math/images/index/index-unit-txt12.png')
+              $('.pract-box').eq(1).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(2).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(3).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(4).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(5).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(2).children().attr('href', './assets_math/test-9-clear.html')
+            },500)
+            setTimeout(function() {
+              $(".pract-box-img2").attr('src','./assets_math/images/index/danyuanzice.png')
+            },1500)
+            setTimeout(function() {
+              $(".pract-box-img14").attr('src','./assets_math/images/index/index-unit-txt14.png')
+              flag = true
+            },1500)
+            break;
+          case 5:
+            hideAll()
+            setTimeout(function () {
+              $('.pract-box').eq(2).show().addClass('animate__animated animate__backInDown')
+              flag = true
+            },500)
+            break;
+          case 6:
+            hideAll()
+            setTimeout(function () {
+              $('.pract-box').eq(1).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(2).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(3).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(4).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(5).show().addClass('animate__animated animate__backInDown')
+            },500)
+            setTimeout(function() {
+              $(".pract-box-img2").attr('src','./assets_math/images/index/index-unit-txt4.png')
+              flag = true
+            },1500)
+            break;
+          case 7:
+            hideAll()
+            setTimeout(function () {
+              $(".pract-box-img6").attr('src','./assets_math/images/index/index-unit-txt21.png')
+              $('.pract-box').eq(2).show().addClass('animate__animated animate__backInDown')
+              flag = true
+            },500)
+            break;
+          case 8:
+            hideAll()
+            setTimeout(function () {
+              $(".pract-box-img6").attr('src','./assets_math/images/index/index-unit-txt23.png')
+              $(".pract-box-img8").attr('src','./assets_math/images/index/index-unit-txt24.png')
+              $('.pract-box').eq(2).show().addClass('animate__animated animate__backInDown')
+              $('.pract-box').eq(3).show().addClass('animate__animated animate__backInDown')
+              flag = true
+            },500)
+            break;
+          default:
+            break;
+        }
+      })
+
+      function hideAll() {
+        $('.pract-box').eq(1).fadeOut().removeClass('animate__animated animate__backInDown')
+        $('.pract-box').eq(2).fadeOut().removeClass('animate__animated animate__backInDown')
+        $('.pract-box').eq(3).fadeOut().removeClass('animate__animated animate__backInDown')
+        $('.pract-box').eq(4).fadeOut().removeClass('animate__animated animate__backInDown')
+        $('.pract-box').eq(5).fadeOut().removeClass('animate__animated animate__backInDown')
+        $(".pract-box-img2").attr('src','')
+        $(".pract-box-img14").attr('src','')
+      }
+    })
+  </script>  
+</body>
+
+</html>

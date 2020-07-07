@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+  <div class="content">
+    <!-- 声音 -->
+    <img class="bg" width="100%" src="./images/bg.png" alt="">
+    <div class="main_content">
+      <div id="score">0</div>
+      <div id="degree">0</div>
+      <div id="countdown">100</div>
+      <div class="main_top">
+        <div class="main_top_left">
+          <span id = "first_num">2</span>
+          <span id = "symbol">+</span>
+          <span id = "last_num">7</span>
+        </div>
+        <div id="main_top_right"></div>
+      </div>
+      <div class="main_button">
+        <div class="main_btn_top">
+          <div class="main_btns" onclick="setVal(1)">1</div>
+          <div class="main_btns" onclick="setVal(2)">2</div>
+          <div class="main_btns" onclick="setVal(3)">3</div>
+          <div class="main_btns" onclick="setVal(4)">4</div>
+          <div class="main_btns" onclick="setVal(5)">5</div>
+          <div class="clear_btn" onclick="clearVal()">清除</div>
+        </div> 
+        <div class="main_btn_button">
+          <div class="main_btns" onclick="setVal(6)">6</div>
+          <div class="main_btns" onclick="setVal(7)">7</div>
+          <div class="main_btns" onclick="setVal(8)">8</div>
+          <div class="main_btns" onclick="setVal(9)">9</div>
+          <div class="main_btns" onclick="setVal(0)">0</div>
+          <div class="confirm_btn" onclick="ensure()">确定</div>
+        </div>
+      </div>
+    </div>
+    <!-- 选框开始 -->
+    <div id="center">
+
+    </div>
+    <!-- 选框结束 -->
+  </div>
+  <script>
+    // 数据
+    var data = [{
+      digital:1,
+    }, {
+      digital:2,
+    }, {
+      digital:3,
+    }, {
+      digital:4,
+    }, {
+      digital:5,
+    }, {
+      digital:6,
+    }]
+  </script>
+  <script src="./index.js"></script>
+</body>
+</html>

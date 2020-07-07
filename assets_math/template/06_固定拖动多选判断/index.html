@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06_固定拖动多选判断</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+  <div class="content">
+    <!-- 声音 -->
+    <img class="bg" width="100%" src="./images/bg.png" alt="">
+    <div id = "main_content">
+      <div class = "main_top">
+      </div>
+      <div class = "main_bth">
+        <div class="move_box" data-list="1"></div>
+        <div class="move_box" data-list="2"></div>
+        <div class="move_box" data-list="3"></div>
+        <div class="move_box" data-list="4"></div>
+        <div class="move_box" data-list="5"></div>
+      </div>
+      <button onclick="submit()">提交答案</button>
+    </div>
+  </div>
+  <script>
+    // 答案
+    var data = [1,2,3,4]
+  </script>
+  <script src="./index.js"></script>
+</body>
+</html>

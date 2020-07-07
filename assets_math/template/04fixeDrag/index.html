@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04_固定拖动</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+  <div class="content">
+    <!-- 声音 -->
+    <img class="bg" width="100%" src="./images/bg.png" alt="">
+    <div id="main_content">
+      <div class="main_top">
+        <div class="check_box"></div>
+        <div class="check_box"></div>
+        <div class="check_box"></div>
+        <div class="check_box"></div>
+      </div>
+      <div class="main_button">
+        <div class="mobile_box" data-list="2">
+        </div>
+        <div class="mobile_box" data-list="1">
+        </div>
+        <div class="mobile_box" data-list="3">
+        </div>
+        <div class="mobile_box" data-list="5">
+        </div>
+        <div class="mobile_box" data-list="7">
+        </div>
+        <div class="mobile_box" data-list="11">
+        </div>
+      </div>
+      <button onclick="submit()">提交</button>
+    </div>
+  </div>
+  <script>
+    // 数据
+    // 答案
+    let data = ['1','3','5','7']
+  </script>
+  <script src="./index.js"></script>
+  <script src="./a.js"></script>
+</body>
+</html>

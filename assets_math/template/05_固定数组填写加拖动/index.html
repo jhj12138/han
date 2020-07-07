@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_固定拖动</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+  <div class="content">
+    <!-- 声音 -->
+    <img class="bg" width="100%" src="./images/bg.png" alt="">
+    <div id="main_content">
+      <div class = "main_left">
+        <div class = "first_input">
+          <input type="number" class="first_inputs"/>
+        </div>
+        <div class = "checkbox"></div>
+        <div class = "second_input">
+          <input type="number" class="second_inputs"/>
+        </div>
+        <div class = "checkbox"></div>
+        <div class = "three_input">
+          <input type="number" class="three_inputs"/>
+        </div>
+        <div class = "fourth_input">
+          <input type="number" class="fourth_inputs"/>
+        </div>
+      </div>
+      <div class = "main_right">
+        <div class = "move_box" data-list="1"></div>
+        <div class = "move_box" data-list="2"></div>
+        <div class = "move_box" data-list="3"></div>
+        <div class = "move_box" data-list="4"></div>
+      </div>
+      <button onclick = "submit()">提交答案</button>
+    </div>
+  </div>
+  <script>
+    // 答案
+    // var data = [[35,2,18,2,9,8],[35,2,9,2,18,8]]
+    var data = [[1,2,1,2,1,1],[3,2,3,2,3,3]]
+  </script>
+  <script src="./index.js"></script>
+</body>
+</html>

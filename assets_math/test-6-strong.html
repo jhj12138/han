@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>二上数学人教版</title>
+  <meta charset=utf-8>
+  <meta name="keywords" content="小学数学">
+  <meta name="description" content="小学数学">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/unitcss.css">
+  <link rel="stylesheet" href="./css/animate.css">
+</head>
+
+<body>
+  <div class="unit u6-1 u6">
+    <!-- 背景 -->
+    <img src="./images/commen/unit-bg.png" alt="数学">
+    <div class="unit-container">
+      <!-- 背景上的图片 -->
+      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
+      <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
+      <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
+      <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
+      <!-- 返回按钮-->
+      <a href="../index.html">
+        <div class="index-return">
+          <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
+          <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
+        </div>
+      </a>
+      <!-- 指示牌 -->
+      <div class="unit-sign">
+        <img src="./images/commen/unit-ladder.png" alt="" class="unit-ladder">
+        <a href="./test-6-clear.html">
+          <div class="study-zhashi"><img src="./images/commen/clear-box.png" alt=""></div>
+        </a>
+        <div class="study-clear unit-select">
+          <img src="./images/commen/solid-box.png" alt="">
+        </div>
+        <a href="./test-6-smart.html">
+          <div class="study-smart"><img src="./images/commen/smart-box.png" alt=""></div>
+        </a>
+        <a href="./test-6-ks.html">
+          <div class="kousuan"><img src="./images/commen/oral-box.png" alt=""></div>
+        </a>
+      </div>
+      <!-- 主内容 -->
+      <!-- 外边框 -->
+      <div class="out-border">
+        <img src="./images/commen/out-border.png" alt="">
+        <!-- 不可点击的蒙层 -->
+        <div class="cant-click"></div>
+        <!-- 背景动画 -->
+        <div class="answer-ani">
+          <div class="answer-ani-imgs">
+            <img src="./images/animbg/bowlingball.png" alt="" class="answer-ani-img">
+          </div>
+          <div class="ani-gif">
+            <!-- <img src="./images/animbg/bowling-success.gif"> -->
+          </div>
+          <div class="ani-gif-2">
+          </div>
+          <div class="ani-gif-3">
+            <!-- <img src="./images/animbg/girl-cry.gif" alt=""> -->
+          </div>
+          <div class="ani-gif-4"></div>
+          <!-- 答对了的声音 -->
+          <audio src="../assets_math/audio/sound_success.mp3" id="ani-audio-success"></audio>
+          <!-- 答错了的声音 -->
+          <audio src="../assets_math/audio/sound_fail.mp3" id="ani-audio-fail"></audio>
+          <!-- 时间快到了的声音 -->
+          <audio src="../assets_math/audio/time_end.mp3" id="ani-audio-end"></audio>
+          <!-- 保龄球 -->
+          <div class="bowling"><img src="./images/animbg/bowling.png" alt=""></div>
+          <div class="bowlings"><img src="./images/animbg/bowlings.png" alt=""></div>
+        </div>
+        <!-- 内边框 -->
+        <div class="inner-border slidein">
+          <img src="./images/commen/unit-panel.png" alt="">
+          <div class="score-board">
+            <img src="./images/commen/unit-scoreboard.png" alt="">
+            <div class="score">0</div>
+          </div>
+          <!-- 答题部分开始 -->
+          <div class="question-con">
+            <!-- 第一题 -->
+            <div class="question q1">
+              <div class="q1-top">
+                <div class="check_box1"></div>
+                <div class="check_box1"></div>
+              </div>
+              <div class="q1-bottom">
+                <div class="mobile_box1" data-list="1">
+                </div>
+                <div class="mobile_box1" data-list="2">
+                </div>
+              </div>
+
+              <img src="../assets_math/images/commen/unitSix/zs-q1.png" alt="">
+            </div>
+            <!-- 第二题 -->
+            <div class="question q2">
+              <div class="q2-top">
+                <div class="check_box2"></div>
+                <div class="check_box2"></div>
+              </div>
+              <div class="q2-bottom">
+                <div class="mobile_box2" data-list="1">
+                </div>
+                <div class="mobile_box2" data-list="2">
+                </div>
+              </div>
+
+              <img src="../assets_math/images/commen/unitSix/zs-q2.png" alt="">
+            </div>
+          </div>
+          <!-- 答题部分结束 -->
+        </div>
+        <!-- 三个按钮（上一题、下一题、确定） -->
+        <div class="last-btn" onclick="lastButton()" onmouseover="goMove(event,1)" onmouseout="goOut(event,1)">
+          <img src="./images/commen/unit-on.png" alt="" class="last-btns">
+          <img src="./images/commen/unit-on-txt.png" alt="" class="last-btn-txt">
+        </div>
+        <div class="next-btn" onclick="nextButton()" onmouseover="goMove(event,1)" onmouseout="goOut(event,1)">
+          <img src="./images/commen/unit-on.png" alt="" class="next-btns">
+          <img src="./images/commen/unit-next-txt.png" alt="" class="next-btn-txt">
+        </div>
+        <div class="submit-btn" onclick="submitAnswer()" onmouseover="goMove(event,2)" onmouseout="goOut(event,2)">
+          <img src="./images/commen/unit-deter.png" alt="" class="submit-btns">
+          <img src="./images/commen/unit-deter-txt.png" alt="" class="submit-btn-txt">
+        </div>
+        <!-- 倒计时 -->
+        <div class="timer">
+          <div class="timer-icon"><img src="./images/commen/timer-icon.png" alt=""></div>
+          <div class="timer-progress">
+            <div class="progress-bg"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- 引入jq -->
+  <script type='text/javascript' src='./js/jquery-1.11.3.min.js'></script>
+  <!-- 引入全局js -->
+  <script type='text/javascript' src='./js/index.js'></script>
+  <!-- 引入固定拖动 -->
+  <script type="text/javascript" src="../assets_math/template/06fixeDrag/index.js"></script>
+  <script type="text/javascript">
+    // 鼠标移动上去改变
+    function goMove(e, num) {
+      if (num == 1) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-onchange.png')
+      } else if (num == 2) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-onchange1.png')
+      }
+    }
+    function goOut(e, num) {
+      if (num == 1) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-on.png')
+      } else if (num == 2) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-deter.png')
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    var q1_arr = [] //第一题的答案
+    var q1_data = [1, 2] //第一题正确答案
+    var q2_arr = [] //第二题拖拽的值
+    var q2_data = [1, 2] //第二题的正确答案
+    var coming1 = false //第一是否来过
+    var coming2 = false //第二是否来过
+    var isScore = [];   //已经得分的题目
+    var total_question_num = 2;    //一共有多少题
+    var current_question = 1;       //当前是第几题
+    var animate_duration = 3000   //动画时长
+    var sorce = 0;   //当前得分，
+    var total_answer_time = 550;     //总答题时间 单位：秒
+    var spend_time = 1;   //耗费的时间
+    var count_timer = null;
+    var flag = true //动画没完成不能点击上一题和下一题
+    var answers = [] //答了几道
+    var answers_num = 0 //答了的数量
+    var set = null //用来清除定时器
+    var newFlag = true
+    $(function () {
+      // showOverPop('.out-border', 3, 6, 5) 
+      setisScoreArr();
+      startTimer();      //开始正计时
+      initTimer(total_answer_time, handTimeleOver);  //开始倒计时
+      autoFocus();    //自动对焦
+      // audioPlay();
+      setTimeout(() => {
+        getDrag('u6-zs1', 'check_box1', 'mobile_box1')
+        // window.onresize = function () {
+        //   getDrag('u6-zs1','check_box1','mobile_box1')
+        //   console.log('执行了')
+        // }
+      }, 2000);
+    })
+
+    //设置已经得分的数组
+    function setisScoreArr() {
+      for (var i = 0; i < total_question_num; i++) {
+        isScore[i] = -1
+      }
+    }
+
+    //音频播发 id属性=>如q1-audio
+    function audioPlay() {
+      if (current_question == 1) {
+        $("#q1-audio")[0].play()
+      } else if (current_question == 2) {
+        $("#q2-audio")[0].play()
+      } else if (current_question == 3) {
+        $("#q3-audio")[0].play()
+      } else if (current_question == 4) {
+        $("#q4-audio")[0].play()
+      }
+    }
+
+    //自动计时
+    function startTimer() {
+      count_timer = setInterval(function () {
+        if (spend_time == total_answer_time) {
+          showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time);
+          clearInterval(count_timer);
+        } else {
+          spend_time++
+        }
+      }, 1000);
+    }
+
+    //题目自动对焦
+    function autoFocus() {
+      $('.question-con .q' + current_question + ' input').eq(0).focus()
+    }
+
+    //倒计时结束的操作
+    function handTimeleOver() {
+      $('.timer').hide()
+    }
+
+    //倒计时函数 set_time=>设置的倒计时时长  ,   callBack=>回调函数
+    function initTimer(set_time, callBack) {
+      var time = set_time; //倒计时的时长
+      var progress_width = 100
+      // var p = document.getElementsById("time");
+      set = setInterval(function () {
+        time--;
+        progress_width -= progress_width / time
+        $('.progress-bg').css("width", progress_width + '%')
+        if (time === 30) {
+          $('#ani-audio-end')[0].play()
+        }
+        if (time === 0) {
+          $('.progress-bg').css("width", "0")
+          clearInterval(set);
+          clearInterval(count_timer)
+          callBack()
+        }
+      }, 1000);
+    }
+
+    //设置答题结束时的弹窗
+    function showOverPop(father_containter, star_num, total_question, total_right, total_time) {
+      var total_time_ = formatSeconds(total_time);
+      var pop_html = "<div class='over-pop'><div class='over-masking'><img src='./images/commen/over-pop/making-img.png'></div><div class='pop-bg'><img src='./images/commen/over-pop/over-modal.png' alt=''><div class='pop-inner'><img src='./images/commen/over-pop/pop-wrapper.png' alt=''><div>完成：<span id='total-question'>4</span></div><div>做对：<span id='total-right'></span></div><div>用时：<span id='total-time'>" + total_time_ + "</span></div></div><div class='stars'><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div></div><div class='answer-again' onclick='ansewerAgain()'><img src='./images/commen/over-pop/play-again.png' alt=''></div></div></div>"
+      $(father_containter).append(pop_html)
+      var star_item = $('.star-item')
+      for (var i = 0; i < star_num; i++) {
+        $('.star-item').eq(i).children('img').attr('src', './images/commen/over-pop/star.png')
+      }
+      $('#total-question').html(total_question);  //设置框内的题目总数
+      $('#total-right').html(total_right);   //设置框内的题目正确数
+      $('.timer').hide();    //隐藏倒计时
+    }
+
+    //再来一次
+    function ansewerAgain() {
+      window.location.reload()
+    }
+
+    //上一题
+    function lastButton() {
+      if (!flag) return
+      if (!newFlag) return
+      delInputValue()
+      // pauseAll()
+      if (current_question == 1) { //第一题无法上一题
+        return false;
+      } else if (current_question) {
+        current_question--;
+        if (current_question == 1) {
+          newFlag = false
+          setTimeout(function () {
+            getDrag('u6-zs1', 'check_box1', 'mobile_box1')
+          }, 1000)
+          // if (!coming1) {
+          //   coming1 = true
+          //   setTimeout(function () {
+          //     console.log('1111')
+          //     getDrag('u6-zs1', 'check_box1', 'mobile_box1')
+          //     // window.onresize = function () {
+          //     //   getDrag('u6-zs1', 'check_box1', 'mobile_box1')
+          //     // }
+          //   }, 1000)
+          // }
+        } else if (current_question == 2) {
+          newFlag = false
+          setTimeout(function () {
+            getDrag('u6-zs2', 'check_box2', 'mobile_box2')
+          }, 1000)
+          // if (!coming2) {
+          //   coming2 = true
+          //   setTimeout(function () {
+          //     getDrag('u6-zs2', 'check_box2', 'mobile_box2')
+          //     // window.onresize = function () {
+          //     //   getDrag('u6-zs2', 'check_box2', 'mobile_box2')
+          //     // }
+          //   }, 1000)
+          // }
+        }
+        $('.inner-border').removeClass('slidein').addClass('slideout');
+        setTimeout(function () {
+          // audioPlay()
+          $('.inner-border').removeClass('slideout').addClass('slidein');
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
+          autoFocus();    //自动对焦
+          newFlag = true
+        }, 500)
+      }
+    }
+
+    //下一题
+    function nextButton() {
+      if (!flag) return
+      if (!newFlag) return
+      delInputValue()
+      // pauseAll()
+      if (current_question < total_question_num) {
+        current_question++;
+        if (current_question == 1) {
+          newFlag = false
+          setTimeout(function () {
+            getDrag('u6-zs1', 'check_box1', 'mobile_box1')
+          }, 1000)
+          // if (!coming1) {
+          //   coming1 = true
+          //   setTimeout(function () {
+          //     getDrag('u6-zs1', 'check_box1', 'mobile_box1')
+          //   }, 1000)
+          //   window.onresize = function () {
+          //     getDrag('u6-zs1', 'check_box1', 'mobile_box1')
+          //   }
+          // }
+          // coming1 = true
+        } else if (current_question == 2) {
+          newFlag = false
+          setTimeout(function () {
+            getDrag('u6-zs2', 'check_box2', 'mobile_box2')
+          }, 1000)
+          // if (!coming2) {
+          //   coming2 = true
+          //   setTimeout(function () {
+          //     console.log('zxzzxzzzx')
+          //     getDrag('u6-zs2', 'check_box2', 'mobile_box2')
+              
+          //   }, 1000)
+          //   window.onresize = function () {
+          //     getDrag('u6-zs2', 'check_box2', 'mobile_box2')
+          //   }
+          // }
+          // coming2 = true
+        }
+        $('.inner-border').removeClass('slidein').addClass('slideout');
+        setTimeout(function () {
+          // audioPlay()
+          $('.inner-border').removeClass('slideout').addClass('slidein');
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+          autoFocus();    //自动对焦
+          newFlag = true
+        }, 500)
+      } else { //如果是最后一题,显示弹窗
+        var stars = calcStars() //计算星星数量
+        // console.log('1111')
+        setTimeout(function () {
+          if (spend_time < total_answer_time) {
+            showOverPop('.out-border', stars, answers_num, sorce, spend_time)
+          } else {
+            showOverPop('.out-border', stars, answers_num, sorce, total_answer_time)
+          }
+          clearInterval(count_timer);
+          clearInterval(set);
+        }, 500);
+      }
+    }
+    //计算获得星星数量
+    function calcStars() {
+      var persent = sorce / total_question_num
+      var star_num = Math.ceil(6 * persent);
+      return star_num
+    }
+
+    // //已答了几道题
+    function fewAnswer() {
+      answers[current_question - 1] = -1
+      var answer = null
+      for (var i = 0; i < answers.length; i++) {
+        if (answers[i] == -1) {
+          answer++
+        }
+      }
+      return answer
+    }
+    //提交答案
+    function submitAnswer() {
+      var result = null;
+      if (current_question == 1) {    //第一题
+        answers_num = fewAnswer()
+        result = goDrag(q1_arr, q1_data, 'check_box1')
+      } else if (current_question == 2) {
+        answers_num = fewAnswer()
+        result = goDrag(q1_arr, q1_data, 'check_box2')
+      }
+      if (result) {
+        if (isScore.indexOf(current_question) == -1) {
+          sorce++;       //分数+1
+          isScore[current_question - 1] = current_question;   //添加到已回答数组
+          setScoreBoard()   //设置计分板
+        }
+        showFootballAnimation(1);   //播放答对动画
+      } else {
+        showFootballAnimation(0);   //播放答错动画
+      }
+      setTimeout(function () {
+        delInputValue()  //删除所有input中的值，清空输入的数组
+        autoFocus()  //自动对焦
+      }, 1500);
+      // console.log(fewAnswer())
+    }
+
+    //切换题目后删除所有input中的值
+    function delInputValue() {
+      $('.question-con input').each(function () {
+        this.value = '';
+        q1_arr = [];
+        q2_arr = [];
+        // $('.question-con .checkbox').children().remove()
+      })
+
+      // $('.q2-bottom').html('<div class="mobile_box" data-list="1"></div><div class="mobile_box" data-list="2"></div><div class="mobile_box" data-list="3"></div><div class="mobile_box" data-list="4"></div><div class="mobile_box" data-list="5"></div><div class="mobile_box" data-list="6"></div><div class="mobile_box" data-list="7"></div><div class="mobile_box" data-list="8"></div>')
+      $('.question-con .check_box1').children() && $('.question-con .check_box1').children().remove()
+      $('.question-con .check_box2').children() && $('.question-con .check_box2').children().remove()
+      $('.q1-bottom').html('<div class="mobile_box1" data-list="1"></div><div class="mobile_box1" data-list="2"></div>')
+      $('.q2-bottom').html('<div class="mobile_box2" data-list="1"></div><div class="mobile_box2" data-list="2"></div>')
+    }
+
+
+    //推保龄球动画  status = 0答错      status = 1答对 
+    function showFootballAnimation(status) {
+      flag = false
+      $('.cant-click').show()
+      $('.inner-border').removeClass('slidein').addClass('slideout');   //题目
+      current_question++;
+      var showpop = false;
+      if (current_question > total_question_num) {
+        showpop = true
+      }
+      if (status == 1) {  //答对的动画
+        setTimeout(function () {
+          $('.answer-ani .ani-gif').html('<img src="./images/animbg/bowling-success.gif?' + new Date().getTime() + '" alt="">')
+          // $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
+          setTimeout(function () {
+            $('.bowling').hide();
+            $('.bowlings').hide();
+          }, 30)
+          $('#ani-audio-success')[0].play()
+        }, 500)
+        setTimeout(function () {
+          $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
+        }, 1500);
+        setTimeout(function () {
+          if (!showpop) {
+            $('.inner-border').removeClass('slideout').addClass('slidein');
+
+          } else {
+            showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
+          }
+          $('.answer-ani .ani-gif').html('')
+          $('.answer-ani .ani-gif-3').html('');
+          $('.cant-click').hide();
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+          setTimeout(function () {
+            $('.bowling').show();
+            $('.bowlings').show();
+          }, 50)
+          flag = true
+        }, animate_duration)
+        setTimeout(function () {
+          // audioPlay()
+        }, animate_duration + 500)
+      } else if (status == 0) { //答错的动画
+        setTimeout(function () {
+          $('.answer-ani .ani-gif-2').html('<img src="./images/animbg/bowling-fail.gif?' + new Date().getTime() + '" alt="">')
+          setTimeout(function () {
+            $('.bowling').hide();
+            $('.bowlings').hide();
+          }, 50)
+          $('#ani-audio-fail')[0].play()
+          // $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">')
+        }, 500)
+        setTimeout(function () {
+          $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">');
+        }, 1000);
+        setTimeout(function () {
+          if (!showpop) {
+            $('.inner-border').removeClass('slideout').addClass('slidein');
+          } else {
+            showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
+          }
+          $('.answer-ani .ani-gif-2').html('')
+          $('.answer-ani .ani-gif-4').html('');
+          $('.cant-click').hide();
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+          setTimeout(function () {
+            $('.bowling').show();
+            $('.bowlings').show();
+          }, 50)
+          flag = true
+          // audioPlay()
+        }, animate_duration)
+      }
+      setTimeout(function () {
+        if (current_question == 1) {
+            getDrag('u6-zs1', 'check_box1', 'mobile_box1')
+            window.onresize = function () {
+              getDrag('u6-zs1', 'check_box1', 'mobile_box1')
+            }
+        } else if (current_question == 2) {
+            getDrag('u6-zs2', 'check_box2', 'mobile_box2')
+            window.onresize = function () {
+              getDrag('u6-zs2', 'check_box2', 'mobile_box2')
+            }
+        }
+      }, 4000);
+    }
+
+    //设置计分板数字
+    function setScoreBoard() {
+      $('.score-board .score').html(sorce)
+    }
+    //监听输入框事件
+    function setInputArr(m_arr, e, i) {
+      m_arr[i] = e.target.value;
+    }
+
+
+    //判断第一题是否正确
+    function calcQuestion(m_arr, right_arr) {
+      var step = 0;
+      for (let i = 0; i < m_arr.length; i++) {
+        if (m_arr[i] == right_arr[i]) {
+          step++
+        }
+      }
+      if (step === right_arr.length) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    //判断第二题拖拽是否正确
+    function goDrag(m_arr, right_arr, checkBox) {
+      var checkBox = document.getElementsByClassName(checkBox)
+      var step = 0
+      for (var i = 0; i < checkBox.length; i++) {
+        if (checkBox[i].children[0]) {
+          m_arr.push(checkBox[i].children[0].dataset.list)
+        }
+      }
+      for (let j = 0; j < m_arr.length; j++) {
+        if (m_arr[j] == right_arr[j]) {
+          step++
+        }
+      }
+      console.log(step)
+      if (step === right_arr.length) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+  </script>
+</body>
+
+</html>

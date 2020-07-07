@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>二上数学人教版</title>
+  <meta charset=utf-8>
+  <meta name="keywords" content="小学数学">
+  <meta name="description" content="小学数学">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/unitcss.css">
+  <link rel="stylesheet" href="./css/animate.css">
+</head>
+
+<body>
+  <div class="unit cs-1 u2">
+    <!-- 背景 -->
+    <img src="./images/commen/unit-bg.png" alt="数学">
+    <div class="unit-container">
+      <!-- 背景上的图片 -->
+      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
+      <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
+      <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
+      <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
+      <!-- 返回按钮-->
+      <a href="../index.html">
+        <div class="index-return">
+          <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
+          <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
+        </div>
+      </a>
+      <!-- 指示牌 -->
+      <div class="unit-sign">
+        <img src="./images/commen/unit-ladder.png" alt="" class="unit-ladder">
+        <!-- <a href="./test-5-clear.html">
+          <div class="study-zhashi"><img src="./images/commen/clear-box.png" alt=""></div>
+        </a> -->
+        <!-- <div class="study-clear unit-select">
+          <img src="./images/commen/solid-box.png" alt="">
+        </div> -->
+        <!-- <a href="./test-5-smart.html">
+          <div class="study-smart"><img src="./images/commen/smart-box.png" alt=""></div>
+        </a> -->
+        <!-- <a href="./test-5-ks.html">
+          <div class="kousuan"><img src="./images/commen/oral-box.png" alt=""></div>
+        </a> -->
+      </div>
+      <!-- 主内容 -->
+      <!-- 外边框 -->
+      <div class="out-border">
+        <img src="./images/commen/out-border.png" alt="">
+        <!-- 不可点击的蒙层 -->
+        <div class="cant-click"></div>
+        <!-- 背景动画 -->
+        <div class="answer-ani">
+          <div class="answer-ani-imgs">
+            <img src="./images/animbg/football-bg.png" alt="" class="answer-ani-img">
+          </div>
+          <div class="ani-gif">
+            <!-- <img src="./images/animbg/football-success.gif" alt=""> -->
+          </div>
+          <div class="ani-gif-2">
+            <!-- <img src="./images/animbg/football-fail.gif" alt=""> -->
+          </div>
+          <div class="ani-gif-3">
+          </div>
+          <div class="ani-gif-4"></div>
+          <!-- 答对了的声音 -->
+          <audio src = "../assets_math/audio/sound_success.mp3" id = "ani-audio-success"></audio>
+          <!-- 答错了的声音 -->
+          <audio src = "../assets_math/audio/sound_fail.mp3" id = "ani-audio-fail"></audio>
+          <!-- 时间快到了的声音 -->
+          <audio src = "../assets_math/audio/time_end.mp3" id = "ani-audio-end"></audio>
+          <!-- 足球 -->
+          <div class="football"><img src="./images/animbg/football.png" alt=""></div>
+          <!-- 守门员 -->
+          <div class="goalkeeper"><img src="./images/animbg/person.png" alt=""></div>
+        </div>
+        <!-- 内边框 -->
+        <div class="inner-border slidein">
+          <img src="./images/commen/unit-panel.png" alt="">
+          <div class="score-board">
+              <img src="./images/commen/unit-scoreboard.png" alt="">
+              <div class="score">0</div>
+          </div>
+          <!-- 答题部分开始 -->
+          <div class = "question-con">
+            <!-- 第一题 -->
+            <div class="question q1">
+              <div class="q1-top">
+                <!-- 米和厘米 -->
+                <div class="check_box1"></div>
+                <div class="check_box1"></div>
+                <div class="check_box1"></div>
+                <div class="check_box1"></div>
+                <div class="check_box1"></div>
+              </div>
+              <div class="q1-bottom">
+                <div class="mobile_box1" data-list="1">
+                </div>
+                <div class="mobile_box1" data-list="2">
+                </div>
+                <div class="mobile_box1" data-list="1">
+                </div>
+                <div class="mobile_box1" data-list="2">
+                </div>
+                <div class="mobile_box1" data-list="1">
+                </div>
+              </div>
+              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 0)" maxlength="3"/></div>
+              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 1)" maxlength="3"/></div>
+              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 2)" maxlength="3"/></div>
+              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 3)" maxlength="3"/></div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/lyl.mp3" id = "q1-audio"></audio>
+              <img src="../assets_math/images/commen/ceshiOne/cs-q1.png" alt="">
+            </div>
+            <!-- 第二题 -->
+            <div class="question q2">
+              <div class="q2-select-con">
+                <div class="q2-select-change">
+                  <img src="" alt="">
+                </div>
+                <div class="q2-select-item" data-right="1" data-index="0" data-num="1"></div>
+                <div class="q2-select-item" data-right="2" data-index="0" data-num="0"></div>
+                <div class="q2-select-item" data-right="3" data-index="0" data-num="0"></div>
+              </div>
+              <div class="q2-select-con">
+                <div class="q2-select-change">
+                  <img src="" alt="">
+                </div>
+                <div class="q2-select-item" data-right="1" data-index="1" data-num="0"></div>
+                <div class="q2-select-item" data-right="2" data-index="1" data-num="1"></div>
+                <div class="q2-select-item" data-right="3" data-index="1" data-num="0"></div>
+              </div>
+              <div class="q2-select-con">
+                <div class="q2-select-change">
+                  <img src="" alt="">
+                </div>
+                <div class="q2-select-item" data-right="1" data-index="2" data-num="1"></div>
+                <div class="q2-select-item" data-right="2" data-index="2" data-num="0"></div>
+                <div class="q2-select-item" data-right="3" data-index="2" data-num="0"></div>
+              </div>
+              <div class="q2-select-con">
+                <div class="q2-select-change">
+                  <img src="" alt="">
+                </div>
+                <div class="q2-select-item" data-right="1" data-index="3" data-num="0"></div>
+                <div class="q2-select-item" data-right="2" data-index="3" data-num="0"></div>
+                <div class="q2-select-item" data-right="3" data-index="3" data-num="1"></div>
+              </div>
+              <div class="q2-select-con">
+                <div class="q2-select-change">
+                  <img src="" alt="">
+                </div>
+                <div class="q2-select-item" data-right="1" data-index="4" data-num="0"></div>
+                <div class="q2-select-item" data-right="2" data-index="4" data-num="1"></div>
+                <div class="q2-select-item" data-right="3" data-index="4" data-num="0"></div>
+              </div>
+              <div class="q2-select-con">
+                <div class="q2-select-change">
+                  <img src="" alt="">
+                </div>
+                <div class="q2-select-item" data-right="1" data-index="5" data-num="0"></div>
+                <div class="q2-select-item" data-right="2" data-index="5" data-num="1"></div>
+                <div class="q2-select-item" data-right="3" data-index="5" data-num="0"></div>
+              </div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/lyl.mp3" id = "q2-audio"></audio>
+              <img src="../assets_math/images/commen/ceshiOne/cs-q2.png" alt="">
+            </div>
+            <!-- 第三题 -->
+            <div class="question q3">
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/tuoyituo.mp3" id = "q3-audio"></audio>
+              <img src="../assets_math/images/commen/ceshiOne/cs-q3.png" alt="">
+            </div>
+            <!-- 第四题 -->
+            <div class="question q4">
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 0)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 1)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 2)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 3)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 4)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 5)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 6)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 7)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 8)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 9)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 10)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 11)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 12)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 13)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 14)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 15)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 16)" maxlength="2"/></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 17)" maxlength="2"/></div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/tuoyituo.mp3" id = "q3-audio"></audio>
+              <img src="../assets_math/images/commen/ceshiOne/cs-q4.png" alt="">
+            </div>
+            <!-- 第五题 -->
+            <div class="question q5">
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 0)" maxlength="2"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 1)" maxlength="2"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 2)" maxlength="2"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 3)" maxlength="1"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 4)" maxlength="1"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 5)" maxlength="1"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 6)" maxlength="1"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 7)" maxlength="1"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 8)" maxlength="1"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 9)" maxlength="1"/></div>
+              <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 10)" maxlength="1"/></div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/tuoyituo.mp3" id = "q3-audio"></audio>
+              <img src="../assets_math/images/commen/ceshiOne/cs-q5.png" alt="">
+            </div>
+            <!-- 第六题 -->
+            <div class="question q6">
+              <div class="q6-top">
+                <div class="checkbox6"></div>
+                <div class="checkbox6"></div>
+                <!-- 输入框部分开始 -->
+                <div class="q6-input"><input id="num1-1" type="text" maxlength="3" /></div>
+                <div class="q6-input"><input id="num1-2" type="text" maxlength="3" /></div>
+                <div class="q6-input"><input id="num1-3" type="text" maxlength="3" /></div>
+                <div class="q6-input"><input id="num2-1" type="text" maxlength="3" /></div>
+                <div class="q6-input"><input id="num2-2" type="text" maxlength="3" /></div>
+                <div class="q6-input"><input id="num2-3" type="text" maxlength="3" /></div>
+              </div>
+              <div class="q6-bottom">
+                <!-- 运算符号 -->
+                <div class="jia move_box6" data-list="1"></div>
+                <div class="jian move_box6" data-list="2"></div>
+                <div class="cheng move_box6" data-list="3"></div>
+                <div class="chu move_box6" data-list="4"></div>
+              </div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/lyl.mp3" id = "q2-audio"></audio>
+              <img src="../assets_math/images/commen/ceshiOne/cs-q6.png" alt="">
+            </div>
+            <!-- 第七题 -->
+            <div class="question q7">
+              <div class="q7-top">
+                <div class="checkbox7"></div>
+                <!-- 输入框部分开始 -->
+                <div class="q7-input"><input id="num3-1" type="text" maxlength="3" /></div>
+                <div class="q7-input"><input id="num3-2" type="text" maxlength="3" /></div>
+                <div class="q7-input"><input id="num3-3" type="text" maxlength="3" /></div>
+              </div>
+              <div class="q7-bottom">
+                <!-- 运算符号 -->
+                <div class="jia move_box7" data-list="1"></div>
+                <div class="jian move_box7" data-list="2"></div>
+                <div class="cheng move_box7" data-list="3"></div>
+                <div class="chu move_box7" data-list="4"></div>
+              </div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/lyl.mp3" id = "q2-audio"></audio>
+              <img src="../assets_math/images/commen/ceshiOne/cs-q7.png" alt="">
+            </div>
+            <!-- 第八题 -->
+            <div class="question q8">
+              <div class="q8-top">
+                <div class="checkbox8"></div>
+                <div class="checkbox8"></div>
+                <div class="checkbox8"></div>
+                <div class="checkbox8"></div>
+                <!-- 输入框部分开始 -->
+                <div class="q8-input"><input id="num4-1" type="text" maxlength="3" onchange="setInputArr(q8_arr, event, 0)"/></div>
+                <div class="q8-input"><input id="num4-2" type="text" maxlength="3" onchange="setInputArr(q8_arr, event, 1)"/></div>
+                <div class="q8-input"><input id="num4-3" type="text" maxlength="3" onchange="setInputArr(q8_arr, event, 2)"/></div>
+                <div class="q8-input"><input id="num5-1" type="text" maxlength="3" onchange="setInputArr(q8_arr, event, 3)"/></div>
+                <div class="q8-input"><input id="num5-2" type="text" maxlength="3" onchange="setInputArr(q8_arr, event, 4)"/></div>
+                <div class="q8-input"><input id="num5-3" type="text" maxlength="3" onchange="setInputArr(q8_arr, event, 5)"/></div>
+                <div class="q8-input"><input id="num6-1" type="text" maxlength="3" onchange="setInputArr(q8_arr, event, 6)"/></div>
+                <div class="q8-input"><input id="num6-2" type="text" maxlength="3" onchange="setInputArr(q8_arr, event, 7)"/></div>
+              </div>
+              <div class="q8-bottom">
+                <!-- 运算符号 -->
+                <div class="jia move_box8" data-list="1"></div>
+                <div class="jian move_box8" data-list="2"></div>
+                <div class="cheng move_box8" data-list="3"></div>
+                <div class="chu move_box8" data-list="4"></div>
+              </div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/lyl.mp3" id = "q2-audio"></audio>
+              <img src="../assets_math/images/commen/ceshiOne/cs-q8.png" alt="">
+            </div>
+            <!-- 第九题 -->
+            <div class="question q9">
+              <div class="q9-input"><input type="text" onchange="setInputArr(q9_arr, event, 0)" maxlength="1"/></div>
+              <div class="q9-input"><input type="text" onchange="setInputArr(q9_arr, event, 1)" maxlength="1"/></div>
+              <div class="q9-input"><input type="text" onchange="setInputArr(q9_arr, event, 2)" maxlength="1"/></div>
+              <div class="q9-input"><input type="text" onchange="setInputArr(q9_arr, event, 3)" maxlength="1"/></div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/lyl.mp3" id = "q2-audio"></audio>
+              <img src="../assets_math/images/commen/ceshiOne/cs-q9.png" alt="">
+            </div>
+          </div>
+          <!-- 答题部分结束 -->
+        </div>
+        <!-- 三个按钮（上一题、下一题、确定） -->
+        <div class="last-btn" onclick="lastButton()" onmouseover="goMove(event,1)" onmouseout="goOut(event,1)">
+          <img src="./images/commen/unit-on.png" alt="" class="last-btns">
+          <img src="./images/commen/unit-on-txt.png" alt="" class="last-btn-txt">
+        </div>
+        <div class="next-btn" onclick="nextButton()" onmouseover="goMove(event,1)" onmouseout="goOut(event,1)">
+          <img src="./images/commen/unit-on.png" alt="" class="next-btns">
+          <img src="./images/commen/unit-next-txt.png" alt="" class="next-btn-txt">
+        </div>
+        <div class="submit-btn" onclick="submitAnswer()" onmouseover="goMove(event,2)" onmouseout="goOut(event,2)">
+          <img src="./images/commen/unit-deter.png" alt="" class="submit-btns">
+          <img src="./images/commen/unit-deter-txt.png" alt="" class="submit-btn-txt">
+        </div>
+        <!-- 倒计时 -->
+        <div class="timer">
+            <div class="timer-icon"><img src="./images/commen/timer-icon.png" alt=""></div>
+            <div class="timer-progress">
+                <div class="progress-bg"></div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- 引入jq -->
+  <script type='text/javascript' src='./js/jquery-1.11.3.min.js'></script>
+  <!-- 引入全局js -->
+  <script type='text/javascript' src='./js/index.js'></script>
+  <!-- 引入固定拖动 -->
+  <script type="text/javascript" src="../assets_math/template/05fiexDrag/index.js"></script>
+  <script type="text/javascript" src="../assets_math/template/06fixeDrag/index.js"></script>
+  <script type="text/javascript">
+      // 鼠标移动上去改变
+      function goMove(e,num) {
+        if(num == 1) {
+          $(e.target).parent().children(":first").attr('src','./images/commen/unit-onchange.png')
+        } else if (num == 2) {
+          $(e.target).parent().children(":first").attr('src','./images/commen/unit-onchange1.png')
+        }
+      }
+      function goOut(e,num) {
+        if(num == 1) {
+          $(e.target).parent().children(":first").attr('src','./images/commen/unit-on.png')
+        } else if (num == 2) {
+          $(e.target).parent().children(":first").attr('src','./images/commen/unit-deter.png')
+        }
+      }
+  </script>
+  <script type="text/javascript">
+    var q1_arr = [] //第一题输入的input的值
+    var q1_data = [1,5,39,33] //正确答案
+    var q1_arrs = [] //第一题拖拽的值
+    var q1_datas = [2,1,4,3,5] //正确的答案
+    var q2_arr = []
+    var q4_arr = [] //第四题值
+    var q4_data = [47,50,25,15,90,47,88,82,42,17,22,41,13,85,69,70,14,80] //第四题正确答案
+    var q5_arr = [] //第五题值
+    var q5_data = [72,37,61,7,2,3,7,3,3,6,1]
+    var rightObj6_1 = { //第六题答案
+      type: '0',
+      data: [12,3],
+      sort: false
+    }
+
+    var rightObj6_2 = { //第六题答案
+      type: '0',
+      data: [12,15],
+      sort: false
+    }
+
+    var rightObj7_1 = { //第七题答案
+      type: '1',
+      data: [25,17],
+      sort: true
+    }
+
+    var q8_arr = []; //第8题输入的答案
+    var q8_data = [[100,33,58,9],[100,33,27,40],[100,33,64,3],[100,58,27,15],[100,27,64,9]]; //第8题的正确答案
+    var q9_arr = []; //第9题输入的答案
+    var q9_data = [8,2,6,5]
+    var total_question_num = 9;    //一共有多少题
+    var current_question = 1;       //当前是第几题
+    var animate_duration = 3000   //动画时长
+    var sorce = 0;   //当前得分，
+    var total_answer_time = 1250;     //总答题时间 单位：秒
+    var spend_time = 1;   //耗费的时间
+    var count_timer = null;
+    var isScore = []
+    var flag = true //动画没完成不能点击上一题和下一题
+    var answers = [] //答了几道
+    var answers_num = 0 //答了的数量
+    var set = null //用来清除定时器
+    var newFlag = true
+    $(function () {
+      // showOverPop('.out-border', 3, 6, 5) 
+      setisScoreArr();
+      startTimer();      //开始正计时
+      initTimer(total_answer_time, handTimeleOver);  //开始倒计时
+      autoFocus();    //自动对焦
+      // audioPlay();
+      setTimeout(() => {
+        getDrag('cs-cm1', 'check_box1', 'mobile_box1')
+      }, 2000);
+    })
+
+    //设置已经得分的数组
+    function setisScoreArr() {
+      for(var i = 0; i < total_question_num; i++) {
+          isScore[i] = -1
+      }
+    }
+
+    //音频播发 id属性=>如q1-audio
+    function audioPlay() {
+      if (current_question == 1) {
+        $("#q1-audio")[0].play()
+      } else if (current_question == 2) {
+        $("#q2-audio")[0].play()
+      } else if (current_question == 3) {
+        $("#q3-audio")[0].play()
+      } else if (current_question == 4) {
+        $("#q4-audio")[0].play()
+      }
+    }
+
+    //自动计时
+    function startTimer() {
+      count_timer = setInterval(function () {
+          if (spend_time == total_answer_time) {
+              showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time);
+              clearInterval(count_timer);
+          } else {
+              spend_time++
+          }
+      }, 1000);
+    }
+
+    //题目自动对焦
+    function autoFocus() {
+      $('.question-con .q' + current_question + ' input').eq(0).focus()
+    }
+
+    //倒计时结束的操作
+    function handTimeleOver() {
+      $('.timer').hide()
+    }
+
+    //倒计时函数 set_time=>设置的倒计时时长  ,   callBack=>回调函数
+    function initTimer(set_time, callBack) {
+      var time = set_time; //倒计时的时长
+      var progress_width = 100
+      // var p = document.getElementsById("time");
+       set = setInterval(function () {
+          time--;
+          progress_width -= progress_width / time
+          $('.progress-bg').css("width", progress_width + '%')
+          if (time === 30) {
+            $('#ani-audio-end')[0].play()
+          } 
+          if (time === 0) {
+              $('.progress-bg').css("width", "0")
+              clearInterval(set);
+              clearInterval(count_timer)
+              callBack()
+          }
+      }, 1000);
+    }
+
+    //设置答题结束时的弹窗
+    function showOverPop(father_containter, star_num, total_question, total_right, total_time) {
+      var total_time_ = formatSeconds(total_time);
+      var pop_html = "<div class='over-pop'><div class='over-masking'><img src='./images/commen/over-pop/making-img.png'></div><div class='pop-bg'><img src='./images/commen/over-pop/over-modal.png' alt=''><div class='pop-inner'><img src='./images/commen/over-pop/pop-wrapper.png' alt=''><div>完成：<span id='total-question'>4</span></div><div>做对：<span id='total-right'></span></div><div>用时：<span id='total-time'>"+total_time_+"</span></div></div><div class='stars'><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div></div><div class='answer-again' onclick='ansewerAgain()'><img src='./images/commen/over-pop/play-again.png' alt=''></div></div></div>"
+      $(father_containter).append(pop_html)
+      var star_item = $('.star-item')
+      for (var i = 0; i < star_num; i++) {
+          $('.star-item').eq(i).children('img').attr('src', './images/commen/over-pop/star.png')
+      }
+      $('#total-question').html(total_question);  //设置框内的题目总数
+      $('#total-right').html(total_right);   //设置框内的题目正确数
+      $('.timer').hide();    //隐藏倒计时
+    }
+
+    //再来一次
+    function ansewerAgain() {
+      window.location.reload()
+    }
+
+    //上一题
+    function lastButton() {
+      if (!flag) return
+      if (!newFlag) return
+      delInputValue()
+      removeMyDrag(total_question_num)
+      // pauseAll()
+      if (current_question == 1) { //第一题无法上一题
+        return false;
+      } else if (current_question) { 
+        current_question--;
+        if (current_question == 1) {
+          newFlag = false
+          setTimeout(function () {
+            getDrag('cs-cm1', 'check_box1', 'mobile_box1')
+          }, 1000)
+        } else if (current_question == 6) {
+          newFlag = false
+          setTimeout(() => {
+            toDrag('cs-cm6', 'checkbox6', 'move_box6')
+          }, 1800);
+        } else if (current_question == 7) {
+          newFlag = false
+          setTimeout(() => {
+            toDrag('cs-cm7', 'checkbox7', 'move_box7')
+          }, 1800);
+        } else if (current_question == 8) {
+          newFlag = false
+          setTimeout(() => {
+            toDrag('cs-cm8', 'checkbox8', 'move_box8')
+          }, 1800);
+        }
+        $('.inner-border').removeClass('slidein').addClass('slideout');
+        setTimeout(function () {
+          // audioPlay()
+          $('.inner-border').removeClass('slideout').addClass('slidein');
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
+          autoFocus();    //自动对焦
+          newFlag = true
+        }, 500)
+      }
+    }
+
+    //下一题
+    function nextButton() {
+      if (!flag) return
+      if (!newFlag) return
+      delInputValue()
+      removeMyDrag(total_question_num)
+      // pauseAll()
+      if (current_question < total_question_num) {
+        current_question++;
+        if (current_question == 1) {
+          newFlag = false
+          setTimeout(function () {
+            getDrag('cs-cm1', 'check_box1', 'mobile_box1')
+          }, 1000)
+        } else if (current_question == 6) {
+          newFlag = false
+          setTimeout(() => {
+            toDrag('cs-cm6', 'checkbox6', 'move_box6')
+          }, 1800);
+        } else if (current_question == 7) {
+          newFlag = false
+          setTimeout(() => {
+            toDrag('cs-cm7', 'checkbox7', 'move_box7')
+          }, 1800);
+        } else if (current_question == 8) {
+          newFlag = false
+          setTimeout(() => {
+            toDrag('cs-cm8', 'checkbox8', 'move_box8')
+          }, 1800);
+        }
+        $('.inner-border').removeClass('slidein').addClass('slideout');
+        setTimeout(function () {
+            // audioPlay()
+            $('.inner-border').removeClass('slideout').addClass('slidein');
+            $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+            autoFocus();    //自动对焦
+            newFlag = true
+        }, 500)
+      } else { //如果是最后一题,显示弹窗
+        var stars = calcStars() //计算星星数量
+        // console.log('1111')
+        setTimeout(function () {
+            if (spend_time < total_answer_time) {
+              showOverPop('.out-border', stars, answers_num, sorce, spend_time)
+            } else {
+              showOverPop('.out-border', stars, answers_num, sorce, total_answer_time)
+            }
+            clearInterval(count_timer);
+            clearInterval(set);
+        }, 500);
+      }
+    }
+    //计算获得星星数量
+    function calcStars() {
+      var persent = sorce / total_question_num
+      var star_num = Math.ceil(6 * persent);
+      return star_num
+    }
+
+    // //已答了几道题
+    function fewAnswer() {
+      answers[current_question - 1] = -1
+      var answer = null
+      for(var i = 0; i < answers.length; i++) {
+        if (answers[i] == -1) {
+          answer ++
+        }
+      }
+      return answer
+    }
+    //提交答案
+    function submitAnswer() {
+      removeMyDrag(total_question_num)
+      var result = null;
+      if (current_question == 1) {    //第一题
+        answers_num = fewAnswer()
+        var result1 = calcQuestion(q1_arr, q1_data)
+        var result2 = goDrag(q1_arr, q1_data, 'check_box1')
+        result = result1 && result2
+      } else if (current_question == 2) {
+        answers_num = fewAnswer()
+        result = (q2_arr.indexOf('0') == -1 && q2_arr.length == 6) ? true : false
+      } else if (current_question == 3) {
+        answers_num = fewAnswer()
+        result = calcQuestion(q3_arr, q3_data)
+      } else if (current_question == 4) {
+        answers_num = fewAnswer()
+        result = calcQuestion(q4_arr, q4_data)
+      } else if (current_question == 5) {
+        answers_num = fewAnswer()
+        result = calcQuestion(q5_arr, q5_data)
+      } else if (current_question == 6) {
+        var newCheck = document.getElementsByClassName('checkbox6')
+        if(newCheck[0].children[0]) {
+          var symbal_1 = newCheck[0].children[0].dataset.list == 1 ? true : false
+        } 
+        if(newCheck[1].children[0]) {
+          var symbal_2 = newCheck[1].children[0].dataset.list == 1 ? true : false
+        }
+        var resultTwo1 = getUserObj(['num1-1', 'num1-2'], 'num1-3', 0, true, rightObj6_1)
+        var resultTwo2 = getUserObj(['num2-1', 'num2-2'], 'num2-3', 0, true, rightObj6_2)
+        result = resultTwo1 && resultTwo2 && symbal_1 && symbal_2
+      } else if (current_question == 7) {
+        var newCheck = document.getElementsByClassName('checkbox7')
+        if(newCheck[0].children[0]) {
+          var symbal_7 = newCheck[0].children[0].dataset.list == 2 ? true : false
+        } 
+        var resultTwo3 = getUserObj(['num3-1', 'num3-2'], 'num3-3', 1, false, rightObj7_1)
+        result = symbal_7 && resultTwo3
+      } else if (current_question == 8) {
+        removeMyDrag(total_question_num)
+        var newCheck = document.getElementsByClassName('checkbox8')
+        if(newCheck[0].children[0]) {
+          var symbal_8 = newCheck[0].children[0].dataset.list == 2 ? true : false
+        }
+        if(newCheck[1].children[0]) {
+          var symbal_9 = newCheck[1].children[0].dataset.list == 2 ? true : false
+        }
+        if(newCheck[2].children[0]) {
+          var symbal_10 = newCheck[2].children[0].dataset.list == 2 ? true : false
+        }
+        if(newCheck[3].children[0]) {
+          var symbal_11 = newCheck[3].children[0].dataset.list == 2 ? true : false
+        }
+        var resultFive = fiveQuestion(q8_arr, q8_data)
+        result = resultFive && symbal_8 && symbal_9 && symbal_10 && symbal_11
+      } else if (current_question == 9){
+        answers_num = fewAnswer()
+        result = calcQuestion(q9_arr, q9_data)
+      }
+      if (result) {
+          if (isScore.indexOf(current_question) == -1) {
+            sorce++;       //分数+1
+            isScore[current_question - 1] = current_question;   //添加到已回答数组
+            setScoreBoard()   //设置计分板
+          }
+          showFootballAnimation(1);   //播放答对动画
+      } else {
+          showFootballAnimation(0);   //播放答错动画
+      }
+      setTimeout(function () {
+          delInputValue()  //删除所有input中的值，清空输入的数组
+          autoFocus()  //自动对焦
+      }, 1500);
+      // console.log(fewAnswer())
+    }
+
+    //切换题目后删除所有input中的值
+    function delInputValue() {
+      $('.question-con input').each(function () {
+          this.value = '';
+          q1_arr = [];
+          q2_arr = [];
+          q3_arr = [];
+          q5_arr = [];
+          q8_arr = [];
+          q9_arr = [];
+          // $('.question-con .checkbox').children().remove()
+          // mobile_box1
+      })
+
+      $('.q1-bottom').html('<div class="mobile_box1" data-list="1"></div><div class="mobile_box1" data-list="2"></div><div class="mobile_box1" data-list="3"></div><div class="mobile_box1" data-list="4"></div><div class="mobile_box1" data-list="5"></div>')
+      $('.question-con .check_box1').children() && $('.question-con .check_box1').children().remove()
+      $('.question-con .checkbox6').children() && $('.question-con .checkbox6').children().remove()
+      $('.question-con .checkbox7').children() && $('.question-con .checkbox7').children().remove()
+      $('.question-con .checkbox8').children() && $('.question-con .checkbox8').children().remove()
+      $('.q2-select-change img').attr("src", '')
+    }
+
+
+    //踢足球  status = 0答错      status = 1答对 
+    function showFootballAnimation(status) {
+      flag = false
+      $('.cant-click').show()
+      $('.inner-border').removeClass('slidein').addClass('slideout');   //题目
+      current_question++;
+      var showpop = false;
+      if(current_question > total_question_num) {
+          showpop = true
+      }
+      if (status == 1) {  //答对的动画
+        setTimeout(function () {
+            $('.answer-ani .ani-gif').html('<img src="./images/animbg/football-success.gif?' + new Date().getTime() + '" alt="">')
+            // $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
+            setTimeout(function () {
+                $('.football').hide();
+                $('.goalkeeper').hide();
+            }, 30)
+            $('#ani-audio-success')[0].play()
+        }, 500)
+        setTimeout(function () {
+            $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
+        }, 1500);
+        setTimeout(function () {
+            if (!showpop) {
+              $('.inner-border').removeClass('slideout').addClass('slidein');
+                
+            } else {
+              showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
+            }
+            $('.answer-ani .ani-gif').html('')
+            $('.answer-ani .ani-gif-3').html('');
+            $('.cant-click').hide();
+            $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+            setTimeout(function () {
+                $('.football').show();
+                $('.goalkeeper').show();
+            }, 50)
+            flag = true
+        }, animate_duration)
+      }else if(status == 0){ //答错的动画
+        setTimeout(function () {
+            $('.answer-ani .ani-gif-2').html('<img src="./images/animbg/football-fail.gif?' + new Date().getTime() + '" alt="">')
+            setTimeout(function () {
+                $('.football').hide();
+                $('.goalkeeper').hide();
+            }, 50)
+            $('#ani-audio-fail')[0].play()
+            // $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">')
+        }, 500)
+        setTimeout(function () {
+            $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">');
+        }, 1000);
+        setTimeout(function () {
+            if (!showpop) {
+                $('.inner-border').removeClass('slideout').addClass('slidein');
+            } else {
+                showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
+            }
+            $('.answer-ani .ani-gif-2').html('')
+            $('.answer-ani .ani-gif-4').html('');  
+            $('.cant-click').hide();
+            $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+            setTimeout(function () {
+                $('.football').show();
+                $('.goalkeeper').show();
+            }, 50)
+            flag = true
+        }, animate_duration)
+      }
+      setTimeout(function () {
+        if (current_question == 1) {
+          getDrag('cs-cm1', 'check_box1', 'mobile_box1')
+          window.onresize = function () {
+            getDrag('cs-cm1', 'check_box1', 'mobile_box1')
+          }
+        } else if (current_question == 6) {
+          toDrag('cs-cm6', 'checkbox6', 'move_box6')
+          window.onresize = function () {
+            toDrag('cs-cm6', 'checkbox6', 'move_box6')
+          }
+        } else if (current_question == 7) {
+          toDrag('cs-cm7', 'checkbox7', 'move_box7')
+          window.onresize = function () {
+            toDrag('cs-cm7', 'checkbox7', 'move_box7')
+          }
+        }
+      }, 4000);
+    }
+
+    //设置计分板数字
+    function setScoreBoard() {
+      $('.score-board .score').html(sorce)
+    }
+    //监听输入框事件
+    function setInputArr(m_arr, e, i) {
+      m_arr[i] = e.target.value;
+    }
+
+    //第四题监听输入的内容
+    function setChange(m_arr, ele) {
+      if (ele == 1 || ele == 2) {
+        $(".q4-inform").eq(0).html('<img src="./images/commen/unitOne/zs-q4-'+ ele +'.png" alt="">')
+        m_arr[0] = ele
+      } else if (ele == 3 || ele == 4) {
+        $(".q4-inform").eq(1).html('<img src="./images/commen/unitOne/zs-q4-'+ ele +'.png" alt="">')
+        m_arr[1] = ele
+      }
+    }
+
+    //判断第一题是否正确
+    function calcQuestion(m_arr, right_arr) {
+      var step = 0;
+      for (let i = 0; i < m_arr.length; i++) {
+          if (m_arr[i] == right_arr[i]) {
+            step++
+          }
+      }
+      // console.log(step)
+      if (step === right_arr.length) {
+          return true;
+      } else {
+          return false;
+      }
+    }
+
+    //判断第三题填空是否正确
+    function calcQuestions(m_arr, right_arr) {
+      var step = 0;
+      for (let i = 0; i < 2; i++) {
+          if (m_arr[i] == right_arr[i]) {
+            step++
+          }
+      }
+      if(m_arr[3] >= right_arr[3] && m_arr[3] <= (right_arr[3]+2)) {
+        step ++
+      } 
+      if(m_arr[2] >= right_arr[2] && m_arr[2] <= (right_arr[3]+2)) {
+        step ++
+      }
+      if (step === right_arr.length) {
+          return true;
+      } else {
+          return false;
+      }
+    }
+    //判断第一题拖拽是否正确
+    function goDrag(m_arr, right_arr, checkBox) {
+      var checkBox = document.getElementsByClassName(checkBox)
+      var step = 0
+      for (var i = 0; i < checkBox.length; i++) {
+        if (checkBox[i].children[0]) {
+          m_arr.push(checkBox[i].children[0].dataset.list)
+        }
+      }
+      for (let j = 0; j < m_arr.length; j++) {
+        if (m_arr[j] == right_arr[j]) {
+          step++
+        }
+      }
+      console.log(step)
+      if (step === right_arr.length) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    // 判断第二题是否正确
+    $('.q2-select-item').on('click', function () {
+      var index = parseInt($(this).attr('data-index'));
+      var right = parseInt($(this).attr('data-right'));
+      var newDate = parseInt($(this).attr('data-num'));
+      if (right == 1) {
+        $(this).siblings('.q2-select-change').children().eq(0).attr("src", './images/commen/unitThree/dayu.png')
+      } else if (right == 2) {
+        $(this).siblings('.q2-select-change').children().eq(0).attr("src", './images/commen/unitThree/xiaoyu.png')
+      } else if (right == 3) {
+        $(this).siblings('.q2-select-change').children().eq(0).attr("src", './images/commen/unitThree/dengyu.png')
+      }
+      q2_arr[index] = right;
+    })
+
+    //判断第8题是否正确
+    function changeEr(arr, size) {  // arr是一维数组 size是二维数组包含几条数据
+      var arr2 = []
+      for (var i = 0; i < arr.length; i = i + size) {
+        arr2.push(arr.slice(i, i + size))
+      }
+      return arr2 // 新的二维数组
+    }
+    function fiveQuestion(m_arr, right_arr) {
+      var step = 0;
+      var newFlag = true;
+      var newArr = changeEr(m_arr, 4)
+      for (var i = 0; i < newArr.length; i++) {
+        if (newArr[i][0] != 100){
+          newFlag = false
+        } 
+        if (newArr[i][0] - newArr[i][1] - newArr[i][2] != newArr[i][3]) {
+          newFlag = false
+        } 
+        parseInt(newArr[i].sort())
+      }
+      for (var k = 0; k < newArr.length; k++) {
+        for (var j = k + 1; j < newArr.length; j++) {
+          if (newArr[k].sort().toString() == newArr[j].sort().toString()){
+            newFlag = false
+          }
+        }
+      }
+      if (newFlag == false) {
+        return newFlag
+      }
+      for (var i = 0; i < right_arr.length; i++) {
+        parseInt(right_arr[i].sort())
+      }
+
+      for (var i = 0; i < newArr.length; i++) {
+        for (var j = 0; j < right_arr.length; j++){
+          if (newArr[i].toString() == right_arr[j].toString()) {
+            step ++
+          }
+        }
+      }
+
+      if (step === 2) {
+          return true;
+      } else {
+          return false;
+      }
+    }
+  </script>
+</body>
+
+</html>

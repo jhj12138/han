@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组全等判断</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="item">
+      一、看图写算式
+      <div>1.每盘有（<input id="numberG" type="text">）根香肠，共有（<input id="numberK" type="text">）盘，一共有<input id="sumD" type="text">根香肠</div>
+      <div>加法算式：<input id="numberA" value='' type="text"> + <input id="numberB" value='' type="text"> + <input id="numberC" value='' type="text"> + <input id="numberD" value='' type="text"> + <input id="numberE" value='' type="text"> =  <input id="sumA" value='' type="text"></div>
+      <div> 乘法算式：<input id="numberF" value='' type="text"> X <input id="numberM" value='' type="text"> =  <input id="sumB" value='' type="text"></div>
+      或<input id="numberH" value='' type="text"> X <input id="numberI" value='' type="text"> =  <input id="sumC" value='' type="number">
+      <button id="submitBtn">提交</button>
+    </div>
+  <script>
+    var rightObj = {
+      type: 0,
+      data: [1, 1, 1, 1, 2],
+      sort: false
+    }
+    var rightObj2 = {
+      type: 2,
+      data: [2, 3],
+      sort: true
+    } 
+
+    var rightObj3 = {
+      type: 2,
+      data: [3, 2],
+      sort: true
+    }
+
+    var rightObj4 = {
+      type: 2,
+      data: [5, 3],
+      sort: true
+    }
+
+    var submitBtn = document.getElementById('submitBtn')
+    submitBtn.addEventListener('click', function() {
+      var a = getUserObj(['numberA', 'numberB', 'numberC', 'numberD', 'numberE'],'sumA', 0, false, rightObj);
+      var b = getUserObj(['numberF', 'numberM'],'sumB', 2, true, rightObj2);
+      var c = getUserObj(['numberH', 'numberI'],'sumC', 2, true, rightObj3);
+      var d = getUserObj(['numberG', 'numberK'],'sumD', 2, true, rightObj4);
+      console.log(a, b, c, d)
+      if(a && b && c && d) {
+        alert('正确')
+      }else {
+        alert('错误')
+      }
+    })
+  </script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数组全等判断</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="item">
+      一、请你填一填
+      <div>1.小朋友做间操，每行6人，排7行。一共有几人</div>
+      <input id="numberA" value='' type="number"> X <input id="numberB" value='' type="number">X <input id="numberC" value='' type="number"> =  <input id="sumA" value='' type="number">
+
+      <div class="select">
+        2.分给30个小朋友，每人能分到一个吗？ 
+        <div class="select-item" id="item-1" data-select="0" onclick="selectItem(event)">能</div>
+        <div class="select-item" id="item-2" data-select="1" onclick="selectItem(event)">不能</div>
+      </div>
+      <button id="submitBtn">提交</button>
+
+    </div>
+  <script>
+    var rigth_select = 0;
+    var currentSelectId = '';
+    var select_Color = '#ff6140'
+
+    var rightObj = {
+      type: '2',
+      data: [6, 7, 2],
+      sort: false
+    }
+    var submitBtn = document.getElementById('submitBtn')
+    submitBtn.addEventListener('click', function() {
+      getUserObj(['numberA', 'numberB', 'numberC'],'sumA', 2, false)
+    })
+
+  
+  </script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>二上数学人教版</title>
+  <meta charset=utf-8>
+  <meta name="keywords" content="小学数学">
+  <meta name="description" content="小学数学">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/unitcss.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/orally.css">
+</head>
+
+<body>
+  <div class="unit">
+    <!-- 背景 -->
+    <img src="./images/commen/unit-bg.png" alt="数学">
+    <div class="unit-container">
+      <!-- 背景上的图片 -->
+      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
+      <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
+      <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
+      <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
+      <!-- 返回按钮-->
+      <a href="../index.html">
+        <div class="index-return">
+          <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
+          <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
+        </div>
+      </a>
+      <!-- 指示牌 -->
+      <div class="unit-sign">
+        <img src="./images/commen/unit-ladder.png" alt="" class="unit-ladder">
+        <a href="./test-3-clear.html">
+          <div class="study-zhashi"><img src="./images/commen/clear-box.png" alt=""></div>
+        </a>
+        <a href="./test-3-strong.html">
+            <div class="study-clear"><img src="./images/commen/solid-box.png" alt=""></div>
+        </a>
+        <a href="./test-3-smart.html">
+            <div class="study-smart"><img src="./images/commen/smart-box.png" alt=""></div>
+        </a>
+        <div class="kousuan unit-select">
+          <img src="./images/commen/oral-box.png" alt="">
+        </div>
+      </div>
+      <!-- 主内容 -->
+      <!-- 外边框 -->
+      <div class="out-border">
+        <img src="./images/commen/out-border.png" alt="">
+        <!-- 背景动画 -->
+        <!-- 投篮没有成功 -->
+        <div class="ks-ani-gif">
+          <!-- <img src="./images/animbg/shooting-fail.gif" alt=""> -->
+        </div>
+        <!-- 投篮成功 -->
+        <div class="ks-ani-gif-2">
+            <img src="" alt="" style="width: 100%;">
+          <!-- <img src="./images/animbg/shooting-ok.gif" alt=""> -->
+        </div>
+        <!-- 投篮准备 -->
+        <div class="ks-ani-gif-3">
+          <img src="./images/animbg/shooting-ready.gif" alt="">
+        </div>
+        <div class="answer-ani">
+          <div class="answer-ani-imgs">
+            <img src="./images/ks/kousuan-bg.png" alt="" class="answer-ani-img">
+          </div>
+          <div class="ks-ani-gif-4"></div>
+        </div>
+        <!-- 时间快到了的声音 -->
+        <audio src = "../assets_math/audio/time_end.mp3" id = "ani-audio-end"></audio>
+        <!-- 背景音乐 -->
+        <audio src="../assets_math/audio/ks-bg.mp3" id = "audio-ks-bg" loop></audio>
+        <!-- 结束时根据答对的题目播发不同的声音 -->
+        <audio src="../assets_math/audio/ks-sound1.mp3" id = "audio-ks-sound1"></audio>
+        <audio src="../assets_math/audio/ks-sound2.mp3" id = "audio-ks-sound2"></audio>
+        <audio src="../assets_math/audio/ks-sound3.mp3" id = "audio-ks-sound3"></audio>
+        <audio src="../assets_math/audio/ks-sound4.mp3" id = "audio-ks-sound4"></audio>
+        <audio src="../assets_math/audio/ks-sound5.mp3" id = "audio-ks-sound5"></audio>
+        <!-- 口算主界面 -->
+        <div class="orally-board">
+          <img src="./images/ks/blackboard.png" alt="">
+          <div class="orally-top">
+            <span id = "first-num"></span>
+            <span id = "symbol"></span>
+            <span id = "last-num"></span>
+            <span>=</span>
+            <div id = 'orally-result'>
+            </div>
+          </div>
+          <div class="orally-botton">
+            <div class="orally-btn-top">
+              <div class="orally-btns" onclick="setVal(1)" onmouseover="goMove(event,1)" onmouseout="goOut(event,1)" onmousedown="goDown(event,1)" onmouseup="goUp(event,1)">
+                <img src="./images/ks/kousuan1.png" alt="">
+              </div>
+              <div class="orally-btns" onclick="setVal(2)" onmouseover="goMove(event,2)" onmouseout="goOut(event,2)" onmousedown="goDown(event,2)" onmouseup="goUp(event,2)">
+                <img src="./images/ks/kousuan2.png" alt="">
+              </div>
+              <div class="orally-btns" onclick="setVal(3)" onmouseover="goMove(event,3)" onmouseout="goOut(event,3)" onmousedown="goDown(event,3)" onmouseup="goUp(event,3)">
+                <img src="./images/ks/kousuan3.png" alt="">
+              </div>
+              <div class="orally-btns" onclick="setVal(4)" onmouseover="goMove(event,4)" onmouseout="goOut(event,4)" onmousedown="goDown(event,4)" onmouseup="goUp(event,4)">
+                <img src="./images/ks/kousuan4.png" alt="">
+              </div>
+              <div class="orally-btns" onclick="setVal(5)" onmouseover="goMove(event,5)" onmouseout="goOut(event,5)" onmousedown="goDown(event,5)" onmouseup="goUp(event,5)">
+                <img src="./images/ks/kousuan5.png" alt="">
+              </div>
+              <div class="clear-btn" onclick="clearVal()" onmouseover="goMoveClear(event,0)" onmouseout="goOutClear(event,0)">
+                <img src="./images/ks/remove.png" alt="" >
+                <img src="./images/ks/remove-txt.png" alt="" class="remove-txt">
+              </div>
+            </div>
+            <div class="orally-btn-button">
+              <div class="orally-btns" onclick="setVal(6)" onmouseover="goMove(event,6)" onmouseout="goOut(event,6)" onmousedown="goDown(event,6)" onmouseup="goUp(event,6)">
+                <img src="./images/ks/kousuan6.png" alt="">
+              </div>
+              <div class="orally-btns" onclick="setVal(7)" onmouseover="goMove(event,7)" onmouseout="goOut(event,7)" onmousedown="goDown(event,7)" onmouseup="goUp(event,7)">
+                <img src="./images/ks/kousuan7.png" alt="">
+              </div>
+              <div class="orally-btns" onclick="setVal(8)" onmouseover="goMove(event,8)" onmouseout="goOut(event,8)" onmousedown="goDown(event,8)" onmouseup="goUp(event,8)">
+                <img src="./images/ks/kousuan8.png" alt="">
+              </div>
+              <div class="orally-btns" onclick="setVal(9)" onmouseover="goMove(event,9)" onmouseout="goOut(event,9)" onmousedown="goDown(event,9)" onmouseup="goUp(event,9)">
+                <img src="./images/ks/kousuan9.png" alt="">
+              </div>
+              <div class="orally-btns" onclick="setVal(0)" onmouseover="goMove(event,0)" onmouseout="goOut(event,0)" onmousedown="goDown(event,0)" onmouseup="goUp(event,0)">
+                <img src="./images/ks/kousuan0.png" alt="">
+              </div>
+              <div class="clear-btns" onclick="ensure()" onmouseover="goMoveClear(event,1)" onmouseout="goOutClear(event,1)">
+                <img src="./images/ks/determine.png" alt="">
+                <img src="./images/ks/determine-txt.png" alt="" class="determine-txt">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 计分牌 -->
+        <div class="scoreboard">
+          <img src="./images/ks/scoreboard.png" alt="">
+          <div class="score">0</div>
+        </div>
+        <!-- 题数 -->
+        <div class="question-num">
+          <img src="./images/ks/tishu.png" alt="">
+          <div class="question-num-txt">
+            <span>完成:</span>
+            <span id = "degree">0</span>
+            <span>/15</span>
+          </div>
+        </div>
+        <!-- 说明 -->
+        <div class="declare">
+          <div class="declare-instxt" onmouseover="goMoves(event)" onmouseout="goOuts(event)">
+            <div class="declare-ins">
+              <img src="./images/ks/instructions.png" alt="" >
+            </div>
+            <img src="./images/ks/instructions-txt.png" alt="" class="instructions-txt">
+            <img src="./images/ks/instructions-txts.png" alt="" class="instructions-txts">
+          </div>
+        </div>
+        <!-- 篮板和篮框 -->
+        
+        <div class="baskstands">
+          <div class="basketry">
+            <img src="./images/ks/basketry.png" alt="">
+          </div>
+          <div class="rim">
+            <img src="./images/ks/rim.png" alt="">
+          </div>
+        </div>
+        <!-- 倒计时 -->
+        <div class="timer">
+            <div class="timer-icon"><img src="./images/commen/timer-icon.png" alt=""></div>
+            <div class="timer-progress">
+                <div class="progress-bg"></div>
+            </div>
+        </div>
+
+        <!-- 答题结束弹窗 -->
+        
+      </div>
+    </div>
+  </div>
+  <!-- 引入jq -->
+  <script type='text/javascript' src='./js/jquery-1.11.3.min.js'></script>
+  <script type='text/javascript' src='./js/index.js'></script>
+  <script type="text/javascript">
+  var total_question_num = 3;    //一共有多少题
+  var current_question = 1;       //当前是第几题
+  var animate_duration = 3000   //动画时长
+  
+  function goMoves(e) {
+    $(e.target).parent().children(".instructions-txt").eq(0).attr('src','./images/ks/instructions-txt1.png')
+  }
+  function goOuts(e) {
+    $(e.target).parent().children(".instructions-txt").eq(0).attr('src','./images/ks/instructions-txt.png')
+  }
+
+
+  //再来一次
+  function ansewerAgain() {
+    window.location.reload()
+  }
+
+  </script>
+  <script type='text/javascript'>
+  var  titleNum = 0 //题数
+  var set = null //用来清除定时器
+  var times = null //答题结束时获取使用的时间
+  var setTime = 30 //设置倒计时的时间
+  initTimer(setTime, handleOver)
+  
+  $(function() {
+    $('#audio-ks-bg')[0].play() 
+  })
+
+  // 鼠标移动上去改变
+  function goMove(e,num) {
+    e.target.src = './images/ks/kousuan1'+num+'.png'
+  }
+
+  // 鼠标移动上去改变
+  function goOut(e,num) {
+    e.target.src = './images/ks/kousuan'+num+'.png'
+  }
+  // 鼠标按下
+  function goDown(e,num) {
+    e.target.src = './images/ks/kousuan2'+num+'.png'
+  }
+  // 鼠标弹起
+  function goUp(e, num) {
+    e.target.src = './images/ks/kousuan'+num+'.png'
+  }
+
+  function goMoveClear(e, num) {
+    if (num == 0) {
+      $(e.target).parent().children(":first").attr('src','./images/ks/remove1.png')
+      // e.target.src = './images/ks/remove1.png'
+    } else if (num == 1) {
+      $(e.target).parent().children(":first").attr('src','./images/ks/determine1.png')
+      // e.target.src = './images/ks/determine1.png'
+    }
+  }
+
+  function goOutClear(e, num) {
+    if (num == 0) {
+      $(e.target).parent().children(":first").attr('src','./images/ks/remove.png')
+      // e.target.src = './images/ks/remove1.png'
+    } else if (num == 1) {
+      $(e.target).parent().children(":first").attr('src','./images/ks/determine.png')
+      // e.target.src = './images/ks/determine1.png'
+    }
+  }
+  //倒计时函数 set_time=>设置的倒计时时长  ,   callBack=>回调函数 
+  function initTimer(set_time, callBack) {
+    var time = set_time; //倒计时的时长
+    var progress_width = 100
+    // var p = document.getElementsById("time");
+        set = setInterval(function () {
+        time--;
+        progress_width -= progress_width / time
+        $('.progress-bg').css("width", progress_width + '%')
+        if (time === 50) {
+          $('#ani-audio-end')[0].play()
+        } 
+        if (time === 0) {
+          $('.progress-bg').css("width", "0")
+          clearInterval(set);
+          callBack()
+        }
+        times = set_time - time
+        
+    }, 1000);
+  }
+
+
+
+  var flag = true
+  // 算题
+  var answerBox = document.getElementById('orally-result')
+  var firstNumBox = document.getElementById('first-num')
+  var lastNumBox = document.getElementById('last-num')
+  var symbolBox = document.getElementById('symbol')
+  var scoreBox = document.getElementsByClassName('score')[0]
+  var degree = document.getElementById('degree')
+  var symbolArr = ['+','-'] //符号
+  var doRight = 0 //答对的题数
+
+  
+  function init() { //初始化题目
+    var symbol = Math.floor(Math.random()*2)
+    clearVal()
+    var firstNum = parseInt(Math.random()*100)
+    var lastNum = parseInt(Math.random()*100)
+    symbolBox.innerHTML = symbolArr[symbol]
+    if(firstNum == 0 || lastNum == 0) {
+      init()
+      return
+    } 
+    if(symbol === 0){
+      if(firstNum + lastNum > 100) {
+        init()
+        return
+      }
+    }
+    if(symbol === 1){ //当符号为减号时执行这段代码
+      firstNumBox.innerHTML = firstNum
+      lastNumBox.innerHTML = lastNum
+      if(parseInt(firstNumBox.innerHTML,10) < parseInt(lastNumBox.innerHTML,10)){
+        var a = firstNumBox.innerHTML;
+        firstNumBox.innerHTML = lastNumBox.innerHTML;
+        lastNumBox.innerHTML = a;
+      }
+      return;
+    }
+    if(symbol === 3){ //如果除数为0时执行这段代码
+      firstNumBox.innerHTML = firstNum
+      lastNumBox.innerHTML = lastNum
+      if(lastNumBox.innerHTML == 0){
+        symbolBox.innerHTML = symbolArr[Math.floor(Math.random()*3)]
+      }
+      return;
+    }
+    firstNumBox.innerHTML = firstNum
+    lastNumBox.innerHTML = lastNum
+  }
+  init()
+
+  function setVal(val) { //输入的值不超过三个数
+    if(answerBox.innerHTML.length <= 2){
+      answerBox.innerHTML += val
+    }
+  }
+
+  function clearVal() { //清除框内数据
+    answerBox.innerHTML = ''
+  }
+
+  function accuracy(doRight) { //正确率
+    var stars = 0 //星星的数量
+    if(doRight == 15) {
+      stars = 6
+    } else if(doRight >= 13 && doRight <= 14) {
+      stars = 5
+    } else if(doRight >= 8 && doRight <= 12) {
+      stars = 4
+    } else if(doRight >=5  && doRight < 7) {
+      stars = 3
+    } else if(doRight == 0){
+      stars = 0
+    } else {
+      stars = 2
+    }
+    return stars
+  }
+  //不同的正确率播发不同的声音
+  function audioKs(star) {
+    if (star == 6) {
+      $("#audio-ks-sound1")[0].play()
+    } else if(star == 5) {
+      $("#audio-ks-sound2")[0].play()
+    } else if(star == 4) {
+      $("#audio-ks-sound3")[0].play()
+    } else if(star == 3) {
+      $("#audio-ks-sound4")[0].play()
+    } else if(star == 2 || star == 1 || star == 0) {
+      $("#audio-ks-sound5")[0].play()
+    }
+  }
+
+  function ensure() { 
+    if (flag) {
+      var firstVal = parseInt(firstNumBox.innerHTML)
+      var symbols = symbolBox.innerHTML
+      var lastVal = parseInt(lastNumBox.innerHTML)
+      var result = null
+      // console.log('answer ===',`${parseInt(firstVal) symbol parseInt(lastVal))}`;
+      switch (symbols) {
+        case '+':
+          result = firstVal + lastVal 
+          break;
+        case '-':
+          result = firstVal - lastVal 
+          break;
+        default:
+          break;
+      }
+      titleNum ++ 
+      if(titleNum <= 15) {
+        degree.innerHTML = titleNum
+      }
+      
+      //计分牌
+      if (result == answerBox.innerHTML){
+        showBallAnimation(1)
+        scoreBox.innerHTML = parseInt(scoreBox.innerHTML) + 1
+        // if(!parseInt(scoreBox.innerHTML)) {
+        //   scoreBox.innerHTML = '001'
+        // } else if(parseInt(scoreBox.innerHTML) <= 8) {
+        //   scoreBox.innerHTML = '00'+(parseInt(scoreBox.innerHTML) + 1).toString()
+        // } else if(parseInt(scoreBox.innerHTML) >= 9) {
+        //   scoreBox.innerHTML = '0'+ (parseInt(scoreBox.innerHTML) + 1).toString()
+        // }
+      } else {
+        showBallAnimation(0)
+      }
+      
+      doRight = parseInt(scoreBox.innerHTML) //做对的题数
+      //题数
+      if(titleNum < 15) {
+        init()
+      }else if (titleNum >= 15){ //答完十五道弹出弹框
+        var acctrue = accuracy(doRight)
+        setTimeout(function () {
+          $('#audio-ks-bg')[0].pause()
+          clearInterval(set)
+          var min = Math.floor(times%3600) 
+          var realTime = Math.floor(min/60) + "分"+ times%60 + "秒" //算出使用的时间
+          showOverPop('.out-border', acctrue, titleNum, doRight, realTime) 
+          $('.timer').fadeOut();
+          audioKs(acctrue)
+        },2500)
+      }
+    }
+  }
+  function handleOver() { //时间到弹出弹框
+    $('#audio-ks-bg')[0].pause() 
+    $('.timer').fadeOut();
+    var acctrue = accuracy(doRight)
+    audioKs(acctrue)
+    var min = Math.floor(setTime%3600) 
+    var realTime = Math.floor(min/60) + "分"+ setTime%60 + "秒" //算出使用的时间
+    showOverPop('.out-border', acctrue, titleNum, doRight, realTime)
+  }
+
+
+  //设置答题结束时的弹窗
+  function showOverPop(father_containter, star_num, total_question, total_right, total_time) {
+    var pop_html = "<div class='over-pop'><div class='over-masking'><img src='./images/commen/over-pop/making-img.png'></div><div class='pop-bg'><img src='./images/commen/over-pop/over-modal.png' alt=''><div class='pop-inner'><img src='./images/commen/over-pop/pop-wrapper.png' alt=''><div>完成：<span id='total-question'>6</span></div><div>做对：<span id='total-right'>0</span></div><div>用时：<span id='total-time'>"+total_time+"</span></div></div><div class='stars'><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div></div><div class='answer-again' onclick='ansewerAgain()'><img src='./images/commen/over-pop/play-again.png' alt=''></div></div></div>"
+    $(father_containter).append(pop_html)
+    var star_item = $('.star-item')
+    for (var i = 0; i < star_num; i++) {
+        $('.star-item').eq(i).children('img').attr('src', './images/commen/over-pop/star.png')
+    }
+    $('#total-question').html(total_question)
+    $('#total-right').html(total_right)
+  }
+
+
+  //篮球比赛的动画  status = 0答错      status = 1答对 
+  function showBallAnimation(status) {
+    if (status == 1) { //答对的动画
+      flag = false
+      setTimeout(function () {
+        $('.ks-ani-gif-3').hide()
+        fishAni1 ()
+        // $('.ks-ani-gif-2').html('<img src="./images/animbg/shooting-ok.gif?' + new Date().getTime() + '" alt="">')
+      }, 400)
+      setTimeout(function () {
+        $('.rim img').hide()
+      },1500)
+      // setTimeout(function () {
+      //   $('.rim img').show()
+      // },1110)
+      setTimeout(function () {
+        clearInterval(clearFish)
+        $('.ks-ani-gif-2 img').attr('src','')
+        $('.rim img').show()
+        $('.ks-ani-gif-3').show()
+        flag = true
+      }, 1800)
+    } else if (status == 0) { //答错动画
+      flag = false
+      setTimeout(function () {
+        $('.ks-ani-gif-3').hide()
+        $('.ks-ani-gif-2 img').attr('src','./images/animbg/shooting-fail.gif')
+        // $('.ks-ani-gif-2').html('<img src="./images/animbg/shooting-fail.gif?' + new Date().getTime() + '" alt="">')
+      }, 400)
+      setTimeout(function () {
+        $('.ks-ani-gif-2 img').attr('src','')
+        $('.rim').show()
+        $('.ks-ani-gif-3').show()
+        flag = true
+      }, 2500)
+    }
+  }
+  </script>
+</body>
+
+</html>
