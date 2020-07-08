@@ -507,20 +507,23 @@
             getDrag('cs-cm1', 'check_box1', 'mobile_box1')
           }, 1000)
         } else if (current_question == 6) {
+          removeMyDrag(total_question_num)
           newFlag = false
           setTimeout(() => {
             toDrag('cs-cm6', 'checkbox6', 'move_box6')
-          }, 1800);
+          }, 1000);
         } else if (current_question == 7) {
+          removeMyDrag(total_question_num)
           newFlag = false
           setTimeout(() => {
             toDrag('cs-cm7', 'checkbox7', 'move_box7')
-          }, 1800);
+          }, 1000);
         } else if (current_question == 8) {
+          removeMyDrag(total_question_num)
           newFlag = false
           setTimeout(() => {
             toDrag('cs-cm8', 'checkbox8', 'move_box8')
-          }, 1800);
+          }, 1000);
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
@@ -548,16 +551,19 @@
             getDrag('cs-cm1', 'check_box1', 'mobile_box1')
           }, 1000)
         } else if (current_question == 6) {
+          removeMyDrag(total_question_num)
           newFlag = false
           setTimeout(() => {
             toDrag('cs-cm6', 'checkbox6', 'move_box6')
           }, 1800);
         } else if (current_question == 7) {
+          removeMyDrag(total_question_num)
           newFlag = false
           setTimeout(() => {
             toDrag('cs-cm7', 'checkbox7', 'move_box7')
           }, 1800);
         } else if (current_question == 8) {
+          removeMyDrag(total_question_num)
           newFlag = false
           setTimeout(() => {
             toDrag('cs-cm8', 'checkbox8', 'move_box8')
@@ -625,6 +631,7 @@
         answers_num = fewAnswer()
         result = calcQuestion(q5_arr, q5_data)
       } else if (current_question == 6) {
+        answers_num = fewAnswer()
         var newCheck = document.getElementsByClassName('checkbox6')
         if(newCheck[0].children[0]) {
           var symbal_1 = newCheck[0].children[0].dataset.list == 1 ? true : false
@@ -636,6 +643,7 @@
         var resultTwo2 = getUserObj(['num2-1', 'num2-2'], 'num2-3', 0, true, rightObj6_2)
         result = resultTwo1 && resultTwo2 && symbal_1 && symbal_2
       } else if (current_question == 7) {
+        answers_num = fewAnswer()
         var newCheck = document.getElementsByClassName('checkbox7')
         if(newCheck[0].children[0]) {
           var symbal_7 = newCheck[0].children[0].dataset.list == 2 ? true : false
@@ -643,6 +651,7 @@
         var resultTwo3 = getUserObj(['num3-1', 'num3-2'], 'num3-3', 1, false, rightObj7_1)
         result = symbal_7 && resultTwo3
       } else if (current_question == 8) {
+        answers_num = fewAnswer()
         removeMyDrag(total_question_num)
         var newCheck = document.getElementsByClassName('checkbox8')
         if(newCheck[0].children[0]) {
@@ -776,19 +785,12 @@
       setTimeout(function () {
         if (current_question == 1) {
           getDrag('cs-cm1', 'check_box1', 'mobile_box1')
-          window.onresize = function () {
-            getDrag('cs-cm1', 'check_box1', 'mobile_box1')
-          }
         } else if (current_question == 6) {
           toDrag('cs-cm6', 'checkbox6', 'move_box6')
-          window.onresize = function () {
-            toDrag('cs-cm6', 'checkbox6', 'move_box6')
-          }
+          removeMyDrag(total_question_num)
         } else if (current_question == 7) {
           toDrag('cs-cm7', 'checkbox7', 'move_box7')
-          window.onresize = function () {
-            toDrag('cs-cm7', 'checkbox7', 'move_box7')
-          }
+          removeMyDrag(total_question_num)
         }
       }, 4000);
     }

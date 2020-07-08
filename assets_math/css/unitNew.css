@@ -1,0 +1,70 @@
+/* 练习十二学的更扎实 */
+/* 第一题 */
+.u12-1 .out-border .inner-border .q1{}
+
+.u12-1 .q1-input input {
+  background:none; 
+  border: none; 
+  outline: none; 
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 180%;
+}
+
+.u12-1 .q1-input{
+  position: absolute;
+  width: 4.3%;
+  height: 7%;
+  background: rgba(200, 255, 155, .8);
+}
+
+.u12-1 .q1-input:nth-of-type(1){
+  left: 31.9%;
+  top: 36%;
+}
+
+.u12-1 .q1-input:nth-of-type(2){
+  left: 55.2%;
+  top: 36%;
+}
+
+.u12-1 .q1-input:nth-of-type(3){
+  left: 78.6%;
+  top: 36%;
+}
+
+.u12-1 .q1-input:nth-of-type(4){
+  left: 31.9%;
+  top: 57%;
+}
+
+.u12-1 .q1-input:nth-of-type(5){
+  left: 55.4%;
+  top: 57%;
+}
+
+.u12-1 .q1-input:nth-of-type(6){
+  left: 78.6%;
+  top: 57%;
+}
+
+/* 第二题 */
+.u12-1 .out-border .inner-border .q2{display: none;}
+
+.u12-1 .q2-input input {
+  background:none; 
+  border: none; 
+  outline: none; 
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 180%;
+}
+
+.u12-1 .q2-input{
+  position: absolute;
+  width: 4.3%;
+  height: 7%;
+  background: rgba(200, 255, 155, .8);
+}

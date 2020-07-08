@@ -313,6 +313,7 @@
     function lastButton() {
       if (!flag) return
       if (!newFlag) return
+      removeMyDrag(total_question_num)
       delInputValue()
       // pauseAll()
       if (current_question == 1) { //第一题无法上一题
@@ -355,6 +356,7 @@
     function nextButton() {
       if (!flag) return
       if (!newFlag) return
+      removeMyDrag(total_question_num)
       delInputValue()
       // pauseAll()
       if (current_question < total_question_num) {
@@ -546,11 +548,11 @@
       }
       setTimeout(function () {
           if (current_question == 1) {
-            removeMyDrag(total_question_num)
             toDrag('u4-zs1','checkbox1','move_box1')
-          } else if (current_question == 2){
             removeMyDrag(total_question_num)
+          } else if (current_question == 2){
             toDrag('u4-zs2','checkbox2','move_box2')
+            removeMyDrag(total_question_num)
           }
       }, 4000);
     }

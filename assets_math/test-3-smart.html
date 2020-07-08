@@ -320,6 +320,7 @@
     var answers_num = 0 //答题的数量
     var set = null //清除定时器
     var newTimer = null
+    var newFlag = true
     $(function () {
       setisScoreArr();
       startTimer();      //开始正计时
@@ -406,7 +407,9 @@
     //上一题
     function lastButton() {
       window.clearInterval(newTimer)
+      removeMyDrag(total_question_num)
       if (!flag) return
+      if (!newFlag) return
       // q3Gif(1)
       delInputValue()
       // pauseAll()
@@ -415,6 +418,7 @@
       } else if (current_question) {
         current_question--;
         if (current_question == 1) {
+          newFlag = false
           newTimer = setTimeout(function () {
             getDrag('u3-cm1')
             window.onresize = function () {
@@ -422,7 +426,8 @@
             }
           }, 1000);
         } else if (current_question == 4) {
-          removeDrag(total_question_num,current_question)
+          newFlag = false
+          removeMyDrag(total_question_num)
           newTimer = setTimeout(function () {
             toDrag('u3-cm4', 'checkbox4', 'move_box4')
           }, 1000);
@@ -430,7 +435,8 @@
           //   toDrag('u3-cm4', 'checkbox4', 'move_box4')
           // }
         } else if (current_question == 5) {
-          removeDrag(total_question_num,current_question)
+          newFlag = false
+          removeMyDrag(total_question_num)
           newTimer = setTimeout(function () {
             toDrag('u3-cm5', 'checkbox5', 'move_box5')
           }, 1000);
@@ -444,6 +450,7 @@
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
           autoFocus();    //自动对焦
+          newFlag = true
         }, 500)
       }
     }
@@ -451,7 +458,9 @@
     //下一题
     function nextButton() {
       window.clearInterval(newTimer)
+      removeMyDrag(total_question_num)
       if (!flag) return
+      if (!newFlag) return
       // q3Gif(1)
       delInputValue()
       // pauseAll()
@@ -465,21 +474,23 @@
             }
           }, 1000);
         } else if (current_question == 4) {
-          removeDrag(total_question_num,current_question)
+          newFlag = false
+          removeMyDrag(total_question_num)
           newTimer = setTimeout(function () {
             toDrag('u3-cm4', 'checkbox4', 'move_box4')
           }, 1000);
-          window.onresize = function () {
-            toDrag('u3-cm4', 'checkbox4', 'move_box4')
-          }
+          // window.onresize = function () {
+          //   toDrag('u3-cm4', 'checkbox4', 'move_box4')
+          // }
         } else if (current_question == 5) {
-          removeDrag(total_question_num,current_question)
+          newFlag = false
+          removeMyDrag(total_question_num)
           newTimer = setTimeout(function () {
             toDrag('u3-cm5', 'checkbox5', 'move_box5')
           }, 1000);
-          window.onresize = function () {
-            toDrag('u3-cm5', 'checkbox5', 'move_box5')
-          }
+          // window.onresize = function () {
+          //   toDrag('u3-cm5', 'checkbox5', 'move_box5')
+          // }
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
@@ -487,6 +498,7 @@
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
           autoFocus();    //自动对焦
+          newFlag = true
         }, 500)
       } else { //如果是最后一题,显示弹窗
         var stars = calcStars() //计算星星数量
@@ -704,14 +716,10 @@
           }
         } else if (current_question == 4) {
           toDrag('u3-cm4', 'checkbox4', 'move_box4')
-          window.onresize = function () {
-            toDrag('u3-cm4', 'checkbox4', 'move_box4')
-          }
+          removeMyDrag(total_question_num)
         } else if (current_question == 5) {
           toDrag('u3-cm5', 'checkbox5', 'move_box5')
-          window.onresize = function () {
-            toDrag('u3-cm5', 'checkbox5', 'move_box5')
-          }
+          removeMyDrag(total_question_num)
         }
       }, 4000);
     }

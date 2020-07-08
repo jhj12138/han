@@ -327,6 +327,7 @@
     function lastButton() {
       if (!flag) return
       if (!newFlag) return
+      removeMyDrag(total_question_num)
       delInputValue()
       // pauseAll()
       if (current_question == 1) {
@@ -371,6 +372,8 @@
     //下一题
     function nextButton() {
       if (!flag) return
+      if (!newFlag) return
+      removeMyDrag(total_question_num)
       delInputValue()
       // pauseAll()
       if (current_question < total_question_num) {
@@ -466,8 +469,8 @@
     //提交答案
     function submitAnswer() {
       var result = null;
+      removeMyDrag(total_question_num)
       if (current_question == 1) {    //第一题
-        removeMyDrag(total_question_num)
         var newCheck = document.getElementsByClassName('checkbox1')
         if(newCheck[0].children[0]) {
           var symbal_1 = newCheck[0].children[0].dataset.list == 2 ? true : false
@@ -483,7 +486,6 @@
         answers_num = fewAnswer()
         result = calcQuestion(q3_arr, q3_data)
       } else if (current_question == 4) {
-        removeMyDrag(total_question_num)
         var newCheck = document.getElementsByClassName('checkbox4')
         if(newCheck[0].children[0]) {
           var symbal_3 = newCheck[0].children[0].dataset.list == 2 ? true : false
@@ -612,11 +614,11 @@
       }
       setTimeout(function () {
         if (current_question == 1) {
-          removeMyDrag(total_question_num)
           toDrag('u5-cm1', 'checkbox1', 'move_box1')
-        } else if(current_question == 4){
           removeMyDrag(total_question_num)
+        } else if(current_question == 4){
           toDrag('u5-cm4', 'checkbox4', 'move_box4')
+          removeMyDrag(total_question_num)
         }
       }, 4000);
     }

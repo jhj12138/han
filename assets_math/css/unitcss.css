@@ -5598,3 +5598,797 @@ body::-webkit-scrollbar-track{ background:#fff;}
   top: 15%;
   left: 8.9%;
 }
+
+/* 练习九的学的更扎实 */
+/* 第一题 */
+.u9-1 .q1-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%; background: rgba(0, 0, 0, 0.6);}
+
+.u9-1 .q1-input:nth-child(1){position: absolute; top: 51.2%; left: 20.4%; width: 5.5%; height: 6.5%;}
+
+.u9-1 .q1-input:nth-child(2){position: absolute; top: 51.2%; left: 49.7%; width: 5.5%; height: 6.5%;}
+
+.u9-1 .q1-input:nth-child(3){position: absolute; top: 51.2%; left: 75.9%; width: 5.5%; height: 6.5%;}
+
+.u9-1 .q1-input:nth-child(4){position: absolute; top: 62%; left: 24.3%; width: 7%; height: 8.5%;}
+
+.u9-1 .q1-input:nth-child(5){position: absolute; top: 62%; left: 35.9%; width: 7%; height: 8.5%;}
+
+.u9-1 .q1-input:nth-child(6){position: absolute; top: 62%; left: 47.5%; width: 7%; height: 8.5%;}
+
+.u9-1 .q1-input:nth-child(7){position: absolute; top: 62%; left: 59.1%; width: 7%; height: 8.5%;}
+
+.u9-1 .q1-input:nth-child(8){position: absolute; top: 62%; left: 70.6%; width: 7%; height: 8.5%;}
+
+.u9-1 .q1-input:nth-child(9){position: absolute; top: 74.8%; left: 26.6%; width: 5.5%; height: 6.5%;}
+
+.u9-1 .q1-input:nth-child(10){position: absolute; top: 74.8%; left: 40.4%; width: 5.5%; height: 6.5%;}
+
+.u9-1 .q1-input:nth-child(11){position: absolute; top: 74.8%; left: 54.2%; width: 5.5%; height: 6.5%;}
+
+.u9-1 .q1-input:nth-child(12){position: absolute; top: 81%; left: 29.55%; width: 5.5%; height: 6.5%;}
+
+.u9-1 .q1-input:nth-child(13){position: absolute; top: 81%; left: 43.4%; width: 5.5%; height: 6.5%;}
+
+.u9-1 .q1-input:nth-child(14){position: absolute; top: 81%; left: 57.2%; width: 5.5%; height: 6.5%;}
+/* 第二题 */
+.u9-1 .out-border .inner-border .q2{display: none;}
+
+.u9-1 .q2-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%; background: rgba(0, 0, 0, 0.6);}
+
+.u9-1 .q2-input:nth-child(1){position: absolute; top: 38.2%; left: 40.1%; width: 8%; height: 8.6%;}
+
+.u9-1 .q2-input:nth-child(2){position: absolute; top: 38.2%; left: 56.7%; width: 8%; height: 8.6%;}
+
+.u9-1 .q2-input:nth-child(3){position: absolute; top: 53.2%; left: 51.1%; width: 8%; height: 8.6%;}
+
+.u9-1 .q2-input:nth-child(4){position: absolute; top: 53.2%;  left: 67.8%; width: 8%; height: 8.6%;}
+
+/* 第三题 */
+
+.u9-1 .out-border .inner-border .q3{display: none; }
+
+.u9-1 .q3-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%;}
+
+.u9-1 .q3-input:nth-child(1){position: absolute; top: 39.7%; left: 28.5%; width: 8%; height: 8.6%;}
+
+.u9-1 .q3-input:nth-child(2){position: absolute; top: 39.7%; left: 46.8%; width: 8%; height: 8.6%;}
+
+.u9-1 .q3-input:nth-child(3){position: absolute; top: 39.7%; left: 69.6%; width: 8%; height: 8.6%;}
+
+/* 练习九的学的更聪明 */
+/* 第一题 */
+
+/* 学得更聪明 第一题 */
+.u9-2 .out-border .inner-border .q1{}
+
+.u9-2 .q1-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%; background: rgba(0, 0, 0, 0.6);}
+
+.u9-2 .q1-input:nth-child(1){position: absolute; top: 59.2%; left: 23.5%; width: 7%; height: 8%;}
+
+.u9-2 .q1-input:nth-child(2){position: absolute; top: 59.2%; left: 39%; width: 7%; height: 8%;}
+
+.u9-2 .q1-input:nth-child(3){position: absolute; top: 70%; left: 35.8%; width: 7%; height: 8%;}
+
+.u9-2 .q1-input:nth-child(4){position: absolute; top: 70%; left: 51.2%; width: 7%; height: 8%;}
+
+.u9-2 .q1-input:nth-child(5){position: absolute; top: 70%; left: 66.7%; width: 7%; height: 8%;}
+
+.u9-2 .q1-input:nth-child(6){position: absolute; top: 70%; left: 82%; width: 7%; height: 8%;}
+
+/* 第二题 */
+.u9-2 .out-border .inner-border .q2{display: none;}
+
+.u9-2 .q2-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%; background: rgba(0, 0, 0, 0.6);}
+
+.u9-2 .q2-input:nth-child(1){position: absolute; top: 60.5%; left: 9.7%; width: 7%; height: 8%;}
+
+.u9-2 .q2-input:nth-child(2){position: absolute; top: 60.5%; left: 22%; width: 7%; height: 8%;}
+
+.u9-2 .q2-input:nth-child(3){position: absolute; top: 60.5%; left: 34.4%; width: 7%; height: 8%;}
+
+.u9-2 .q2-input:nth-child(4){position: absolute; top: 60.5%; left: 52.8%; width: 7%; height: 8%;}
+
+.u9-2 .q2-input:nth-child(5){position: absolute; top: 60.5%; left: 65.2%; width: 7%; height: 8%;}
+
+.u9-2 .q2-input:nth-child(6){position: absolute; top: 60.5%; left: 77.5%; width: 7%; height: 8%;}
+
+
+/* 第三题 */
+.u9-2 .out-border .inner-border .q3{display: none;}
+
+.u9-2 .q3-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%; background: rgba(0, 0, 0, 0.6);}
+
+.u9-2 .q3-input:nth-child(1){position: absolute; top: 75.5%; left: 23.8%; width: 7%; height: 8%;}
+
+.u9-2 .q3-input:nth-child(2){position: absolute; top: 75.5%; left: 39.2%; width: 7%; height: 8%;}
+
+.u9-2 .q3-input:nth-child(3){position: absolute; top: 75.5%; left: 54.5%; width: 7%; height: 8%;}
+
+.u9-2 .q3-input:nth-child(4){position: absolute; top: 83.5%; left: 26.8%; width: 7%; height: 8%;}
+
+.u9-2 .q3-input:nth-child(5){position: absolute; top: 83.5%; left: 42.3%; width: 7%; height: 8%;}
+
+.u9-2 .q3-input:nth-child(6){position: absolute; top: 83.5%; left: 57.7%; width: 7%; height: 8%;}
+
+/* 第四题 */
+.u9-2 .out-border .inner-border .q4{display: none;}
+
+.u9-2 .q4-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%; background: rgba(0, 0, 0, 0.6);}
+
+.u9-2 .q4-input:nth-child(1){position: absolute; top: 37.8%; left: 47%; width: 7%; height: 8%;}
+
+.u9-2 .q4-input:nth-child(2){position: absolute; top: 37.8%; left: 62.3%; width: 7%; height: 8%;}
+
+.u9-2 .q4-input:nth-child(3){position: absolute; top: 37.8%; left: 77.6%; width: 7%; height: 8%;}
+
+.u9-2 .q4-input:nth-child(4){position: absolute; top: 55.5%; left: 47%; width: 7%; height: 8%;}
+
+.u9-2 .q4-input:nth-child(5){position: absolute; top: 55.5%; left: 62.3%; width: 7%; height: 8%;}
+
+.u9-2 .q4-input:nth-child(6){position: absolute; top: 55.5%; left: 77.6%; width: 7%; height: 8%;}
+
+/* 第五题 */
+.u9-2 .out-border .inner-border .q5{display: none; }
+
+.u9-2 .out-border .inner-border .q5-select-con{position: absolute; width: 9.3%; height: 6.5%;}
+
+.u9-2 .out-border .inner-border .q5-select-con:nth-child(1) {top: 23.4%; left: 78.8%;}
+
+.u9-2 .out-border .inner-border .q5-select-con:nth-child(2) {top: 39.4%; left: 78.8%;}
+
+.u9-2 .out-border .inner-border .q5-select-con:nth-child(3) {top: 54.8%; left: 78.8%;}
+
+.u9-2 .out-border .inner-border .q5-select-con:nth-child(4) {top: 71%; left: 78.8%;}
+
+.u9-2 .out-border .inner-border .q5-select-con .q5-select-item {position: absolute; width: 39%; height: 100%; background: red;}
+
+.u9-2 .out-border .inner-border .q5-select-con .q5-select-item:nth-child(1) {top: 0%; left: 0%;}
+
+.u9-2 .out-border .inner-border .q5-select-con .q5-select-item:nth-child(2) {top: 0%; right: 0%;}
+
+/* 第六题 */
+.u9-2 .out-border .inner-border .q6{display: none;}
+
+.u9-2 .q6-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%; background: rgba(0, 0, 0, 0.6);}
+
+.u9-2 .q6-input:nth-child(1){position: absolute; top: 34%; left: 42.5%; width: 5.5%; height: 6.5%;}
+
+.u9-2 .q6-input:nth-child(2){position: absolute; top: 34%; left: 53.3%; width: 5.5%; height: 6.5%;}
+
+.u9-2 .q6-input:nth-child(3){position: absolute; top: 34%; left: 64%; width: 5.5%; height: 6.5%;}
+
+.u9-2 .q6-input:nth-child(4){position: absolute; top: 34%; left: 74.8%; width: 5.5%; height: 6.5%}
+
+.u9-2 .q6-input:nth-child(5){position: absolute; top: 49%; left: 42.5%; width: 5.5%; height: 6.5%}
+
+.u9-2 .q6-input:nth-child(6){position: absolute; top: 49%; left: 53.3%; width: 5.5%; height: 6.5%}
+
+.u9-2 .q6-input:nth-child(7){position: absolute; top: 49%; left: 64%; width: 5.5%; height: 6.5%}
+
+.u9-2 .q6-input:nth-child(8){position: absolute; top: 49%; left: 74.8%; width: 5.5%; height: 6.5%}
+
+.u9-2 .q6-input:nth-child(9){position: absolute; top: 62.5%; left: 34.2%; width: 5.5%; height: 6.5%;}
+
+.u9-2 .q6-input:nth-child(10){position: absolute; top: 62.5%; left: 44.9%; width: 5.5%; height: 6.5%;}
+
+.u9-2 .q6-input:nth-child(11){position: absolute; top: 62.5%; left: 55.4%; width: 5.5%; height: 6.5%;}
+
+.u9-2 .q6-input:nth-child(12){position: absolute; top: 62.5%; left: 66%; width: 5.5%; height: 6.5%;}
+
+.u9-2 .q6-input:nth-child(13){position: absolute; top: 62.5%; left: 76.6%; width: 5.5%; height: 6.5%;}
+
+.u9-2 .q6-input:nth-child(14){position: absolute; top: 62.5%; left: 87.2%; width: 5.5%; height: 6.5%;}
+
+.u9-2 .out-border .inner-border .q6-select-con{position: absolute; width: 20.9%; height: 6.5%; background: rgba(0, 0, 0, 0.6);}
+
+.u9-2 .out-border .inner-border .q6-select-con:nth-child(15) {top: 78%; left: 56.5%;}
+
+.u9-2 .out-border .inner-border .q6-select-con .q6-select-item {position: absolute; width: 32%; height: 100%; cursor: pointer;}
+
+.u9-2 .out-border .inner-border .q6-select-con .q6-select-item:nth-child(1) {top: 0%; left: 0%;}
+
+.u9-2 .out-border .inner-border .q6-select-con .q6-select-item:nth-child(2) {top: 0%; left: 34%;}
+
+.u9-2 .out-border .inner-border .q6-select-con .q6-select-item:nth-child(3) {top: 0%; right: 0%;}
+
+.u9-2 .q6-select {position: absolute; top:78%; left: 24.8%; width: 7%; height: 7%; line-height: 1.2; font-size: 200%; text-align: center; color: #700e02;}
+
+/* 练习十学得更扎实 */
+/* 第一题 */
+
+.u10-1 .inner-border .q1{}
+
+/* .u10-1 .q1 .q1-top .checkbox1{ background: rgba(0, 0, 0, 0.6);} */
+
+.u10-1 .q1 .q1-top .checkbox1:nth-child(1){position: absolute; top: 44%; left: 23.3%; width: 9%; height: 10%;}
+
+.u10-1 .q1 .q1-top .checkbox1:nth-child(2){position: absolute; top: 44%; left: 49.4%; width: 9%; height: 10%;}
+
+.u10-1 .q1 .q1-top .checkbox1:nth-child(3){position: absolute; top: 44%; left: 75.5%; width: 9%; height: 10%;}
+
+.u10-1 .q1 .q1-top .checkbox1:nth-child(4){position: absolute; top: 56%; left: 23.3%; width: 9%; height: 10%;}
+
+.u10-1 .q1 .q1-top .checkbox1:nth-child(5){position: absolute; top: 56%; left: 49.4%; width: 9%; height: 10%;}
+
+.u10-1 .q1 .q1-top .checkbox1:nth-child(6){position: absolute; top: 56%; left: 75.5%; width: 9%; height: 10%;}
+
+.u10-1 .q1 .mobile_box1 {position: absolute;cursor: pointer;}
+
+.u10-1 .q1 .mobile_box1:nth-child(1){top: 23%; left: 13%; width: 9%; height: 5%; background: url('../images/commen/unitTen/zsOne1.png') no-repeat center; background-size: cover;}
+
+.u10-1 .q1 .mobile_box1:nth-child(2){top: 23%; left: 26%; width: 9%; height: 5%; background: url('../images/commen/unitTen/zsOne2.png') no-repeat center; background-size: cover;}
+
+.u10-1 .q1 .mobile_box1:nth-child(3){top: 23%; left: 39%; width: 9%; height: 5%; background: url('../images/commen/unitTen/zsOne3.png') no-repeat center; background-size: cover;}
+
+.u10-1 .q1 .mobile_box1:nth-child(4){top: 23%; left: 51%; width: 9%; height: 5%; background: url('../images/commen/unitTen/zsOne4.png') no-repeat center; background-size: cover;}
+
+.u10-1 .q1 .mobile_box1:nth-child(5){top: 23%; left: 64%; width: 9%; height: 5%; background: url('../images/commen/unitTen/zsOne5.png') no-repeat center; background-size: cover;}
+
+.u10-1 .q1 .mobile_box1:nth-child(6){top: 23%; left: 78%; width: 9%; height: 5%; background: url('../images/commen/unitTen/zsOne6.png') no-repeat center; background-size: cover;}
+
+/* 第二题 */
+
+.u10-1 .out-border .inner-border .q2{display: none; }
+
+.u10-1 .q2-input input {background:none; position: absolute; border: none; outline: none; width: 100%; height: 100%; text-align: center;font-size: 150% ; background: rgba(0, 0, 0, 0.6);}
+
+.u10-1 .q2-input:nth-child(1){position: absolute; top: 12.2%; left: 53.3%; width: 7%; height: 8%;}
+
+.u10-1 .q2-input:nth-child(2){position: absolute; top: 12.2%; left: 76.4%; width: 7%; height: 8%;}
+
+.u10-1 .q2-input:nth-child(3){position: absolute; top: 46%; left: 36.3%; width: 3.4%; height: 6.5%; }
+
+.u10-1 .q2-input:nth-child(4){position: absolute; top: 46%; left: 44.3%; width: 3.4%; height: 6.5%;}
+
+.u10-1 .q2-input:nth-child(5){position: absolute; top: 46%; left: 52.9%; width: 3.4%; height: 6.5%;}
+
+.u10-1 .q2-input:nth-child(6){position: absolute; top: 46%; left: 66.2%; width: 3.4%; height: 6.5%;}
+
+/* 第三题 */
+.u10-1 .out-border .inner-border .q3{display: none;}
+
+.u10-1 .q3-input input {background:none; position: absolute; border: none; outline: none; width: 100%; height: 100%; text-align: center;font-size: 200% }
+
+.u10-1 .q3-input:nth-child(1){position: absolute; top: 53.2%; left: 19.7%; width: 6%; height: 6%;}
+
+.u10-1 .q3-input:nth-child(2){position: absolute; top: 53.2%; left: 30.5%; width: 6%; height: 6%;}
+
+.u10-1 .q3-input:nth-child(3){position: absolute; top: 53.2%; left: 41.3%; width: 6%; height: 6%; }
+
+.u10-1 .q3-input:nth-child(4){position: absolute; top: 53.2%; left: 52.1%; width: 6%; height: 6%;}
+
+.u10-1 .q3-input:nth-child(5){position: absolute; top: 53.2%; left: 62.9%; width: 6%; height: 6%;}
+
+.u10-1 .q3-input:nth-child(6){position: absolute; top: 53.2%; left: 73.6%; width: 6%; height: 6%;}
+
+.u10-1  .out-border .inner-border .q3-select-con{position: absolute; width: 71%; height: 6%; top: 74.5%; left: 14.5%;}
+
+.u10-1  .out-border .inner-border .q3-select-con .q3-select-item {position: absolute; width: 15.4%; height: 100%; cursor: pointer;}
+
+.u10-1  .out-border .inner-border .q3-select-con .q3-select-item:nth-child(1) {top: 0%; left: 0%; width: 15.3%;}
+
+.u10-1  .out-border .inner-border .q3-select-con .q3-select-item:nth-child(2) {top: 0%; left: 20.2%;}
+
+.u10-1  .out-border .inner-border .q3-select-con .q3-select-item:nth-child(3) {top: 0%; left: 40.2%;}
+
+.u10-1  .out-border .inner-border .q3-select-con .q3-select-item:nth-child(4) {top: 0%; left: 60.3%; width: 19%;}
+
+.u10-1  .out-border .inner-border .q3-select-con .q3-select-item:nth-child(5) { top: 0%;right: .6%;width: 15.3%;}
+
+.u10-1  .q3-select {position: absolute; top:20%; left: 42%; width: 5%; height: 7%; line-height: 1.2; font-size: 150%; text-align: center; color: #700e02;}
+
+.u10-2 .out-border .inner-border .q1{ }
+
+.u10-2 .q1-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 150%;}
+
+.u10-2 .q1-input:nth-child(1){position: absolute; top:47.1%; left: 23.6%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(2){position: absolute; top:47.1%; left: 31.2%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(3){position: absolute; top:47.1%; left: 40.4%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(4){position: absolute; top: 47.1%; left: 47.9%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(5){position: absolute; top: 47.1%; left: 55.4%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(6){position: absolute; top: 47.1%; left: 65.4%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(7){position: absolute; top:47.1%; left: 73%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(8){position: absolute; top:47.1%; left: 80.5%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(9){position: absolute; top: 57.7%; left: 16.1%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(10){position: absolute; top: 57.7%; left: 23.6%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(11){position: absolute; top: 57.7%; left: 31.2%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(12){position: absolute; top: 57.7%; left: 40.4%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .q1-input:nth-child(13){position: absolute; top: 57.7%; left: 55.4%; width: 3.4%; height: 6.5%;}
+
+.u10-2 .out-border .inner-border .q2{display: none;}
+
+.u10-2 .q2-bottom .mobile_box2{
+  position: absolute;
+  width: 7.12%;
+  height: 6.28%;
+  cursor: pointer;
+}
+
+.u10-2 .q2-bottom .mobile_box2:nth-of-type(1){
+  left: 10%;
+  top: 30%;
+  background: url('../images/commen/unitTen/cmTwo1.png') no-repeat center; 
+  background-size: cover;
+}
+
+.u10-2 .q2-bottom .mobile_box2:nth-of-type(2){
+  left: 20%;
+  top: 30%;
+  background: url('../images/commen/unitTen/cmTwo2.png') no-repeat center; 
+  background-size: cover;
+}
+
+.u10-2 .q2-bottom .mobile_box2:nth-of-type(3){
+  left: 30%;
+  top: 30%;
+  background: url('../images/commen/unitTen/cmTwo3.png') no-repeat center; 
+  background-size: cover;
+}
+
+.u10-2 .q2-bottom .mobile_box2:nth-of-type(4){
+  left: 40%;
+  top: 30%;
+  background: url('../images/commen/unitTen/cmTwo4.png') no-repeat center; 
+  background-size: cover;
+}
+
+.u10-2 .q2-bottom .mobile_box2:nth-of-type(5){
+  left: 50%;
+  top: 30%;
+  background: url('../images/commen/unitTen/cmTwo5.png') no-repeat center; 
+  background-size: cover;
+}
+
+.u10-2 .q2-bottom .mobile_box2:nth-of-type(6){
+  left: 60%;
+  top: 30%;
+  background: url('../images/commen/unitTen/cmTwo6.png') no-repeat center; 
+  background-size: cover;
+}
+
+.u10-2 .q2-bottom .mobile_box2:nth-of-type(7){
+  left: 70%;
+  top: 30%;
+  background: url('../images/commen/unitTen/cmTwo7.png') no-repeat center; 
+  background-size: cover;
+}
+
+.u10-2 .q2-bottom .mobile_box2:nth-of-type(8){
+  left: 80%;
+  top: 30%;
+  background: url('../images/commen/unitTen/cmTwo8.png') no-repeat center; 
+  background-size: cover;
+}
+
+.u10-2 .q2-top .checkbox2{
+  position: absolute;
+  width: 16%;
+  height: 30%;
+  background: rgba(200, 255, 155, .8);
+}
+
+.u10-2 .q2-top .checkbox2:nth-of-type(1){
+  left: 8%;
+  top: 52%;
+}
+
+.u10-2 .q2-top .checkbox2:nth-of-type(2){
+  left: 25%;
+  top: 46%;
+}
+
+.u10-2 .q2-top .checkbox2:nth-of-type(3){
+  left: 41.8%;
+  top: 51%;
+}
+
+.u10-2 .q2-top .checkbox2:nth-of-type(4){
+  left: 58.5%;
+  top: 45%;
+}
+
+.u10-2 .q2-top .checkbox2:nth-of-type(5){
+  left: 75.4%;
+  top: 51%;
+}
+
+/* 第三题 */
+.u10-2  .out-border .inner-border .q3{display: none; }
+
+.u10-2  .q3-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%;}
+
+.u10-2  .q3-input:nth-child(1){position: absolute; top: 38.1%; left: 29.4%; width: 6%; height: 7%;}
+
+.u10-2  .q3-input:nth-child(2){position: absolute; top:38.1%; left: 54.2%; width: 6%; height: 7%;}
+
+.u10-2  .q3-input:nth-child(3){position: absolute; top:38.1%; left: 78.3%; width: 6%; height: 7%;}
+
+.u10-2  .q3-input:nth-child(4){position: absolute; top:55.2%; left: 29.4%; width: 6%; height: 7%;}
+
+.u10-2  .q3-input:nth-child(5){position: absolute; top: 55.2%; left: 54%; width: 6%; height: 7%;}
+
+.u10-2  .q3-input:nth-child(6){position: absolute; top:55.2%; left: 78.3%; width: 6%; height: 7%;}
+
+/* 第四题 */
+.u10-2 .out-border .inner-border .q4{display: none; }
+
+
+.u10-2 .q4-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 180%;}
+
+.u10-2 .q4-input:nth-child(1){position: absolute; top: 68%; left: 19.8%; width: 3.6%; height: 6.5%;}
+
+.u10-2 .q4-input:nth-child(2){position: absolute; top: 68%; left: 27.3%; width: 3.6%; height: 6.5%;}
+
+.u10-2 .q4-input:nth-child(3){position: absolute; top: 68%; left: 34.8%; width: 3.6%; height: 6.5%;}
+
+.u10-2 .q4-input:nth-child(4){position: absolute; top: 77.3%; left: 19.8%; width: 3.6%; height: 6.5%}
+
+.u10-2 .q4-input:nth-child(5){position: absolute; top: 77.3%; left: 27.3%; width: 3.6%; height: 6.5%}
+
+.u10-2 .q4-input:nth-child(6){position: absolute; top: 77.3%; left: 34.8%; width: 3.6%; height: 6.5%}
+
+.u10-2 .q4-input:nth-child(7){position: absolute; top: 68%; left: 58%; width: 3.6%; height: 6.5%}
+
+.u10-2 .q4-input:nth-child(8){position: absolute; top: 68%; left: 65.4%; width: 3.6%; height: 6.5%}
+
+.u10-2 .q4-input:nth-child(9){position: absolute; top: 68%; left: 72.9%; width: 3.6%; height: 6.5%;}
+
+.u10-2 .q4-input:nth-child(10){position: absolute; top: 68%; left: 80.4%; width: 3.6%; height: 6.5%;}
+
+.u10-2 .q4-input:nth-child(11){position: absolute; top: 77.3%; left: 57.9%; width: 3.6%; height: 6.5%;}
+
+.u10-2 .q4-input:nth-child(12){position: absolute; top: 77.3%; left: 65.4%; width: 3.6%; height: 6.5%;}
+
+.u10-2 .q4-input:nth-child(13){position: absolute; top: 77.3%; left: 72.9%; width: 3.6%; height: 6.5%;}
+
+.u10-2 .q4-input:nth-child(14){position: absolute; top: 77.3%; left: 80.4%; width: 3.6%; height: 6.5%;}
+
+/* 练习十一学的更扎实 */
+/* 第一题 */
+.u11-1 .out-border .inner-border .q1{}
+
+.u11-1 .q1-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 200%;}
+
+.u11-1 .q1-input:nth-child(1){position: absolute; top: 28%; left: 38.5%; width: 5.5%; height: 9.5%;}
+
+.u11-1 .q1-input:nth-child(2){position: absolute; top: 45.4%; left: 38.5%; width: 5.5%; height: 9.5%;}
+
+.u11-1 .q1-input:nth-child(3){position: absolute; top: 45.4%; left: 54.6%; width: 5.5%; height: 9.5%;}
+
+.u11-1 .q1-input:nth-child(4){position: absolute; top: 62.7%; left: 38.5%; width: 5.5%; height: 9.5%}
+
+.u11-1 .q1-input:nth-child(5){position: absolute; top: 62.7%; left: 54.5%; width: 5.5%; height: 9.5%}
+
+.u11-1 .q1-input:nth-child(6){position: absolute; top: 62.7%; left: 70.6%; width: 5.5%; height: 9.5%}
+
+/* 第二题 */
+.u11-1 .out-border .inner-border .q2{display: none; }
+
+.u11-1 .q2-input input {background:none; position: absolute; border: none; outline: none; width: 100%; height: 100%; text-align: center;font-size: 180% ; background: rgba(0, 0, 0, 0.6);}
+
+.u11-1 .q2-input:nth-child(1){position: absolute; top: 59.4%; left: 18%; width: 3.4%; height: 6.5%;}
+
+.u11-1 .q2-input:nth-child(2){position: absolute; top: 59.4%; left: 25.55%; width: 3.4%; height: 6.5%;}
+
+.u11-1 .q2-input:nth-child(3){position: absolute; top: 59.4%; left: 33.1%; width: 3.4%; height: 6.5%; }
+
+.u11-1 .q2-input:nth-child(4){position: absolute; top: 68.5%; left: 18%; width: 3.4%; height: 6.5%;}
+
+.u11-1 .q2-input:nth-child(5){position: absolute; top: 68.5%; left: 25.55%; width: 3.4%; height: 6.5%;}
+
+.u11-1 .q2-input:nth-child(6){position: absolute; top: 68.5%; left: 33.1%; width: 3.4%; height: 6.5%;}
+
+.u11-1  .out-border .inner-border .q2-select-con{position: absolute; width: 10.8%; height: 40%; top: 34.3%; left: 64.9%;}
+
+.u11-1  .out-border .inner-border .q2-select-con .q2-select-item {position: absolute; width: 100%; height: 15%; cursor: pointer;}
+
+.u11-1  .out-border .inner-border .q2-select-con .q2-select-item:nth-child(1) {top: 0%; left: 0%;}
+
+.u11-1  .out-border .inner-border .q2-select-con .q2-select-item:nth-child(2) {top: 22%; left: 0%;}
+
+.u11-1  .out-border .inner-border .q2-select-con .q2-select-item:nth-child(3) {top: 44%; left: 0%;}
+
+.u11-1  .out-border .inner-border .q2-select-con .q2-select-item:nth-child(4) {top: 65%; left: 0%; }
+
+.u11-1  .out-border .inner-border .q2-select-con .q2-select-item:nth-child(5) {top: 87%; right: 0%;}
+
+/* 第三题 */
+.u11-1 .out-border .inner-border .q3{display: none; }
+
+.u11-1 .q3-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 180%;}
+
+.u11-1 .q3-input{
+  width: 4.7%;
+  height: 8.3%;
+  position: absolute;
+}
+
+.u11-1 .q3-input:nth-of-type(1){
+  left: 38.3%;
+  top: 29.9%;
+}
+
+.u11-1 .q3-input:nth-of-type(2){
+  left: 38.3%;
+  top: 40.9%;
+}
+
+.u11-1 .q3-input:nth-of-type(3){
+  left: 38.3%;
+  top: 51.9%;
+}
+
+.u11-1 .q3-input:nth-of-type(4){
+  left: 38.3%;
+  top: 63.3%;
+}
+
+.u11-1 .q3-input:nth-of-type(5){
+  left: 76.7%;
+  top: 29.9%;
+}
+
+.u11-1 .q3-input:nth-of-type(6){
+  left: 76.8%;
+  top: 40.9%;
+}
+
+.u11-1 .q3-input:nth-of-type(7){
+  left: 56.9%;
+  top: 51.9%;
+}
+
+.u11-1 .q3-input:nth-of-type(8){
+  left: 76.7%;
+  top: 63.3%;
+}
+
+/* 学得更聪明 */
+/* 第一题 */
+.u11-2 .out-border .inner-border .q1{}
+
+.u11-2 .q1-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 180%; background: rgba(0, 0, 0, 0.6);}
+
+.u11-2 .q1-input:nth-child(1){position: absolute; top: 47%; left: 16%; width:3.6%; height:6.5%;}
+
+.u11-2 .q1-input:nth-child(2){position: absolute; top: 47%; left: 23.6%; width:3.6%; height:6.5%;}
+
+.u11-2 .q1-input:nth-child(3){position: absolute; top: 47%; left: 31%; width:3.6%; height:6.5%;}
+
+.u11-2 .q1-input:nth-child(4){position: absolute; top: 47%; left: 40.3%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(5){position: absolute; top: 47%; left: 47.8%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(6){position: absolute; top: 47%; left: 55.4%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(7){position: absolute; top: 47%; left: 65.4%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(8){position: absolute; top: 47%; left: 72.9%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(9){position: absolute; top: 47%; left: 80.4%; width:3.6%; height:6.5%;}
+
+.u11-2 .q1-input:nth-child(10){position: absolute; top: 57.6%; left: 16%; width:3.6%; height:6.5%;}
+
+.u11-2 .q1-input:nth-child(11){position: absolute; top: 57.6%; left: 23.6%; width:3.6%; height:6.5%;}
+
+.u11-2 .q1-input:nth-child(12){position: absolute; top: 57.6%; left: 31%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(13){position: absolute; top: 57.6%; left: 40.3%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(14){position: absolute; top: 57.6%; left: 47.8%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(15){position: absolute; top: 57.6%; left: 55.4%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(16){position: absolute; top: 57.6%; left: 65.4%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(17){position: absolute; top: 57.6%; left: 72.9%; width:3.6%; height:6.5%}
+
+.u11-2 .q1-input:nth-child(18){position: absolute; top: 57.6%; left: 80.4%; width:3.6%; height:6.5%}
+
+/* 第二题 */
+.u11-2 .out-border .inner-border .q2{display: none; }
+
+.u11-2 .q2-input input {background:none; border: none; outline: none; width: 100%; height: 100%; text-align: center; font-size: 180%;}
+
+.u11-2 .q2-input:nth-child(1){position: absolute; top: 65.3%; left: 35%; width:8.5%; height:10.5%;}
+
+.u11-2 .q2-input:nth-child(2){position: absolute; top: 65.3%; left: 43.9%; width:8.5%; height:10.5%;}
+
+.u11-2 .q2-input:nth-child(3){position: absolute; top: 65.3%; left: 52.7%; width:8.5%; height:10.5%;}
+
+.u11-2 .q2-input:nth-child(4){position: absolute; top: 65.3%; left: 62.4%; width:8.5%; height:10.5%}
+
+.u11-2 .q2-input:nth-child(5){position: absolute; top: 65.3%; left: 71.1%; width:8.5%; height:10.5%}
+
+.u11-2 .q2-input:nth-child(6){position: absolute; top: 65.3%; left: 81.3%; width:8.5%; height:10.5%}
+
+.u11-2 .out-border .inner-border .q3{display: none;}
+
+.u11-2 .out-border .inner-border .q3-select-con{position: absolute;display: flex; align-items: flex-start; flex-wrap: wrap; width: 69%; height: 19.5%; top: 41%; left: 15.5%; border: 1px solid #000;}
+
+.u11-2 .out-border .inner-border .q3-select-con .q3-select-item { display: flex; align-items: center; justify-content: center; width: 10%; height: 50%;  font-size: 180%; cursor: pointer;}
+
+.u11-2 .q3-select-item:nth-of-type(1), .u11-2 .q3-select-item:nth-of-type(2), .u11-2 .q3-select-item:nth-of-type(3), .u11-2 .q3-select-item:nth-of-type(4), .u11-2 .q3-select-item:nth-of-type(5), .u11-2 .q3-select-item:nth-of-type(6), .u11-2 .q3-select-item:nth-of-type(7), .u11-2 .q3-select-item:nth-of-type(8), .u11-2 .q3-select-item:nth-of-type(9){
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.u11-2 .q3-select-item:nth-of-type(10){
+  border-bottom: 1px solid #000;
+}
+
+.u11-2 .q3-select-item:nth-of-type(11), .u11-2 .q3-select-item:nth-of-type(12), .u11-2 .q3-select-item:nth-of-type(13), .u11-2 .q3-select-item:nth-of-type(14), .u11-2 .q3-select-item:nth-of-type(15), .u11-2 .q3-select-item:nth-of-type(16), .u11-2 .q3-select-item:nth-of-type(17), .u11-2 .q3-select-item:nth-of-type(18), .u11-2 .q3-select-item:nth-of-type(19){
+  border-right: 1px solid #000;
+}
+/* border: 2px solid #000; */
+.u11-2  .q3-reclick {position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); width: 10%; cursor: pointer;}
+
+/* 第四题 */
+.u11-2 .out-border .inner-border .q4{display: none; }
+
+.u11-2 .q4-input input {
+  background:none; 
+  border: none; 
+  outline: none; 
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 180%;
+}
+
+.u11-2 .q4-input{
+  position: absolute;
+  width: 10%;
+  height: 8%;
+}
+
+.u11-2 .q4-input:nth-of-type(1){
+  left: 86.5%;
+  top: 12.3%;
+}
+
+.u11-2 .q4-input:nth-of-type(2){
+  left: 43%;
+  top: 20.4%;
+}
+
+/* 第五题 */
+.u11-2 .out-border .inner-border .q5{display: none; }
+
+.u11-2 .q5-input input {
+  background:none; 
+  border: none; 
+  outline: none; 
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 180%;
+}
+
+.u11-2 .q5-input{
+  position: absolute;
+  width: 10%;
+  height: 8%;
+  background: rgba(200, 255, 155, .8);
+}
+
+.u11-2 .q5-input:nth-of-type(1){
+  left: 27%;
+  top: 44%;
+}
+
+.u11-2 .q5-input:nth-of-type(2){
+  left: 46.8%;
+  top: 44%;
+}
+
+.u11-2 .q5-input:nth-of-type(3){
+  left: 67%;
+  top: 44%;
+}
+
+.u11-2 .q5-input:nth-of-type(4){
+  left: 27%;
+  top: 54%;
+}
+
+.u11-2 .q5-input:nth-of-type(5){
+  left: 46.8%;
+  top: 54%;
+}
+
+.u11-2 .q5-input:nth-of-type(6){
+  left: 66.7%;
+  top: 54%;
+}
+
+.u11-2 .q5-input:nth-of-type(7){
+  left: 27%;
+  top: 63.4%;
+}
+
+.u11-2 .q5-input:nth-of-type(8){
+  left: 46.8%;
+  top: 63.4%;
+}
+
+.u11-2 .q5-input:nth-of-type(9){
+  left: 66.7%;
+  top: 63.4%;
+}
+
+/* 第五题 */
+.u11-2 .out-border .inner-border .q6{display: none; }
+
+.u11-2 .q6-input input {
+  background:none; 
+  border: none; 
+  outline: none; 
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 180%;
+}
+
+.u11-2 .q6-input{
+  position: absolute;
+  width: 4%;
+  height: 7%;
+  background: rgba(200, 255, 155, .8);
+}
+
+.u11-2 .q6-input:nth-of-type(1){
+  left: 9.9%;
+  top: 37.7%;
+}
+
+.u11-2 .q6-input:nth-of-type(2){
+  left: 34%;
+  top: 37.7%;
+}
+
+.u11-2 .q6-input:nth-of-type(3){
+  left: 57%;
+  top: 37.7%;
+}
+
+.u11-2 .q6-input:nth-of-type(4){
+  left: 76%;
+  top: 37.7%;
+}
+
+.u11-2 .q6-input:nth-of-type(5){
+  left: 25%;
+  top: 54.9%;
+}
+
+.u11-2 .q6-input:nth-of-type(6){
+  left: 49.6%;
+  top: 54.9%;
+}
+
+.u11-2 .q6-input:nth-of-type(7){
+  left: 56.8%;
+  top: 54.9%;
+}
+
+.u11-2 .q6-input:nth-of-type(8){
+  left: 81.4%;
+  top: 54.9%;
+}
+
+.u11-2 .q6-input:nth-of-type(9){
+  left: 88.7%;
+  top: 54.9%;
+}

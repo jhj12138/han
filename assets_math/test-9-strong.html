@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="unit u5-1 u2">
+  <div class="unit u9-1 u2">
     <!-- 背景 -->
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
@@ -34,16 +34,16 @@
       <!-- 指示牌 -->
       <div class="unit-sign">
         <img src="./images/commen/unit-ladder.png" alt="" class="unit-ladder">
-        <a href="./test-5-clear.html">
+        <a href="./test-9-clear.html">
           <div class="study-zhashi"><img src="./images/commen/clear-box.png" alt=""></div>
         </a>
         <div class="study-clear unit-select">
           <img src="./images/commen/solid-box.png" alt="">
         </div>
-        <a href="./test-5-smart.html">
+        <a href="./test-9-smart.html">
           <div class="study-smart"><img src="./images/commen/smart-box.png" alt=""></div>
         </a>
-        <a href="./test-5-ks.html">
+        <a href="./test-9-ks.html">
           <div class="kousuan"><img src="./images/commen/oral-box.png" alt=""></div>
         </a>
       </div>
@@ -68,11 +68,11 @@
           </div>
           <div class="ani-gif-4"></div>
           <!-- 答对了的声音 -->
-          <audio src = "../assets_math/audio/sound_success.mp3" id = "ani-audio-success"></audio>
+          <audio src="../assets_math/audio/sound_success.mp3" id="ani-audio-success"></audio>
           <!-- 答错了的声音 -->
-          <audio src = "../assets_math/audio/sound_fail.mp3" id = "ani-audio-fail"></audio>
+          <audio src="../assets_math/audio/sound_fail.mp3" id="ani-audio-fail"></audio>
           <!-- 时间快到了的声音 -->
-          <audio src = "../assets_math/audio/time_end.mp3" id = "ani-audio-end"></audio>
+          <audio src="../assets_math/audio/time_end.mp3" id="ani-audio-end"></audio>
           <!-- 足球 -->
           <div class="football"><img src="./images/animbg/football.png" alt=""></div>
           <!-- 守门员 -->
@@ -82,62 +82,50 @@
         <div class="inner-border slidein">
           <img src="./images/commen/unit-panel.png" alt="">
           <div class="score-board">
-              <img src="./images/commen/unit-scoreboard.png" alt="">
-              <div class="score">0</div>
+            <img src="./images/commen/unit-scoreboard.png" alt="">
+            <div class="score">0</div>
           </div>
           <!-- 答题部分开始 -->
-          <div class = "question-con">
+          <div class="question-con">
             <!-- 第一题 -->
             <div class="question q1">
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 0)" maxlength="3"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 1)" maxlength="3"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 2)" maxlength="3"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 3)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 4)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 5)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 6)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 7)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 8)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 9)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 10)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 11)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 12)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 13)" maxlength="1"/></div>
-              <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 14)" maxlength="1"/></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr, event, 0)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr, event, 1)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr, event, 2)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr, event, 3)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr, event, 4)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr, event, 5)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr, event, 6)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr, event, 7)"></div>
+
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr2, event, 0)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr2, event, 1)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr2, event, 2)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr2, event, 3)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr2, event, 4)"></div>
+              <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr2, event, 5)"></div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/lyl.mp3" id = "q1-audio"></audio>
-              <img src="../assets_math/images/commen/unitFive/zs-q1.png" alt="">
+              <audio src="../assets_math/audio/lyl.mp3" id="q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitNine/zs-q1.png" alt="">
             </div>
             <!-- 第二题 -->
             <div class="question q2">
-              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 0)" maxlength="3"/></div>
-              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 1)" maxlength="3"/></div>
-              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 2)" maxlength="3"/></div>
-              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 3)" maxlength="3"/></div>
-              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 4)" maxlength="3"/></div>
+              <div class="q2-input"><input type="text" maxlength="3" onchange="setInputArr(q2_arr, event, 0)"></div>
+              <div class="q2-input"><input type="text" maxlength="3" onchange="setInputArr(q2_arr, event, 1)"></div>
+              <div class="q2-input"><input type="text" maxlength="3" onchange="setInputArr(q2_arr2, event, 0)"></div>
+              <div class="q2-input"><input type="text" maxlength="3" onchange="setInputArr(q2_arr2, event, 1)"></div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/lyl.mp3" id = "q2-audio"></audio>
-              <img src="../assets_math/images/commen/unitFive/zs-q2.png" alt="">
+              <audio src="../assets_math/audio/lyl.mp3" id="q2-audio"></audio>
+              <img src="../assets_math/images/commen/unitNine/zs-q2.png" alt="">
             </div>
             <!-- 第三题 -->
             <div class="question q3">
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 0)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 1)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 2)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 3)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 4)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 5)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 6)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 7)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 8)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 9)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 10)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 11)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 12)" maxlength="3"/></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 13)" maxlength="3"/></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 0)"></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 1)"></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 2)"></div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/tuoyituo.mp3" id = "q3-audio"></audio>
-              <img src="../assets_math/images/commen/unitFive/zs-q3.png" alt="">
+              <audio src="../assets_math/audio/tuoyituo.mp3" id="q3-audio"></audio>
+              <img src="../assets_math/images/commen/unitNine/zs-q3.png" alt="">
             </div>
           </div>
           <!-- 答题部分结束 -->
@@ -157,10 +145,10 @@
         </div>
         <!-- 倒计时 -->
         <div class="timer">
-            <div class="timer-icon"><img src="./images/commen/timer-icon.png" alt=""></div>
-            <div class="timer-progress">
-                <div class="progress-bg"></div>
-            </div>
+          <div class="timer-icon"><img src="./images/commen/timer-icon.png" alt=""></div>
+          <div class="timer-progress">
+            <div class="progress-bg"></div>
+          </div>
         </div>
 
       </div>
@@ -173,30 +161,35 @@
   <!-- 引入固定拖动 -->
   <script type="text/javascript" src="../assets_math/template/04fixeDrag/index.js"></script>
   <script type="text/javascript">
-      // 鼠标移动上去改变
-      function goMove(e,num) {
-        if(num == 1) {
-          $(e.target).parent().children(":first").attr('src','./images/commen/unit-onchange.png')
-        } else if (num == 2) {
-          $(e.target).parent().children(":first").attr('src','./images/commen/unit-onchange1.png')
-        }
+    // 鼠标移动上去改变
+    function goMove(e, num) {
+      if (num == 1) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-onchange.png')
+      } else if (num == 2) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-onchange1.png')
       }
-      function goOut(e,num) {
-        if(num == 1) {
-          $(e.target).parent().children(":first").attr('src','./images/commen/unit-on.png')
-        } else if (num == 2) {
-          $(e.target).parent().children(":first").attr('src','./images/commen/unit-deter.png')
-        }
+    }
+    function goOut(e, num) {
+      if (num == 1) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-on.png')
+      } else if (num == 2) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-deter.png')
       }
+    }
   </script>
   <script type="text/javascript">
-    var q1_arr = [] //第一题输入的input的值
-    var q1_data = [87,14,69,6,3,8,7,3,2,1,4,4,2,6,9] //正确答案
-    var q2_arr = [] //第二题输入的input的值
-    var q2_data = [60,43,78,49,31] //第二题正确答案
-    var q3_arr = [] //第三题输入的input的值
-    var q3_data = [37,83,47,64,36,21,74,47,29,55,93,74,52,85] //第三题正确答案
+    var q1_arr = [];   //第一题input输入的值
+    var q1_arr2 = [];
+    var q1_data = ["2", "4", "8", "2", "2", "2", "2", "8"]
+    var q1_right = ["2", "4", "8"]
 
+    var q2_arr = [];  //第二题input输入的值
+    var q2_arr2 = []
+    var q2_data = ["3", "6"];  //第二题正确答案
+    var q2_right = ["5", "9"]
+
+    var q3_arr = [];
+    var q3_data = ["3", "4", "12"]
 
     var total_question_num = 3;    //一共有多少题
     var current_question = 1;       //当前是第几题
@@ -221,8 +214,8 @@
 
     //设置已经得分的数组
     function setisScoreArr() {
-      for(var i = 0; i < total_question_num; i++) {
-          isScore[i] = -1
+      for (var i = 0; i < total_question_num; i++) {
+        isScore[i] = -1
       }
     }
 
@@ -242,12 +235,12 @@
     //自动计时
     function startTimer() {
       count_timer = setInterval(function () {
-          if (spend_time == total_answer_time) {
-              showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time);
-              clearInterval(count_timer);
-          } else {
-              spend_time++
-          }
+        if (spend_time == total_answer_time) {
+          showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time);
+          clearInterval(count_timer);
+        } else {
+          spend_time++
+        }
       }, 1000);
     }
 
@@ -266,30 +259,30 @@
       var time = set_time; //倒计时的时长
       var progress_width = 100
       // var p = document.getElementsById("time");
-       set = setInterval(function () {
-          time--;
-          progress_width -= progress_width / time
-          $('.progress-bg').css("width", progress_width + '%')
-          if (time === 30) {
-            $('#ani-audio-end')[0].play()
-          } 
-          if (time === 0) {
-              $('.progress-bg').css("width", "0")
-              clearInterval(set);
-              clearInterval(count_timer)
-              callBack()
-          }
+      set = setInterval(function () {
+        time--;
+        progress_width -= progress_width / time
+        $('.progress-bg').css("width", progress_width + '%')
+        if (time === 30) {
+          $('#ani-audio-end')[0].play()
+        }
+        if (time === 0) {
+          $('.progress-bg').css("width", "0")
+          clearInterval(set);
+          clearInterval(count_timer)
+          callBack()
+        }
       }, 1000);
     }
 
     //设置答题结束时的弹窗
     function showOverPop(father_containter, star_num, total_question, total_right, total_time) {
       var total_time_ = formatSeconds(total_time);
-      var pop_html = "<div class='over-pop'><div class='over-masking'><img src='./images/commen/over-pop/making-img.png'></div><div class='pop-bg'><img src='./images/commen/over-pop/over-modal.png' alt=''><div class='pop-inner'><img src='./images/commen/over-pop/pop-wrapper.png' alt=''><div>完成：<span id='total-question'>4</span></div><div>做对：<span id='total-right'></span></div><div>用时：<span id='total-time'>"+total_time_+"</span></div></div><div class='stars'><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div></div><div class='answer-again' onclick='ansewerAgain()'><img src='./images/commen/over-pop/play-again.png' alt=''></div></div></div>"
+      var pop_html = "<div class='over-pop'><div class='over-masking'><img src='./images/commen/over-pop/making-img.png'></div><div class='pop-bg'><img src='./images/commen/over-pop/over-modal.png' alt=''><div class='pop-inner'><img src='./images/commen/over-pop/pop-wrapper.png' alt=''><div>完成：<span id='total-question'>4</span></div><div>做对：<span id='total-right'></span></div><div>用时：<span id='total-time'>" + total_time_ + "</span></div></div><div class='stars'><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div></div><div class='answer-again' onclick='ansewerAgain()'><img src='./images/commen/over-pop/play-again.png' alt=''></div></div></div>"
       $(father_containter).append(pop_html)
       var star_item = $('.star-item')
       for (var i = 0; i < star_num; i++) {
-          $('.star-item').eq(i).children('img').attr('src', './images/commen/over-pop/star.png')
+        $('.star-item').eq(i).children('img').attr('src', './images/commen/over-pop/star.png')
       }
       $('#total-question').html(total_question);  //设置框内的题目总数
       $('#total-right').html(total_right);   //设置框内的题目正确数
@@ -308,9 +301,9 @@
       // pauseAll()
       if (current_question == 1) { //第一题无法上一题
         return false;
-      } else if (current_question) { 
+      } else if (current_question) {
         current_question--;
-        
+
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
           audioPlay()
@@ -328,25 +321,25 @@
       // pauseAll()
       if (current_question < total_question_num) {
         current_question++;
-        
+
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-            audioPlay()
-            $('.inner-border').removeClass('slideout').addClass('slidein');
-            $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
-            autoFocus();    //自动对焦
+          audioPlay()
+          $('.inner-border').removeClass('slideout').addClass('slidein');
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+          autoFocus();    //自动对焦
         }, 500)
       } else { //如果是最后一题,显示弹窗
         var stars = calcStars() //计算星星数量
         // console.log('1111')
         setTimeout(function () {
-            if (spend_time < total_answer_time) {
-              showOverPop('.out-border', stars, answers_num, sorce, spend_time)
-            } else {
-              showOverPop('.out-border', stars, answers_num, sorce, total_answer_time)
-            }
-            clearInterval(count_timer);
-            clearInterval(set);
+          if (spend_time < total_answer_time) {
+            showOverPop('.out-border', stars, answers_num, sorce, spend_time)
+          } else {
+            showOverPop('.out-border', stars, answers_num, sorce, total_answer_time)
+          }
+          clearInterval(count_timer);
+          clearInterval(set);
         }, 500);
       }
     }
@@ -361,9 +354,9 @@
     function fewAnswer() {
       answers[current_question - 1] = -1
       var answer = null
-      for(var i = 0; i < answers.length; i++) {
+      for (var i = 0; i < answers.length; i++) {
         if (answers[i] == -1) {
-          answer ++
+          answer++
         }
       }
       return answer
@@ -373,28 +366,31 @@
       var result = null;
       if (current_question == 1) {    //第一题
         answers_num = fewAnswer()
-        result = calcQuestion(q1_arr, q1_data)
-
-      } else if (current_question == 2) {
+        var q1_a = JSON.stringify(q1_arr) == JSON.stringify(q1_data)
+        var q1_b = changeFormula(q1_arr2, q1_right, 3)
+        result = q1_a && q1_b
+      } else if (current_question == 2) {   //第二题
         answers_num = fewAnswer()
-        result = calcQuestion(q2_arr, q2_data)
-      } else if (current_question == 3) {
+        var q2_a = q2_arr.sort().toString() == q2_data.sort().toString()
+        var q2_b = q2_arr2.sort().toString() == q2_right.sort().toString()
+        result = q2_a && q2_b
+      } else if (current_question == 3) { //第三题
         answers_num = fewAnswer()
-        result = calcQuestion(q3_arr, q3_data)
-      } 
+        result = q3_arr.sort().toString() == q3_data.sort().toString();
+      }
       if (result) {
-          if (isScore.indexOf(current_question) == -1) {
-            sorce++;       //分数+1
-            isScore[current_question - 1] = current_question;   //添加到已回答数组
-            setScoreBoard()   //设置计分板
-          }
-          showFootballAnimation(1);   //播放答对动画
+        if (isScore.indexOf(current_question) == -1) {
+          sorce++;       //分数+1
+          isScore[current_question - 1] = current_question;   //添加到已回答数组
+          setScoreBoard()   //设置计分板
+        }
+        showFootballAnimation(1);   //播放答对动画
       } else {
-          showFootballAnimation(0);   //播放答错动画
+        showFootballAnimation(0);   //播放答错动画
       }
       setTimeout(function () {
-          delInputValue()  //删除所有input中的值，清空输入的数组
-          autoFocus()  //自动对焦
+        delInputValue()  //删除所有input中的值，清空输入的数组
+        autoFocus()  //自动对焦
       }, 1500);
       // console.log(fewAnswer())
     }
@@ -402,11 +398,13 @@
     //切换题目后删除所有input中的值
     function delInputValue() {
       $('.question-con input').each(function () {
-          this.value = '';
-          q1_arr = [];
-          q2_arr = [];
-          q3_arr = [];
-          // $('.question-con .checkbox').children().remove()
+        this.value = '';
+        q1_arr = [];
+        q2_arr = [];
+        q3_arr = [];
+        q1_arr2 = [];
+        q2_arr2 = [];
+        // $('.question-con .checkbox').children().remove()
       })
     }
 
@@ -418,67 +416,67 @@
       $('.inner-border').removeClass('slidein').addClass('slideout');   //题目
       current_question++;
       var showpop = false;
-      if(current_question > total_question_num) {
-          showpop = true
+      if (current_question > total_question_num) {
+        showpop = true
       }
       if (status == 1) {  //答对的动画
         setTimeout(function () {
-            $('.answer-ani .ani-gif').html('<img src="./images/animbg/football-success.gif?' + new Date().getTime() + '" alt="">')
-            // $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
-            setTimeout(function () {
-                $('.football').hide();
-                $('.goalkeeper').hide();
-            }, 30)
-            $('#ani-audio-success')[0].play()
+          $('.answer-ani .ani-gif').html('<img src="./images/animbg/football-success.gif?' + new Date().getTime() + '" alt="">')
+          // $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
+          setTimeout(function () {
+            $('.football').hide();
+            $('.goalkeeper').hide();
+          }, 30)
+          $('#ani-audio-success')[0].play()
         }, 500)
         setTimeout(function () {
-            $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
+          $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
         }, 1500);
         setTimeout(function () {
-            if (!showpop) {
-              $('.inner-border').removeClass('slideout').addClass('slidein');
-                
-            } else {
-              showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
-            }
-            $('.answer-ani .ani-gif').html('')
-            $('.answer-ani .ani-gif-3').html('');
-            $('.cant-click').hide();
-            $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
-            setTimeout(function () {
-                $('.football').show();
-                $('.goalkeeper').show();
-            }, 50)
-            flag = true
+          if (!showpop) {
+            $('.inner-border').removeClass('slideout').addClass('slidein');
+
+          } else {
+            showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
+          }
+          $('.answer-ani .ani-gif').html('')
+          $('.answer-ani .ani-gif-3').html('');
+          $('.cant-click').hide();
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+          setTimeout(function () {
+            $('.football').show();
+            $('.goalkeeper').show();
+          }, 50)
+          flag = true
         }, animate_duration)
-      }else if(status == 0){ //答错的动画
+      } else if (status == 0) { //答错的动画
         setTimeout(function () {
-            $('.answer-ani .ani-gif-2').html('<img src="./images/animbg/football-fail.gif?' + new Date().getTime() + '" alt="">')
-            setTimeout(function () {
-                $('.football').hide();
-                $('.goalkeeper').hide();
-            }, 50)
-            $('#ani-audio-fail')[0].play()
-            // $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">')
+          $('.answer-ani .ani-gif-2').html('<img src="./images/animbg/football-fail.gif?' + new Date().getTime() + '" alt="">')
+          setTimeout(function () {
+            $('.football').hide();
+            $('.goalkeeper').hide();
+          }, 50)
+          $('#ani-audio-fail')[0].play()
+          // $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">')
         }, 500)
         setTimeout(function () {
-            $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">');
+          $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">');
         }, 1000);
         setTimeout(function () {
-            if (!showpop) {
-                $('.inner-border').removeClass('slideout').addClass('slidein');
-            } else {
-                showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
-            }
-            $('.answer-ani .ani-gif-2').html('')
-            $('.answer-ani .ani-gif-4').html('');  
-            $('.cant-click').hide();
-            $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
-            setTimeout(function () {
-                $('.football').show();
-                $('.goalkeeper').show();
-            }, 50)
-            flag = true
+          if (!showpop) {
+            $('.inner-border').removeClass('slideout').addClass('slidein');
+          } else {
+            showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
+          }
+          $('.answer-ani .ani-gif-2').html('')
+          $('.answer-ani .ani-gif-4').html('');
+          $('.cant-click').hide();
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+          setTimeout(function () {
+            $('.football').show();
+            $('.goalkeeper').show();
+          }, 50)
+          flag = true
         }, animate_duration)
       }
     }
@@ -495,10 +493,10 @@
     //第四题监听输入的内容
     function setChange(m_arr, ele) {
       if (ele == 1 || ele == 2) {
-        $(".q4-inform").eq(0).html('<img src="./images/commen/unitOne/zs-q4-'+ ele +'.png" alt="">')
+        $(".q4-inform").eq(0).html('<img src="./images/commen/unitOne/zs-q4-' + ele + '.png" alt="">')
         m_arr[0] = ele
       } else if (ele == 3 || ele == 4) {
-        $(".q4-inform").eq(1).html('<img src="./images/commen/unitOne/zs-q4-'+ ele +'.png" alt="">')
+        $(".q4-inform").eq(1).html('<img src="./images/commen/unitOne/zs-q4-' + ele + '.png" alt="">')
         m_arr[1] = ele
       }
     }
@@ -507,15 +505,15 @@
     function calcQuestion(m_arr, right_arr) {
       var step = 0;
       for (let i = 0; i < m_arr.length; i++) {
-          if (m_arr[i] == right_arr[i]) {
-            step++
-          }
+        if (m_arr[i] == right_arr[i]) {
+          step++
+        }
       }
       // console.log(step)
       if (step === right_arr.length) {
-          return true;
+        return true;
       } else {
-          return false;
+        return false;
       }
     }
 
@@ -523,39 +521,39 @@
     function calcQuestions(m_arr, right_arr) {
       var step = 0;
       for (let i = 0; i < 2; i++) {
-          if (m_arr[i] == right_arr[i]) {
-            step++
-          }
+        if (m_arr[i] == right_arr[i]) {
+          step++
+        }
       }
-      if(m_arr[3] >= right_arr[3] && m_arr[3] <= (right_arr[3]+2)) {
-        step ++
-      } 
-      if(m_arr[2] >= right_arr[2] && m_arr[2] <= (right_arr[3]+2)) {
-        step ++
+      if (m_arr[3] >= right_arr[3] && m_arr[3] <= (right_arr[3] + 2)) {
+        step++
+      }
+      if (m_arr[2] >= right_arr[2] && m_arr[2] <= (right_arr[3] + 2)) {
+        step++
       }
       if (step === right_arr.length) {
-          return true;
+        return true;
       } else {
-          return false;
+        return false;
       }
     }
     //判断第三题拖拽是否正确
     function goDrag(m_arr, right_arr) {
       var step = 0;
-      for (var i = 0; i < checkBox.length; i ++) {
-        if(checkBox[i].children[0]) {
+      for (var i = 0; i < checkBox.length; i++) {
+        if (checkBox[i].children[0]) {
           m_arr.push(checkBox[i].children[0].dataset.list)
         }
       }
       for (let j = 0; j < m_arr.length; j++) {
-          if (m_arr[j] == right_arr[j]) {
-            step++
-          }
+        if (m_arr[j] == right_arr[j]) {
+          step++
+        }
       }
       if (step === right_arr.length) {
-          return true;
+        return true;
       } else {
-          return false;
+        return false;
       }
     }
 
@@ -563,14 +561,14 @@
     function addTo(m_arr, right_arr) {
       var step = 0;
       for (let i = 0; i < m_arr.length; i++) {
-          if (m_arr[i] == right_arr[i]) {
-            step++
-          }
+        if (m_arr[i] == right_arr[i]) {
+          step++
+        }
       }
       if (step === right_arr.length) {
-          return true;
+        return true;
       } else {
-          return false;
+        return false;
       }
     }
   </script>

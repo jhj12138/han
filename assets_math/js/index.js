@@ -127,10 +127,32 @@ function removeDrag(total_question_num,current_question) { //清除除自己以�
 function removeMyDrag(total_question_num) { //清除除自己的
   for(var j = 1; j <= total_question_num; j++) {
     var checkBoxs = document.getElementsByClassName("move_box"+j+"")
+    
     for (var i = 0; i < checkBoxs.length; i++) {
         $(checkBoxs[i]).off('mousedown')
     }
   }
+}
+
+// /判断可交换的算式
+function changeFormula(arr, rightArr, length) {
+  var newArr = group(arr, length);
+  var flag = true;
+  if (newArr[0].toString() == newArr[1].toString()) {
+    flag = false
+  } else {
+    flag = newArr[0].sort().toString() == newArr[1].sort().toString()
+  }
+  return flag
+}
+
+function group(array, subGroupLength) {
+  let index = 0;
+  let newArray = [];
+  while (index < array.length) {
+    newArray.push(array.slice(index, index += subGroupLength));
+  }
+  return newArray;
 }
 
 

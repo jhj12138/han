@@ -66,8 +66,6 @@ function findBox(target) {
     return scope
   }
   
-  // console.log(scopeInfoArr)
-  console.log(mobileBox)
   for( var i = 0; i< mobileBox.length; i++) {    //鼠标按下
     mobileBox[i].addEventListener('mousedown', function(e) {
       activeBox = e
@@ -77,6 +75,7 @@ function findBox(target) {
       // 元素原来的位置
       var originalX = e.target.offsetLeft
       var originalY = e.target.offsetTop
+      // console.log(scopeInfoArr)
       locat = scopeInfoArr;
       // 鼠标移动
       document.addEventListener('mousemove', function(e) {
@@ -110,6 +109,8 @@ function findBox(target) {
                     clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmFour"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
                   } else if (domName == 'cs-cm1') {
                     clonedNode.style.cssText = "background-image: url('./images/commen/ceshiOne/csOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 62%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                  } else if (domName == 'u10-zs1') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen//unitTen/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
                   }
                   checkBox[k].appendChild(clonedNode)
                   test()
@@ -134,6 +135,8 @@ function findBox(target) {
                     clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmFour"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
                   } else if (domName == 'cs-cm1') {
                     clonedNode.style.cssText = "background-image: url('./images/commen/ceshiOne/csOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 62%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                  } else if (domName == 'u10-zs1') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen//unitTen/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
                   }
                   checkBox[k].appendChild(clonedNode)
                   test()
@@ -225,6 +228,8 @@ function findBox(target) {
                         clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmFour"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
                       } else if (domName == 'cs-cm1') {
                         clonedNode.style.cssText = "background-image: url('./images/commen/ceshiOne/csOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 62%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                      } else if (domName == 'u10-zs1') {
+                        clonedNode.style.cssText = "background-image: url('./images/commen//unitTen/zsOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
                       }
                       checkBox[i].appendChild(clonedNode)
                       removeBox.target.parentNode && removeBox.target.parentNode.removeChild(removeBox.target)
