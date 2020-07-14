@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/unitcss.css">
   <link rel="stylesheet" href="./css/animate.css">
-  <link rel="stylesheet" type="" href="./css/unitNew.css">
+  <link rel="stylesheet" href="./css/unitNew.css">
 </head>
 
 <body>
@@ -115,7 +115,16 @@
             </div>
             <!-- 第三题 -->
             <div class="question q3">
-              
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 0)"></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 1)"></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 2)"></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 3)"></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 4)"></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 5)"></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 6)"></div>
+              <div class="q3-input"><input type="text" maxlength="3" onchange="setInputArr(q3_arr, event, 7)"></div>
+              <audio src="../assets_math/audio/lyl.mp3" id = "q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitTwel/zs-q3.png" alt="">
             </div>
           </div>
           <!-- 答题部分结束 -->
@@ -171,11 +180,11 @@
     var q1_arr = [] //第一题输入的input的值
     var q1_data = [8,13,14,5,21,15] //正确答案
 
-    // var q2_arr = [] //第二题输入的input的值
-    // var q2_data = [60,43,78,49,31] //第二题正确答案
-    // var q3_arr = [] //第三题输入的input的值
-    // var q3_data = [37,83,47,64,36,21,74,47,29,55,93,74,52,85] //第三题正确答案
+    var q2_arr = []
+    var q2_data = [[3,4,3,15],[4,4,1,15]]
 
+    var q3_arr = []
+    var q3_data = [[2,3,1,7],[2,4,1,7]]
 
     var total_question_num = 3;    //一共有多少题
     var current_question = 1;       //当前是第几题
@@ -355,10 +364,10 @@
         result = calcQuestion(q1_arr, q1_data)
       } else if (current_question == 2) {
         answers_num = fewAnswer()
-        result = calcQuestion(q2_arr, q2_data)
+        result = FourQuestion(q2_arr, q2_data)
       } else if (current_question == 3) {
         answers_num = fewAnswer()
-        result = calcQuestion(q3_arr, q3_data)
+        result = FourQuestion(q3_arr, q3_data)
       } 
       if (result) {
           if (isScore.indexOf(current_question) == -1) {
@@ -569,11 +578,9 @@
           step ++
         }
         if (newList[j][2] == right_arr[j][2]){
-          console.log('第二',m_arr[j][2],right_arr[j][2]);
           step ++
         }
         if (newList[j][3] == right_arr[j][3]){
-          console.log('第三',m_arr[j][3],right_arr[j][3]);
           step ++
         }
       }

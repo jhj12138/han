@@ -138,13 +138,47 @@ function removeMyDrag(total_question_num) { //清除除自己的
 function changeFormula(arr, rightArr, length) {
   var newArr = group(arr, length);
   var flag = true;
+
+  if (!newArr[0] || !newArr[1]) {
+    return false
+  }
+  // console.log(newArr[0],newArr[1])
   if (newArr[0].toString() == newArr[1].toString()) {
     flag = false
   } else {
-    flag = newArr[0].sort().toString() == newArr[1].sort().toString()
+    for(var i = 0; i < newArr.length; i++) {
+      if (newArr[i][0] * newArr[i][1] != newArr[i][2]){
+        // console.log(newArr[0],newArr[1])
+        flag = false
+      }
+    }
+    if(flag) {
+      flag = newArr[0].sort().toString() == newArr[1].sort().toString()
+    }
   }
   return flag
 }
+
+function changeFormula1(arr, rightArr, length) {
+  var newArr = group(arr, length);
+  var flag = true;
+
+  if (!newArr[0] || !newArr[1]) {
+    return false
+  }
+  // console.log(newArr[0],newArr[1])
+  if (newArr[0].toString() == newArr[1].toString()) {
+    flag = false
+  } else {
+    if(flag) {
+      flag = newArr[0].sort().toString() == newArr[1].sort().toString()
+    }
+  }
+  return flag
+}
+
+
+
 
 function group(array, subGroupLength) {
   let index = 0;
@@ -156,4 +190,6 @@ function group(array, subGroupLength) {
 }
 
 
-  
+// $('img').attr({"alt":'数学'});
+
+// $('title').text('学习资源包 二年级上');

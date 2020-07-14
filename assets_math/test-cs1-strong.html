@@ -403,7 +403,7 @@
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
       // audioPlay();
-      setTimeout(() => {
+      setTimeout(function(){
         getDrag('cs-cm1', 'check_box1', 'mobile_box1')
       }, 2000);
     })
@@ -509,19 +509,19 @@
         } else if (current_question == 6) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('cs-cm6', 'checkbox6', 'move_box6')
           }, 1000);
         } else if (current_question == 7) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('cs-cm7', 'checkbox7', 'move_box7')
           }, 1000);
         } else if (current_question == 8) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('cs-cm8', 'checkbox8', 'move_box8')
           }, 1000);
         }
@@ -553,19 +553,19 @@
         } else if (current_question == 6) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('cs-cm6', 'checkbox6', 'move_box6')
           }, 1800);
         } else if (current_question == 7) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('cs-cm7', 'checkbox7', 'move_box7')
           }, 1800);
         } else if (current_question == 8) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('cs-cm8', 'checkbox8', 'move_box8')
           }, 1800);
         }
@@ -786,11 +786,11 @@
         if (current_question == 1) {
           getDrag('cs-cm1', 'check_box1', 'mobile_box1')
         } else if (current_question == 6) {
+          removeMyDrag(total_question_num)
           toDrag('cs-cm6', 'checkbox6', 'move_box6')
-          removeMyDrag(total_question_num)
         } else if (current_question == 7) {
-          toDrag('cs-cm7', 'checkbox7', 'move_box7')
           removeMyDrag(total_question_num)
+          toDrag('cs-cm7', 'checkbox7', 'move_box7')
         }
       }, 4000);
     }

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>二上数学人教版</title>
+  <meta charset=utf-8>
+  <meta name="keywords" content="小学数学">
+  <meta name="description" content="小学数学">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/unitcss.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/unitNew.css">
+</head>
+
+<body>
+  <div class="unit u17-2 u2">
+    <!-- 背景 -->
+    <img src="./images/commen/unit-bg.png" alt="数学">
+    <div class="unit-container">
+      <!-- 背景上的图片 -->
+      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
+      <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
+      <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
+      <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
+      <!-- 返回按钮-->
+      <a href="../index.html">
+        <div class="index-return">
+          <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
+          <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
+        </div>
+      </a>
+      <!-- 指示牌 -->
+      <div class="unit-sign">
+        <img src="./images/commen/unit-ladder.png" alt="" class="unit-ladder">
+        <a href="./test-17-clear.html">
+          <div class="study-zhashi"><img src="./images/commen/clear-box.png" alt=""></div>
+        </a>
+        <a href="./test-17-strong.html">
+          <div class="study-clear"><img src="./images/commen/solid-box.png" alt=""></div>
+        </a>
+        <div class="study-smart unit-select">
+          <img src="./images/commen/smart-box.png" alt="">
+        </div>
+        <a href="./test-17-ks.html">
+          <div class="kousuan"><img src="./images/commen/oral-box.png" alt=""></div>
+        </a>
+      </div>
+      <!-- 主内容 -->
+      <!-- 外边框 -->
+      <div class="out-border">
+        <img src="./images/commen/out-border.png" alt="">
+        <!-- 背景动画 -->
+        <div class="answer-ani">
+          <div class="answer-ani-imgs">
+            <img src="./images/animbg/football-bg.png" alt="" class="answer-ani-img">
+          </div>
+          <div class="ani-gif">
+            <!-- <img src="./images/animbg/football-success.gif" alt=""> -->
+          </div>
+          <div class="ani-gif-2">
+            <!-- <img src="./images/animbg/football-fail.gif" alt=""> -->
+          </div>
+          <div class="ani-gif-3">
+          </div>
+          <div class="ani-gif-4"></div>
+          <!-- 答对了的声音 -->
+          <audio src="../assets_math/audio/sound_success.mp3" id="ani-audio-success"></audio>
+          <!-- 答错了的声音 -->
+          <audio src="../assets_math/audio/sound_fail.mp3" id="ani-audio-fail"></audio>
+          <!-- 时间快到了的声音 -->
+          <audio src="../assets_math/audio/time_end.mp3" id="ani-audio-end"></audio>
+          <!-- 足球 -->
+          <div class="football"><img src="./images/animbg/football.png" alt=""></div>
+          <!-- 守门员 -->
+          <div class="goalkeeper"><img src="./images/animbg/person.png" alt=""></div>
+        </div>
+        <!-- 内边框 -->
+        <div class="inner-border slidein">
+          <img src="./images/commen/unit-panel.png" alt="">
+          <div class="score-board">
+            <img src="./images/commen/unit-scoreboard.png" alt="">
+            <div class="score">0</div>
+          </div>
+          <!-- 答题部分开始 -->
+          <div class="question-con">
+            <!-- 第一题 -->
+            <div class="question q1">
+              <div class="q1-input"><input id="num1-1" type="text" maxlength="1" /></div>
+              <div class="q1-input"><input id="num1-2" type="text" maxlength="1" /></div>
+              <div class="q1-input"><input id="num1-3" type="text" maxlength="2" /></div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/zhaoyizhao.mp3" id="q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitSevete/cm-q1.png" alt="">
+            </div>
+            <!-- 第二题 -->
+            <div class="question q2">
+              <div class="q2-input"><input id="num2-1" type="text" maxlength="1" /></div>
+              <div class="q2-input"><input id="num2-2" type="text" maxlength="1" /></div>
+              <div class="q2-input"><input id="num2-3" type="text" maxlength="2" /></div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/zhaoyizhao.mp3" id="q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitSevete/cm-q2.png" alt="">
+            </div>
+            <!-- 第三题 -->
+            <div class="question q3">
+              <div class="q3-input"><input type="text" maxlength="2" onchange="setInputArr(q3_arr, event, 0)"></div>
+              <div class="q3-input"><input type="text" maxlength="2" onchange="setInputArr(q3_arr, event, 1)"></div>
+              <div class="q3-select-con">
+                <div class="q3-select-item" data-right="0" data-index="0"></div>
+                <div class="q3-select-item" data-right="1" data-index="0"></div>
+              </div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/shuyishu.mp3" id="q3-audio"></audio>
+              <img src="../assets_math/images/commen/unitSevete/cm-q3.png" alt="">
+            </div>
+            <!-- 第四题 -->
+            <div class="question q4">
+              <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 0)"></div>
+              <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 1)"></div>
+              <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 2)"></div>
+              <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 3)"></div>
+              <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 4)"></div>
+              <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 5)"></div>
+              <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 6)"></div>
+              <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 7)"></div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/lyl.mp3" id = "q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitSevete/cm-q4.png" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- 三个按钮（上一题、下一题、确定） -->
+        <div class="last-btn" onclick="lastButton()" onmouseover="goMove(event,1)" onmouseout="goOut(event,1)">
+          <img src="./images/commen/unit-on.png" alt="" class="last-btns">
+          <img src="./images/commen/unit-on-txt.png" alt="" class="last-btn-txt">
+        </div>
+        <div class="next-btn" onclick="nextButton()" onmouseover="goMove(event,1)" onmouseout="goOut(event,1)">
+          <img src="./images/commen/unit-on.png" alt="" class="next-btns">
+          <img src="./images/commen/unit-next-txt.png" alt="" class="next-btn-txt">
+        </div>
+        <div class="submit-btn" onclick="submitAnswer()" onmouseover="goMove(event,2)" onmouseout="goOut(event,2)">
+          <img src="./images/commen/unit-deter.png" alt="" class="submit-btns">
+          <img src="./images/commen/unit-deter-txt.png" alt="" class="submit-btn-txt">
+        </div>
+        <!-- 倒计时 -->
+        <div class="timer">
+          <div class="timer-icon"><img src="./images/commen/timer-icon.png" alt=""></div>
+          <div class="timer-progress">
+            <div class="progress-bg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 引入jq -->
+  <script type='text/javascript' src='./js/jquery-1.11.3.min.js'></script>
+  <!-- 引入全局js -->
+  <script type='text/javascript' src='./js/index.js'></script>
+  <!-- 拖拽 -->
+  <script type="text/javascript" src='./template/05fiexDrag/index.js'></script>
+  <!-- 引入兔子树和返回 -->
+  <script type="text/javascript">
+    // 鼠标移动上去改变
+    function goMove(e, num) {
+      if (num == 1) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-onchange.png')
+      } else if (num == 2) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-onchange1.png')
+      }
+    }
+    function goOut(e, num) {
+      if (num == 1) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-on.png')
+      } else if (num == 2) {
+        $(e.target).parent().children(":first").attr('src', './images/commen/unit-deter.png')
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    var rightObj1 = { //第六题答案
+      type: '2',
+      data: [4,7],
+      sort: false
+    }
+
+    var rightObj2 = { //第六题答案
+      type: '2',
+      data: [6,7],
+      sort: false
+    }
+
+    var q3_arr = []
+    var q3_arr1 = []
+    var q3_data = [6,35]
+    
+    var q4_arr = []
+    var q4_data = [[3,7,4,25],[4,7,3,25]]
+
+    var total_question_num = 4;    //一共有多少题
+    var current_question = 1;       //当前是第几题
+    var animate_duration = 3000   //动画时长
+    var sorce = 0;   //当前得分，
+    var total_answer_time = 1250;     //总答题时间 单位：秒
+    var spend_time = 1;   //耗费的时间
+    var count_timer = null;
+    var isScore = [];   //已经得分的题目
+    var flag = true //动画没完成不能点击上一题和下一题
+    var answers = [] //答了几道
+    var answers_num = 0 //答题的数量
+    var set = null //清除定时器
+    var newFlag = true
+    $(function () {
+      // showOverPop('.out-border', 3, 6, 5) 
+      setisScoreArr();
+      startTimer();      //开始正计时
+      initTimer(total_answer_time, handTimeleOver);  //开始倒计时
+      autoFocus();    //自动对焦
+      // audioPlay()
+      setTimeout(function(){
+        toDrag('u5-cm1', 'checkbox1', 'move_box1')
+        // window.onresize = function () {
+        //   toDrag('u5-cm1', 'checkbox1', 'move_box1')
+        // }
+      }, 2000);
+    })
+
+    //设置已经得分的数组
+    function setisScoreArr() {
+      for (var i = 0; i < total_question_num; i++) {
+        isScore[i] = -1
+      }
+    }
+
+    //自动计时
+    function startTimer() {
+      count_timer = setInterval(function () {
+        if (spend_time == total_answer_time) {
+          showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time);
+          clearInterval(count_timer);
+        } else {
+          spend_time++
+        }
+      }, 1000);
+    }
+    //题目自动对焦
+    function autoFocus() {
+      $('.question-con .q' + current_question + ' input').eq(0).focus()
+    }
+
+    //倒计时结束的操作
+    function handTimeleOver() {
+      $('.timer').hide()
+    }
+
+    //倒计时函数 set_time=>设置的倒计时时长  ,   callBack=>回调函数
+    function initTimer(set_time, callBack) {
+      var time = set_time; //倒计时的时长
+      var progress_width = 100
+      // var p = document.getElementsById("time");
+      set = setInterval(function () {
+        time--;
+        progress_width -= progress_width / time
+        $('.progress-bg').css("width", progress_width + '%')
+        if (time === 30) {
+          $('#ani-audio-end')[0].play()
+        }
+        if (time === 0) {
+          $('.progress-bg').css("width", "0")
+          clearInterval(set);
+          clearInterval(count_timer);
+          callBack()
+        }
+      }, 1000);
+    }
+
+    //设置答题结束时的弹窗
+    function showOverPop(father_containter, star_num, total_question, total_right, total_time) {
+      var total_time_ = formatSeconds(total_time);
+      var pop_html = "<div class='over-pop'><div class='over-masking'><img src='./images/commen/over-pop/making-img.png'></div><div class='pop-bg'><img src='./images/commen/over-pop/over-modal.png' alt=''><div class='pop-inner'><img src='./images/commen/over-pop/pop-wrapper.png' alt=''><div>完成：<span id='total-question'>6</span></div><div>做对：<span id='total-right'></span></div><div>用时：<span id='total-time'>" + total_time_ + "</span></div></div><div class='stars'><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div><div class='star-item'><img src='./images/commen/over-pop/star-1.png' alt=''></div></div><div class='answer-again' onclick='ansewerAgain()'><img src='./images/commen/over-pop/play-again.png' alt=''></div></div></div>"
+      $(father_containter).append(pop_html)
+      var star_item = $('.star-item')
+      for (var i = 0; i < star_num; i++) {
+        $('.star-item').eq(i).children('img').attr('src', './images/commen/over-pop/star.png')
+      }
+      $('#total-question').html(total_question);  //设置框内的题目总数
+      $('#total-right').html(total_right);   //设置框内的题目正确数
+      $('.timer').hide();    //隐藏倒计时
+    }
+
+    //再来一次
+    function ansewerAgain() {
+      window.location.reload()
+    }
+
+    //上一题
+    function lastButton() {
+      if (!flag) return
+      if (!newFlag) return
+      delInputValue()
+      // pauseAll()
+      if (current_question == 1) {
+        return false;
+      } else if (current_question) {
+        current_question--;
+        if (current_question == 1) {
+          // removeDrag(total_question_num,current_question)
+          removeMyDrag(total_question_num)
+          newFlag = false
+          setTimeout(function(){
+
+            toDrag('u5-cm1', 'checkbox1', 'move_box1')
+          }, 1000);
+          // window.onresize = function () {
+          //   toDrag('u5-cm1', 'checkbox1', 'move_box1')
+          // }
+        } else if (current_question == 2) {
+          // removeDrag(total_question_num,current_question)
+        } else if (current_question == 4) {
+          // removeDrag(total_question_num,current_question)
+          removeMyDrag(total_question_num)
+          newFlag = false
+          setTimeout(function(){
+            toDrag('u5-cm4', 'checkbox4', 'move_box4')
+          }, 1000);
+          // window.onresize = function () {
+          //   toDrag('u5-cm4', 'checkbox4', 'move_box4')
+          // }
+        }
+        $('.inner-border').removeClass('slidein').addClass('slideout');
+        setTimeout(function () {
+          // audioPlay()
+          $('.inner-border').removeClass('slideout').addClass('slidein');
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
+          autoFocus();    //自动对焦
+          newFlag = true
+        }, 500)
+      }
+    }
+
+    //下一题
+    function nextButton() {
+      if (!flag) return
+      delInputValue()
+      // pauseAll()
+      if (current_question < total_question_num) {
+        current_question++;
+        if (current_question == 1) {
+          // removeDrag(total_question_num,current_question)
+          removeMyDrag(total_question_num)
+          newFlag = false
+          setTimeout(function(){
+
+            toDrag('u5-cm1', 'checkbox1', 'move_box1')
+          }, 1000);
+          // window.onresize = function () {
+          //   toDrag('u5-cm1', 'checkbox1', 'move_box1')
+          // }
+        } else if (current_question == 4) {
+          // removeDrag(total_question_num,current_question)
+          removeMyDrag(total_question_num)
+          newFlag = false
+          setTimeout(function(){
+            // removeDrag(total_question_num,current_question)
+            toDrag('u5-cm4', 'checkbox4', 'move_box4')
+          }, 1000);
+          // window.onresize = function () {
+          //   toDrag('u5-cm4', 'checkbox4', 'move_box4')
+          // }
+        }
+        $('.inner-border').removeClass('slidein').addClass('slideout');
+        setTimeout(function () {
+          // audioPlay()
+          $('.inner-border').removeClass('slideout').addClass('slidein');
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+          autoFocus();    //自动对焦
+          newFlag = true
+        }, 500)
+      } else { //如果是最后一题,显示弹窗
+        var stars = calcStars() //计算星星数量
+        setTimeout(function () {
+          if (spend_time < total_answer_time) {
+            showOverPop('.out-border', stars, answers_num, sorce, spend_time)
+          } else {
+            showOverPop('.out-border', stars, answers_num, sorce, total_answer_time)
+          }
+          clearInterval(set);
+          clearInterval(count_timer);
+        }, 500);
+      }
+    }
+    //计算获得星星数量
+    function calcStars() {
+      var persent = sorce / total_question_num
+      var star_num = Math.ceil(6 * persent);
+      return star_num
+    }
+
+    // //已答了几道题
+    function fewAnswer() {
+      answers[current_question - 1] = -1
+      var answer = null
+      for (var i = 0; i < answers.length; i++) {
+        if (answers[i] == -1) {
+          answer++
+        }
+      }
+      return answer
+    }
+
+    //音频播发 id属性=>如q1-audio
+    function audioPlay() {
+      if (current_question == 1) {
+        $("#q1-audio")[0].play()
+      } else if (current_question == 2) {
+        $("#q2-audio")[0].play()
+      } else if (current_question == 3) {
+        $("#q3-audio")[0].play()
+      } else if (current_question == 4) {
+        $("#q4-audio")[0].play()
+      } else if (current_question == 5) {
+        $("#q5-audio")[0].play()
+      }
+    }
+
+    function q3Gif(num) { //第三题的动画
+      if (num == 0) {
+        $('.q3-ani-gif').css("display", "block")
+        $('.q3-ani-gif img').attr('src', '../assets_math/images/animbg/u1-2-ani.gif')
+      } else if (num == 1) {
+        $('.q3-ani-gif').css("display", "none")
+        $('.q3-ani-gif img').attr('src', '')
+      }
+    }
+
+    //提交答案
+    function submitAnswer() {
+      var result = null;
+      if (current_question == 1) {    //第一题
+        answers_num = fewAnswer()
+        result = getUserObj(['num1-1', 'num1-2'], 'num1-3', 2, false, rightObj1)
+      } else if (current_question == 2) {
+        answers_num = fewAnswer()
+        result = getUserObj(['num2-1', 'num2-2'], 'num2-3', 2, false, rightObj2)
+      } else if (current_question == 3) {
+        answers_num = fewAnswer()
+        var q3_a = (q3_arr1.indexOf(0) == -1 && q3_arr1.length == 1) ? true : false;
+        var q3_b = calcQuestion(q3_arr, q3_data);
+        result = q3_a && q3_b
+      } else if (current_question == 4) {
+        answers_num = fewAnswer()
+        result = FourQuestion(q4_arr, q4_data)
+      } 
+      if (result) {
+        if (isScore.indexOf(current_question) == -1) {
+          sorce++;       //分数+1
+          isScore[current_question - 1] = current_question;   //添加到已回答数组
+          setScoreBoard()   //设置计分板
+        }
+        // console.log('111111111')
+        showFootballAnimation(1);   //播放答对动画
+      } else {
+        showFootballAnimation(0);   //播放答错动画
+      }
+      setTimeout(function () {
+        delInputValue()  //删除所有input中的值，清空输入的数组
+        autoFocus()  //自动对焦
+      }, 3200);
+      // console.log(fewAnswer())
+    }
+
+    //切换题目后删除所有input中的值
+    function delInputValue() {
+      $('.question-con input').each(function () {
+        this.value = '';
+        q3_arr = [];
+        q4_arr = [];
+        // $('.question-con .checkbox').children().remove()
+      })
+      $('.q3-select-item ').each(function () {
+        $(this).css('background', 'none');
+        $(this).css('color', '#000');
+      })
+            
+    }
+
+    //踢足球  status = 0答错      status = 1答对 
+    function showFootballAnimation(status) {
+      flag = false
+      $('.cant-click').show()
+      $('.inner-border').removeClass('slidein').addClass('slideout');   //题目
+      current_question++;
+      var showpop = false;
+      if (current_question > total_question_num) {
+        showpop = true
+      }
+      if (status == 1) {  //答对的动画
+        setTimeout(function () {
+          $('.answer-ani .ani-gif').html('<img src="./images/animbg/football-success.gif?' + new Date().getTime() + '" alt="">')
+          // $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
+          setTimeout(function () {
+            $('.football').hide();
+            $('.goalkeeper').hide();
+          }, 30)
+          $('#ani-audio-success')[0].play()
+        }, 500)
+        setTimeout(function () {
+          $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
+        }, 1500);
+        setTimeout(function () {
+          if (!showpop) {
+            $('.inner-border').removeClass('slideout').addClass('slidein');
+
+          } else {
+            showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
+          }
+          $('.answer-ani .ani-gif').html('')
+          $('.answer-ani .ani-gif-3').html('');
+          $('.cant-click').hide();
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+          setTimeout(function () {
+            $('.football').show();
+            $('.goalkeeper').show();
+          }, 50)
+          flag = true
+        }, animate_duration)
+      } else if (status == 0) { //答错的动画
+        setTimeout(function () {
+          $('.answer-ani .ani-gif-2').html('<img src="./images/animbg/football-fail.gif?' + new Date().getTime() + '" alt="">')
+          setTimeout(function () {
+            $('.football').hide();
+            $('.goalkeeper').hide();
+          }, 50)
+          $('#ani-audio-fail')[0].play()
+          // $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">')
+        }, 500)
+        setTimeout(function () {
+          $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">');
+        }, 1000);
+        setTimeout(function () {
+          if (!showpop) {
+            $('.inner-border').removeClass('slideout').addClass('slidein');
+          } else {
+            showOverPop('.out-border', calcStars(), answers_num, sorce, spend_time)
+          }
+          $('.answer-ani .ani-gif-2').html('')
+          $('.answer-ani .ani-gif-4').html('');
+          $('.cant-click').hide();
+          $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
+          setTimeout(function () {
+            $('.football').show();
+            $('.goalkeeper').show();
+          }, 50)
+          flag = true
+        }, animate_duration)
+      }
+      setTimeout(function () {
+        if (current_question == 1) {
+          removeMyDrag(total_question_num)
+          toDrag('u5-cm1', 'checkbox1', 'move_box1')
+        } else if (current_question == 4) {
+          removeMyDrag(total_question_num)
+          toDrag('u5-cm4', 'checkbox4', 'move_box4')
+        }
+      }, 4000);
+    }
+
+    //设置计分板数字
+    function setScoreBoard() {
+      // var strSorce = '00' + sorce
+      $('.score-board .score').html(sorce)
+    }
+    //监听输入框事件
+    function setInputArr(m_arr, e, i) {
+      m_arr[i] = parseInt(e.target.value);
+    }
+
+    //判断输入是否正确
+    function calcQuestion(m_arr, right_arr) {
+      var step = 0;
+      for (let i = 0; i < m_arr.length; i++) {
+        if (m_arr[i] == right_arr[i]) {
+          step++
+        }
+      }
+      if (step === right_arr.length) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    //    第三题选择
+    $('.q3-select-item').on('click', function () {
+      var select_word = null
+      // var select_index = $(this).index()
+      var index = parseInt($(this).attr('data-index'));
+      var right = parseInt($(this).attr('data-right'));
+      q3_arr1[index] = right;
+      $(this).css('background', 'rgba(245, 29, 29, 0.6)');
+      $(this).siblings().css('background', 'none');
+    })
+
+    // 判断乘和加减
+    function changeEr(arr, size) {  // arr是一维数组 size是二维数组包含几条数据
+      var arr2 = []
+      for (var i = 0; i < arr.length; i = i + size) {
+        arr2.push(arr.slice(i, i + size))
+      }
+      return arr2 // 新的二维数组
+    }
+    function FourQuestion(m_arr,right_arr) {
+      var step = 0;
+      var newList = changeEr(m_arr, 4)
+      console.log(newList)
+      for (var j = 0; j < newList.length; j++){
+        if ((newList[j][0] == right_arr[j][0] && newList[j][1] == right_arr[j][1]) || (newList[j][0] == right_arr[j][1] && newList[j][1] == right_arr[j][0])){
+          step ++
+        }
+        if (newList[j][2] == right_arr[j][2]){
+          step ++
+        }
+        if (newList[j][3] == right_arr[j][3]){
+          step ++
+        }
+      }
+      console.log(step)
+      if (step === 6){
+        return true;
+      } else {
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>

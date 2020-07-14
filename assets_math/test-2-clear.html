@@ -51,12 +51,15 @@
       <div class="out-border">
         <img src="./images/commen/out-border.png" alt="">
         <!-- 内边框 -->
-        <div class="vadio-switch">
-          <div class="vadio-switch-box1" onclick = "toChange(0)"></div>
-          <div class="vadio-switch-box2" onclick = "toChange(1)"></div>
-        </div>
-        <div class="vadio-border">
-          <!-- <video src="../assets_math/video/test-1.mp4" loop  muted id="clearVideo1"></video> -->
+        <div class="in-vadio-border">
+
+          <div class="vadio-switch">
+            <div class="vadio-switch-box1" onclick = "toChange(0)"></div>
+            <div class="vadio-switch-box2" onclick = "toChange(1)"></div>
+          </div>
+          <div class="vadio-border">
+            <video src="../assets_math/video/test-1.mp4" loop  muted id="clearVideo1"></video>
+          </div>
         </div>
       </div>
     </div>
@@ -65,7 +68,7 @@
   <script type='text/javascript' src='./js/jquery-1.11.3.min.js'></script>
   <script type="text/javascript">
     //自动播放
-    setTimeout(() => {
+    setTimeout(function(){
       $("#clearVideo1")[0].muted = false;
       $("#clearVideo1")[0].play();
     },0);

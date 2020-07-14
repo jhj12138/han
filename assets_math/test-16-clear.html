@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>二上数学人教版</title>
+  <meta charset=utf-8>
+  <meta name="keywords" content="小学数学">
+  <meta name="description" content="小学数学">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/unitcss.css">
+  <link rel="stylesheet" href="./css/animate.css">
+</head>
+
+<body>
+  <div class="unit u1-clear">
+    <!-- 背景 -->
+    <img src="./images/commen/unit-bg.png" alt="数学">
+    <div class="unit-container">
+      <!-- 背景上的图片 -->
+      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
+      <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
+      <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
+      <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
+      <!-- 返回按钮-->
+      <a href="../index.html">
+        <div class="index-return">
+          <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
+          <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
+        </div>
+      </a>
+      <!-- 指示牌 -->
+      <div class="unit-sign">
+        <img src="./images/commen/unit-ladder.png" alt="" class="unit-ladder">
+        <div class="study-zhashi unit-select">
+          <img src="./images/commen/clear-box.png" alt="">
+        </div>
+        <a href="./test-16-strong.html">
+            <div class="study-clear"><img src="./images/commen/solid-box.png" alt=""></div>
+        </a>
+        <a href="./test-16-smart.html">
+            <div class="study-smart"><img src="./images/commen/smart-box.png" alt=""></div>
+        </a>
+        <a href="./test-16-ks.html">
+            <div class="kousuan"><img src="./images/commen/oral-box.png" alt=""></div>
+        </a>
+      </div>
+      <!-- 主内容 -->
+      <!-- 外边框 -->
+      <div class="out-border">
+        <img src="./images/commen/out-border.png" alt="">
+        <!-- 内边框 -->
+        <div class="in-vadio-border">
+
+          <div class="vadio-switch">
+            <div class="vadio-switch-box1" onclick = "toChange(0)"></div>
+            <div class="vadio-switch-box2" onclick = "toChange(1)"></div>
+          </div>
+          <div class="vadio-border">
+            <video src="../assets_math/video/test-1.mp4" loop  muted id="clearVideo1"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 引入jq -->
+  <script type='text/javascript' src='./js/jquery-1.11.3.min.js'></script>
+  <script type="text/javascript">
+    //自动播放
+    setTimeout(function(){
+      $("#clearVideo1")[0].muted = false;
+      $("#clearVideo1")[0].play();
+    },0);
+    //两个视频切换
+    function toChange(val) {
+      if(val == 0) {
+        $("#clearVideo1").attr('src','../assets_math/video/test-1.mp4')
+        $("#clearVideo1")[0].muted = false;
+        $("#clearVideo1")[0].play();
+      } else if (val == 1) {
+        $("#clearVideo1").attr('src','../assets_math/video/test-2.mp4')
+        $("#clearVideo1")[0].muted = false;
+        $("#clearVideo1")[0].play();
+      }
+    }
+  </script>
+</body>
+
+</html>

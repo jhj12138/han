@@ -301,7 +301,7 @@
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
       audioPlay();
-      setTimeout(() => {
+      setTimeout(function(){
         toDrag('u4-cm1', 'checkbox1', 'move_box1')
         // window.onresize = function () {
         //   toDrag('u4-cm1', 'checkbox1', 'move_box1')
@@ -391,7 +391,7 @@
         if (current_question == 1) {
           removeDrag(total_question_num,current_question)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u4-cm1', 'checkbox1', 'move_box1')
           }, 1000);
           // window.onresize = function () {
@@ -401,7 +401,7 @@
           removeDrag(total_question_num,current_question)
           // removeDrag("checkbox"+(current_question)+1+"","move_box"+(current_question)+1+"")
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u4-cm2', 'checkbox2', 'move_box2')
           }, 1000);
           // window.onresize = function () {
@@ -410,7 +410,7 @@
         } else if (current_question == 3) {
           removeDrag(total_question_num,current_question)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u4-cm3', 'checkbox3', 'move_box3')
           }, 1000);
           // window.onresize = function () {
@@ -419,7 +419,7 @@
         } else if (current_question == 4) {
           removeDrag(total_question_num,current_question)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u4-cm4', 'checkbox4', 'move_box4')
           }, 1000);
           // window.onresize = function () {
@@ -449,7 +449,7 @@
         if (current_question == 1) {
           removeDrag(total_question_num,current_question)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u4-cm1', 'checkbox1', 'move_box1')
           }, 1000);
           // window.onresize = function () {
@@ -458,7 +458,7 @@
         } else if (current_question == 2) {
           removeDrag(total_question_num,current_question)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             console.log('toDrag',toDrag())
             toDrag('u4-cm2', 'checkbox2', 'move_box2')
           }, 1000);
@@ -468,7 +468,7 @@
         } else if (current_question == 3) {
           removeDrag(total_question_num,current_question)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u4-cm3', 'checkbox3', 'move_box3')
           }, 1000);
           // window.onresize = function () {
@@ -477,7 +477,7 @@
         } else if (current_question == 4) {
           removeDrag(total_question_num,current_question)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u4-cm4', 'checkbox4', 'move_box4')
           }, 1000);
           // window.onresize = function () {
@@ -627,7 +627,7 @@
       $('.question-con .checkbox1').children() && $('.question-con .checkbox1').children().remove()
       $('.question-con .checkbox2').children() && $('.question-con .checkbox2').children().remove()
       $('.question-con .checkbox3').children() && $('.question-con .checkbox3').children().remove()
-      $('.question-con .checkbox4').children() && $('.question-con .checkbox3').children().remove()
+      $('.question-con .checkbox4').children() && $('.question-con .checkbox4').children().remove()
     }
 
 
@@ -708,17 +708,17 @@
       }
       setTimeout(function () {
         if (current_question == 1) {
+          removeMyDrag(total_question_num)
           toDrag('u4-cm1', 'checkbox1', 'move_box1')
-          removeMyDrag(total_question_num)
         } else if (current_question == 2) {
+          removeMyDrag(total_question_num)
           toDrag('u4-cm2', 'checkbox2', 'move_box2')
-          removeMyDrag(total_question_num)
         } else if (current_question == 3) {
+          removeMyDrag(total_question_num)
           toDrag('u4-cm3', 'checkbox3', 'move_box3')
-          removeMyDrag(total_question_num)
         } else if (current_question == 4) {
-          toDrag('u4-cm4', 'checkbox4', 'move_box4')
           removeMyDrag(total_question_num)
+          toDrag('u4-cm4', 'checkbox4', 'move_box4')
         }
       }, 4000);
     }

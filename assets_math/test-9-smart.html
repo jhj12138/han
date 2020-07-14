@@ -278,7 +278,7 @@
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
       // audioPlay()
-      setTimeout(() => {
+      setTimeout(function(){
         toDrag('u5-cm1', 'checkbox1', 'move_box1')
         // window.onresize = function () {
         //   toDrag('u5-cm1', 'checkbox1', 'move_box1')
@@ -368,7 +368,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
 
             toDrag('u5-cm1', 'checkbox1', 'move_box1')
           }, 1000);
@@ -381,7 +381,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u5-cm4', 'checkbox4', 'move_box4')
           }, 1000);
           // window.onresize = function () {
@@ -410,7 +410,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
 
             toDrag('u5-cm1', 'checkbox1', 'move_box1')
           }, 1000);
@@ -421,7 +421,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             // removeDrag(total_question_num,current_question)
             toDrag('u5-cm4', 'checkbox4', 'move_box4')
           }, 1000);
@@ -500,7 +500,7 @@
       if (current_question == 1) {    //第一题
         answers_num = fewAnswer()
         var q1_a = q1_arr.sort().toString() == q1_right.sort().toString()
-        var q1_b = changeFormula(q1_arr2, q1_right2, 2)
+        var q1_b = changeFormula1(q1_arr2, q1_right2, 2)
         result = q1_a && q1_b
       } else if (current_question == 2) {
         answers_num = fewAnswer()
@@ -515,8 +515,8 @@
         result = (q5_arr.indexOf(0) == -1 && q5_arr.length == 4) ? true : false
       } else if (current_question == 6) {
         var q6_a = (q6_arr.indexOf(0) == -1 && q6_arr.length == 1) ? true : false;
-        var q6_b = changeFormula(q6_arr2, q6_right2, 2);
-        var q6_c = changeFormula(q6_arr3, q6_right3, 2);
+        var q6_b = changeFormula1(q6_arr2, q6_right2, 2);
+        var q6_c = changeFormula1(q6_arr3, q6_right3, 2);
         var q6_d = (q6_arr4[0] == 2 && q6_arr4[1] == 5) || (q6_arr4[0] == 5 || q6_arr4[1] == 2) && q6_arr4[2] == 3 && (q6_arr4[3] == 3 && q6_arr4[4] == 5) || (q6_arr4[3] == 5 || q6_arr4[4] == 3) && q6_arr4[5] == 2
         result = q6_a && q6_b && q6_c && q6_d;
       }

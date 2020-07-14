@@ -185,6 +185,7 @@
   <!-- <script type="text/javascript" src="" id = "doScript"></script> -->
   <!-- <script type="text/javascript" src="../assets_math/template/04fixeDrag/index.js"></script> -->
   <script type="text/javascript" src="../assets_math/template/06fixeDrag/index.js"></script>
+  <script type="text/javascript" src="../assets_math/template/07toDrag/index.js"></script>
   <!-- <script type="text/javascript" src="../assets_math/template/cssesa.js"></script> -->
   <!-- 引入兔子树和返回 -->
   <script type="text/javascript">
@@ -210,7 +211,7 @@
     var q1_data = ["2", "10", "4", "5", "20", "5", "5", "25", "2", "5", "10", "5", "20"]   //第一题答案
 
     var q2_arr = [];
-    var q2_right = ["2", "6", "12"]   //第二题答案
+    var q2_data = [[4,7],[2,6],[3,8],[1],[5]]   //第二题答案
 
     var q3_arr = [];
     var q3_data = ["10", "20", "20", "5", "15", "30"]   //第三题答案
@@ -242,7 +243,7 @@
       autoFocus();    //自动对焦
       // audioPlay()
 
-      setTimeout(() => {
+      setTimeout(function(){
         getDrag('u6-cm1', 'check_box1', 'mobile_box1')
         // window.onresize = function () {
         //   getDrag('u6-zs1','check_box1','mobile_box1')
@@ -333,13 +334,16 @@
         current_question--;
         if (current_question == 1) {
           newFlag = false
-
+          removeMyDrag(total_question_num) 
         } else if (current_question == 2) {
+          removeMyDrag(total_question_num) 
           newFlag = false
-
-        } else if (current_question == 4) {
+          setTimeout(function(){
+            newDrag('u10-cm2', 'checkbox2', 'mobile_box2')
+          }, 1000);
+        } else if (current_question == 3) {
+          removeMyDrag(total_question_num) 
           newFlag = false
-
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
@@ -364,13 +368,16 @@
         current_question++;
         if (current_question == 1) {
           newFlag = false
-
+          removeMyDrag(total_question_num) 
         } else if (current_question == 2) {
+          removeMyDrag(total_question_num) 
           newFlag = false
-
-        } else if (current_question == 4) {
+          setTimeout(function(){
+            newDrag('u10-cm2', 'checkbox2', 'mobile_box2')
+          }, 1000);
+        } else if (current_question == 3) {
+          removeMyDrag(total_question_num) 
           newFlag = false
-
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
@@ -445,7 +452,7 @@
         result = calcQuestion(q1_arr, q1_data)
       } else if (current_question == 2) {
         answers_num = fewAnswer()
-        result = goDrag(q2_arr, q2_data, 'check_box2')
+        result = goDrag(q2_arr, q2_data, 'checkbox2')
       } else if (current_question == 3) {
         answers_num = fewAnswer()
         result = calcQuestion(q3_arr, q3_data)
@@ -481,13 +488,14 @@
         q2_arr = [];
         q3_arr = [];
         q4_arr = [];
+        q4_arr2 = [];
         // $('.question-con .checkbox').children().remove()
       })
       // $('.q1-bottom').html('<div class="mobile_box1" data-list="1"></div><div class="mobile_box1" data-list="2"></div>')
       // // $('.q2-bottom').html('<div class="mobile_box2" daxta-list="1"></div><div class="mobile_box2" data-list="2"></div>')
-      // $('.q4-bottom').html('<div class="mobile_box4" data-list="1"></div><div class="mobile_box4" data-list="2"></div>')
+      $('.q2-bottom').html('<div class="mobile_box2" data-list="1"></div><div class="mobile_box2" data-list="2"></div><div class="mobile_box2" data-list="3"></div><div class="mobile_box2" data-list="4"></div><div class="mobile_box2" data-list="5"></div><div class="mobile_box2" data-list="6"></div><div class="mobile_box2" data-list="7"></div><div class="mobile_box2" data-list="8"></div>')
       // $('.question-con .check_box1').children() && $('.question-con .check_box1').children().remove()
-      // $('.question-con .check_box2').children() && $('.question-con .check_box2').children().remove()
+      $('.question-con .checkbox2').children() && $('.question-con .checkbox2').children().remove()
       // $('.question-con .check_box4').children() && $('.question-con .check_box4').children().remove()
     }
 
@@ -568,20 +576,10 @@
         }, animate_duration)
       }
       setTimeout(function () {
-        if (current_question == 1) {
-          getDrag('u6-cm1', 'check_box1', 'mobile_box1')
+        if (current_question == 2) {
+          newDrag('u10-cm2', 'checkbox2', 'mobile_box2')
           window.onresize = function () {
-            getDrag('u6-cm1', 'check_box1', 'mobile_box1')
-          }
-        } else if (current_question == 2) {
-          getDrag('u6-cm2', 'check_box2', 'mobile_box2')
-          window.onresize = function () {
-            getDrag('u6-cm2', 'check_box2', 'mobile_box2')
-          }
-        } else if (current_question == 4) {
-          getDrag('u6-cm4', 'check_box4', 'mobile_box4')
-          window.onresize = function () {
-            getDrag('u6-cm4', 'check_box4', 'mobile_box4')
+            newDrag('u10-cm2', 'checkbox2', 'mobile_box2')
           }
         }
       }, 4000);
@@ -663,6 +661,33 @@
       }
       console.log(step)
       if (step === 6){
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    // 判断第二题对不对
+    function goDrag(m_arr, right_arr, checkBox) {
+      var checkBox = document.getElementsByClassName(checkBox)
+      var step = 0
+      for (var i = 0; i < checkBox.length; i++) {
+        if (checkBox[i].children) {
+          var new_arr = []
+          for (var j = 0; j < checkBox[i].children.length; j++){
+            new_arr.push(checkBox[i].children[j].dataset.list)
+          }
+          m_arr.push(new_arr)
+        }
+      }
+      console.log(m_arr)
+      for (let j = 0; j < m_arr.length; j++) {
+        if (m_arr[j].sort().toString() == right_arr[j].sort().toString()) {
+          step++
+        }
+      }
+      console.log(step)
+      if (step === right_arr.length) {
         return true;
       } else {
         return false;

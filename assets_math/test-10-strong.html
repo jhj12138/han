@@ -215,7 +215,7 @@
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
       // audioPlay();
-      setTimeout(() => {
+      setTimeout(function(){
         getDrag('u10-zs1', 'checkbox1', 'mobile_box1')
       }, 2000);
     })
@@ -424,7 +424,10 @@
         q3_arr2 = [];
         // $('.question-con .checkbox').children().remove()
       })
-
+      $('.q3-select-item ').each(function () {
+        $(this).css('background', 'none');
+        $(this).css('color', '#000');
+      })
       // $('.q2-bottom').html('<div class="mobile_box" data-list="1"></div><div class="mobile_box" data-list="2"></div><div class="mobile_box" data-list="3"></div><div class="mobile_box" data-list="4"></div><div class="mobile_box" data-list="5"></div><div class="mobile_box" data-list="6"></div><div class="mobile_box" data-list="7"></div><div class="mobile_box" data-list="8"></div>')
       $('.question-con .check_box1').children() && $('.question-con .check_box1').children().remove()
       $('.q1-bottom').html('<div class="mobile_box1" data-list="1"></div><div class="mobile_box1" data-list="2"></div><div class="mobile_box1" data-list="3"></div><div class="mobile_box1" data-list="4"></div><div class="mobile_box1" data-list="5"></div><div class="mobile_box1" data-list="6"></div>')

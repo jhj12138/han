@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./css/unitcss.css">
   <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/unitNew.css">
 </head>
 
 <body>
@@ -88,79 +89,68 @@
             <div class="question q1">
               <div class="q1-top">
                 <div class="checkbox1"></div>
-                <div class="checkbox1"></div>
-                <!-- 输入框部分开始 -->
-                <div class="q1-input"><input id="num1-1" type="text" maxlength="3" /></div>
-                <div class="q1-input"><input id="num1-2" type="text" maxlength="3" /></div>
-                <div class="q1-input"><input id="num1-3" type="text" maxlength="3" /></div>
-                <div class="q1-input"><input id="num1-4" type="text" maxlength="3" /></div>
               </div>
               <div class="q1-bottom">
                 <!-- 运算符号 -->
-                <div class="jia move_box1" data-list="1"></div>
-                <div class="jian move_box1" data-list="2"></div>
-                <div class="cheng move_box1" data-list="3"></div>
-                <div class="chu move_box1" data-list="4"></div>
+                <div class="mobile_box1 boxType" data-list="1"></div>
+                <div class="mobile_box1 boxType" data-list="1"></div>
+                <div class="mobile_box1 boxType" data-list="1"></div>
+                <div class="mobile_box1 boxType" data-list="1"></div>
+                <div class="mobile_box1 boxType" data-list="1"></div>
               </div>
               <!-- 背景声音 -->
               <audio src="../assets_math/audio/zhaoyizhao.mp3" id = "q1-audio"></audio>
-              <img src="../assets_math/images/commen/unitFive/cm-q1.png" alt="">
+              <img src="../assets_math/images/commen/unitTwel/cm-q1.png" alt="">
             </div>
             <!-- 第二题 -->
             <div class="question q2">
-              <div class="q2-list">
-                <div class="q2-box" data-list= '1'></div>
-                <div class="q2-box" data-list= '2'></div>
-              </div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 0)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 1)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 2)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 3)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 4)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 5)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 6)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 7)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 8)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 9)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 10)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 11)"></div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/tianyitian.mp3" id = "q2-audio"></audio>
-              <img src="../assets_math/images/commen/unitFive/cm-q2.png" alt="">
+              <audio src="../assets_math/audio/zhaoyizhao.mp3" id = "q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitTwel/cm-q2.png" alt="">
             </div>
             <!-- 第三题 -->
             <div class="question q3">
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 0)" maxlength="3"></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 1)" maxlength="3"></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 2)" maxlength="3"></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 3)" maxlength="3"></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 4)" maxlength="3"></div>
-              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 5)" maxlength="3"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 0)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 1)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 2)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 3)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 4)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 5)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 6)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr, event, 7)" maxlength="2"></div>
+
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr1, event, 0)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr1, event, 1)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr1, event, 2)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr1, event, 3)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr1, event, 4)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr1, event, 5)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr1, event, 6)" maxlength="2"></div>
+              <div class="q3-input"><input type="text" onchange="setInputArr(q3_arr1, event, 7)" maxlength="2"></div>
               <!-- 背景声音 -->
               <audio src="../assets_math/audio/shuyishu.mp3" id = "q3-audio"></audio>
-              <img src="../assets_math/images/commen/unitFive/cm-q3.png" alt="">
+              <img src="../assets_math/images/commen/unitTwel/cm-q3.png" alt="">
             </div>
             <!-- 第四题 -->
             <div class="question q4">
-              <div class="q4-top">
-                <div class="checkbox4"></div>
-                <div class="checkbox4"></div>
-                <div class="checkbox4"></div>
-                <div class="checkbox4"></div>
-                <div class="checkbox4"></div>
-                <div class="checkbox4"></div>
-                <!-- 输入框部分开始 -->
-                <div class="q4-input"><input id="num6-1" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 0)"></div>
-                <div class="q4-input"><input id="num6-2" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 1)"></div>
-                <div class="q4-input"><input id="num6-3" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 2)"></div>
-                <div class="q4-input"><input id="num7-1" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 3)"></div>
-                <div class="q4-input"><input id="num7-2" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 4)"></div>
-                <div class="q4-input"><input id="num7-3" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 5)"></div>
-                <div class="q4-input"><input id="num8-1" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 6)"></div>
-                <div class="q4-input"><input id="num8-2" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 7)"></div>
-                <div class="q4-input"><input id="num8-3" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 8)"></div>
-                <div class="q4-input"><input id="num9-1" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 9)"></div>
-                <div class="q4-input"><input id="num9-2" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 10)"></div>
-                <div class="q4-input"><input id="num9-3" type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 11)"></div>
-              </div>
-              <div class="q4-bottom">
-                <!-- 运算符号 -->
-                <div class="jia move_box4" data-list="1"></div>
-                <div class="jian move_box4" data-list="2"></div>
-                <div class="cheng move_box4" data-list="3"></div>
-                <div class="chu move_box4" data-list="4"></div>
-              </div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 0)" maxlength="2"></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 1)" maxlength="2"></div>
+              <div class="q4-input"><input type="text" onchange="setInputArr(q4_arr, event, 2)" maxlength="2"></div>
               <!-- 背景声音 -->
               <audio src="../assets_math/audio/biyibi.mp3" id = "q4-audio"></audio>
-              <img src="../assets_math/images/commen/unitFive/cm-q4.png" alt="">
+              <img src="../assets_math/images/commen/unitTwel/cm-q4.png" alt="">
             </div>
           </div>
         </div>
@@ -212,21 +202,19 @@
     }
   </script>
   <script type="text/javascript">
-    var rightObj1 = { //第一题答案
-      type: '1',
-      data: [97,46,24],
-      sort: false
-    }
 
-    var q2_data = 1; //第二题答案
-    var q2_flag = false;
+    var q2_arr = []; //第二题答案
+    var q2_data = [[3,5,2,17],[4,4,1,17],[3,5,2,17]]
 
     var q3_arr = []; //第三题input输入的答案
-    var q3_data = [87,98,95,3,1,2]; //第三题正确答案
+    var q3_data = [[3,4,2,14],[3,5,1,14]]; //第三题正确答案
 
-    var q4_arr = []; //第四题input输入的答案
-    var q4_data = [[98,36,27,35],[98,36,60,2],[98,48,27,23]]; //第四题的正确答案
+    var q3_arr1 = []; //第三题input输入的答案
+    var q3_data1 = [[3,4,2,14],[4,4,2,14]]; //第三题正确答案
 
+    var q4_arr = []; //第三题input输入的答案
+    var q4_data = [2,3,3]; //第三题正确答案
+    
     var total_question_num = 4;    //一共有多少题
     var current_question = 1;       //当前是第几题
     var animate_duration = 3000   //动画时长
@@ -246,8 +234,8 @@
       startTimer();      //开始正计时
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
-      audioPlay()
-      setTimeout(() => {
+      // audioPlay()
+      setTimeout(function(){
         toDrag('u5-cm1', 'checkbox1', 'move_box1')
         // window.onresize = function () {
         //   toDrag('u5-cm1', 'checkbox1', 'move_box1')
@@ -338,7 +326,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             
             toDrag('u5-cm1', 'checkbox1', 'move_box1')
           }, 1000);
@@ -351,7 +339,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u5-cm4', 'checkbox4', 'move_box4')
           }, 1000);
           // window.onresize = function () {
@@ -360,7 +348,7 @@
         } 
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          audioPlay()
+          // audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
           autoFocus();    //自动对焦
@@ -382,7 +370,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             
             toDrag('u5-cm1', 'checkbox1', 'move_box1')
           }, 1000);
@@ -393,7 +381,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             // removeDrag(total_question_num,current_question)
             toDrag('u5-cm4', 'checkbox4', 'move_box4')
           }, 1000);
@@ -403,7 +391,7 @@
         } 
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-            audioPlay()
+            // audioPlay()
             $('.inner-border').removeClass('slideout').addClass('slidein');
             $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
             autoFocus();    //自动对焦
@@ -471,44 +459,18 @@
       var result = null;
       removeMyDrag(total_question_num)
       if (current_question == 1) {    //第一题
-        var newCheck = document.getElementsByClassName('checkbox1')
-        if(newCheck[0].children[0]) {
-          var symbal_1 = newCheck[0].children[0].dataset.list == 2 ? true : false
-        }
-        if(newCheck[1].children[0]) {
-          var symbal_2 = newCheck[1].children[0].dataset.list == 2 ? true : false
-        }
-        var resultOne = getUserObj(['num1-1', 'num1-2', 'num1-3'], 'num1-4', 1, false, rightObj1)
-        result = symbal_1 && symbal_2 && resultOne
+
       } else if (current_question == 2) {
-        result = q2_flag
+        answers_num = fewAnswer()
+        result = FourQuestion(q2_arr, q2_data, 9)
       } else if (current_question == 3) {
         answers_num = fewAnswer()
-        result = calcQuestion(q3_arr, q3_data)
+        var result1 = FourQuestion(q3_arr, q3_data, 6)
+        var result2 = FourQuestion(q3_arr1, q3_data1, 6)
+        result = result1 && result2
       } else if (current_question == 4) {
-        var newCheck = document.getElementsByClassName('checkbox4')
-        if(newCheck[0].children[0]) {
-          var symbal_3 = newCheck[0].children[0].dataset.list == 2 ? true : false
-        }
-        if(newCheck[1].children[0]) {
-          var symbal_4 = newCheck[1].children[0].dataset.list == 2 ? true : false
-        }
-        if(newCheck[2].children[0]) {
-          var symbal_5 = newCheck[2].children[0].dataset.list == 2 ? true : false
-        }
-        if(newCheck[3].children[0]) {
-          var symbal_6 = newCheck[3].children[0].dataset.list == 2 ? true : false
-        }
-        if(newCheck[4].children[0]) {
-          var symbal_7 = newCheck[4].children[0].dataset.list == 2 ? true : false
-        }
-        if(newCheck[5].children[0]) {
-          var symbal_8 = newCheck[5].children[0].dataset.list == 2 ? true : false
-        }
-        var resultFive = fiveQuestion(q4_arr, q4_data)
-        result = resultFive && symbal_3 && symbal_4 && symbal_5 && symbal_6 && symbal_7 && symbal_8
-        // console.log('resultFive',resultFive)
-        
+        answers_num = fewAnswer()
+        result = calcQuestion(q4_arr, q4_data)
       } 
       if (result) {
           if (isScore.indexOf(current_question) == -1) {
@@ -533,8 +495,9 @@
       $('.question-con input').each(function () {
           this.value = '';
           q1_arr = [];
-          q2_flag = false;
+          q2_arr = [];
           q3_arr = [];
+          q3_arr1 = [];
           q4_arr = [];
           // $('.question-con .checkbox').children().remove()
       })
@@ -614,11 +577,11 @@
       }
       setTimeout(function () {
         if (current_question == 1) {
+          removeMyDrag(total_question_num)
           toDrag('u5-cm1', 'checkbox1', 'move_box1')
-          removeMyDrag(total_question_num)
         } else if(current_question == 4){
-          toDrag('u5-cm4', 'checkbox4', 'move_box4')
           removeMyDrag(total_question_num)
+          toDrag('u5-cm4', 'checkbox4', 'move_box4')
         }
       }, 4000);
     }
@@ -658,52 +621,32 @@
       })
 
     // 判断第四题下是否正确
-    function changeEr(arr, size) {  // arr是一维数组 size是二维数组包含几条数据
+   // 判断乘和加减
+   function changeEr(arr, size) {  // arr是一维数组 size是二维数组包含几条数据
       var arr2 = []
       for (var i = 0; i < arr.length; i = i + size) {
         arr2.push(arr.slice(i, i + size))
       }
       return arr2 // 新的二维数组
     }
-    function fiveQuestion(m_arr, right_arr) {
+    function FourQuestion(m_arr,right_arr, num) {
       var step = 0;
-      var newFlag = true;
-      var newArr = changeEr(m_arr, 4)
-      for (var i = 0; i < newArr.length; i++) {
-        if (newArr[i][0] != 98){
-          newFlag = false
-        } 
-        if (newArr[i][0] - newArr[i][1] - newArr[i][2] != newArr[i][3]) {
-          newFlag = false
-        } 
-        parseInt(newArr[i].sort())
-      }
-      for (var k = 0; k < newArr.length; k++) {
-        for (var j = k + 1; j < newArr.length; j++) {
-          if (newArr[k].sort().toString() == newArr[j].sort().toString()){
-            newFlag = false
-          }
+      var newList = changeEr(m_arr, 4)
+      for (var j = 0; j < newList.length; j++){
+        if ((newList[j][0] == right_arr[j][0] && newList[j][1] == right_arr[j][1]) || (newList[j][0] == right_arr[j][1] && newList[j][1] == right_arr[j][0])){
+          step ++
+        }
+        if (newList[j][2] == right_arr[j][2]){
+          step ++
+        }
+        if (newList[j][3] == right_arr[j][3]){
+          step ++
         }
       }
-      if (newFlag == false) {
-        return newFlag
-      }
-      for (var i = 0; i < right_arr.length; i++) {
-        parseInt(right_arr[i].sort())
-      }
-
-      for (var i = 0; i < newArr.length; i++) {
-        for (var j = 0; j < right_arr.length; j++){
-          if (newArr[i].toString() == right_arr[j].toString()) {
-            step ++
-          }
-        }
-      }
-
-      if (step === right_arr.length) {
-          return true;
+      if (step === num){
+        return true;
       } else {
-          return false;
+        return false;
       }
     }
   </script>

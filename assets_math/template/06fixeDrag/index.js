@@ -75,7 +75,6 @@ function findBox(target) {
       // 元素原来的位置
       var originalX = e.target.offsetLeft
       var originalY = e.target.offsetTop
-      // console.log(scopeInfoArr)
       locat = scopeInfoArr;
       // 鼠标移动
       document.addEventListener('mousemove', function(e) {
@@ -94,23 +93,35 @@ function findBox(target) {
             if(count === 0){
               if (checkBox[k] != undefined){
                 if (!checkBox[k].children.length) {
-                  e.target.style.cssText = 'display:none'
-                  var clonedNode = e.target.cloneNode(true);
+                  activeBox.target.style.cssText = 'display:none'
+                  var clonedNode = activeBox.target.cloneNode(true);
                   clonedNode.classList.remove(mobileClass)
                   if(domName == 'u6-zs1') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u6-zs2') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsTwo"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsTwo"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u6-cm1') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u6-cm2') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmTwo"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmTwo"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u6-cm4') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmFour"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmFour"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'cs-cm1') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiOne/csOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 62%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiOne/csOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 62%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u10-zs1') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen//unitTen/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen//unitTen/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'u13-cm6') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitThirt/cmSix"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'cs2-cm1') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiTwo/qOne"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'cs2-cm9') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiTwo/qNine"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 62%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'cs2-cm11') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiTwo/qEle"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 57%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'u16-cm2') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSixte/qTwo"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 57%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'u16-cm5') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSixte/qFive"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 57%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   }
                   checkBox[k].appendChild(clonedNode)
                   test()
@@ -124,19 +135,31 @@ function findBox(target) {
                   var clonedNode = e.target.cloneNode(true);
                   clonedNode.classList.remove(mobileClass)
                   if(domName == 'u6-zs1') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u6-zs2') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsTwo"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsTwo"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u6-cm1') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u6-cm2') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmTwo"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmTwo"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u6-cm4') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmFour"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmFour"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'cs-cm1') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiOne/csOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 62%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiOne/csOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 62%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if (domName == 'u10-zs1') {
-                    clonedNode.style.cssText = "background-image: url('./images/commen//unitTen/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                    clonedNode.style.cssText = "background-image: url('./images/commen//unitTen/zsOne"+getIndex(e.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'u13-cm6') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitThirt/cmSix"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'cs2-cm1') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiTwo/qOne"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 90%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'cs2-cm9') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiTwo/qNine"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 62%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'cs2-cm11') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/ceshiTwo/qEle"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 57%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'u16-cm2') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSixte/qTwo"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 57%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'u16-cm5') {
+                    clonedNode.style.cssText = "background-image: url('./images/commen/unitSixte/qFive"+getIndex(activeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 57%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   }
                   checkBox[k].appendChild(clonedNode)
                   test()
@@ -217,19 +240,29 @@ function findBox(target) {
                       var clonedNode = removeBox.target.cloneNode(true);
                       clonedNode.classList.remove(mobileClass)
                       if(domName == 'u6-zs1') {
-                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                       } else if (domName == 'u6-zs2') {
-                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsTwo"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/zsTwo"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 86%;height: 60%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                       } else if (domName == 'u6-cm1') {
-                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                       } else if (domName == 'u6-cm2') {
-                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmTwo"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmTwo"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 42%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                       } else if (domName == 'u6-cm4') {
-                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmFour"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSix/cmFour"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                       } else if (domName == 'cs-cm1') {
-                        clonedNode.style.cssText = "background-image: url('./images/commen/ceshiOne/csOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 62%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                        clonedNode.style.cssText = "background-image: url('./images/commen/ceshiOne/csOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 77%;height: 62%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                       } else if (domName == 'u10-zs1') {
-                        clonedNode.style.cssText = "background-image: url('./images/commen//unitTen/zsOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%)"
+                        clonedNode.style.cssText = "background-image: url('./images/commen//unitTen/zsOne"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 100%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                      } else if (domName == 'u13-cm6') {
+                        clonedNode.style.cssText = "background-image: url('./images/commen/unitThirt/cmSix"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 90%;height: 48%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                      } else if (domName == 'cs2-cm9') {
+                        clonedNode.style.cssText = "background-image: url('./images/commen/ceshiTwo/qNine"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 62%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                      } else if (domName == 'cs2-cm11') {
+                        clonedNode.style.cssText = "background-image: url('./images/commen/ceshiTwo/qEle"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 57%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                      } else if (domName == 'u16-cm2') {
+                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSixte/qTwo"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 57%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                      } else if (domName == 'u16-cm5') {
+                        clonedNode.style.cssText = "background-image: url('./images/commen/unitSixte/qFive"+getPicInTopBox(removeBox.target)+".png');background-repeat: no-repeat;background-size: cover;width: 57%;height: 51%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                       }
                       checkBox[i].appendChild(clonedNode)
                       removeBox.target.parentNode && removeBox.target.parentNode.removeChild(removeBox.target)

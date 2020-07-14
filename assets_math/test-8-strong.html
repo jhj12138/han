@@ -196,6 +196,7 @@
   <script type='text/javascript' src='./js/index.js'></script>
   <!-- 引入固定拖动 -->
   <script type="text/javascript" src="../assets_math/template/05fiexDrag/index.js"></script>
+  <script type="text/javascript" src="../assets_math/template/07toDrag/index.js"></script>
   <script type="text/javascript">
     // 鼠标移动上去改变
     function goMove(e, num) {
@@ -218,6 +219,8 @@
     var q2_arr = [] //第二题拖拽的值
     var q2_data = [1, 2, 1] //第二题的正确答案
 
+    var q3_arr = []
+    var q3_data = [[1,4],[5,3],[2,6]]
 
     var isScore = [];   //已经得分的题目
     var total_question_num = 3;    //一共有多少题
@@ -335,9 +338,16 @@
       } else if (current_question) {
         current_question--;
         if (current_question == 2) {
+          removeMyDrag(total_question_num) 
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u8-zs2', 'checkbox2', 'move_box2')
+          }, 1000);
+        } else if (current_question == 3) {
+          removeMyDrag(total_question_num) 
+          newFlag = false
+          setTimeout(function(){
+            newDrag('u8-zs3', 'checkbox3', 'move_box3')
           }, 1000);
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
@@ -361,9 +371,16 @@
       if (current_question < total_question_num) {
         current_question++;
         if (current_question == 2) {
+          removeMyDrag(total_question_num) 
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u8-zs2', 'checkbox2', 'move_box2')
+          }, 1000);
+        } else if (current_question == 3) {
+          removeMyDrag(total_question_num) 
+          newFlag = false
+          setTimeout(function(){
+            newDrag('u8-zs3', 'checkbox3', 'move_box3')
           }, 1000);
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
@@ -415,6 +432,9 @@
       } else if (current_question == 2) {
         answers_num = fewAnswer()
         result = goDrag(q2_arr, q2_data, 'checkbox2')
+      } else if (current_question == 3) {
+        answers_num = fewAnswer()
+        result = goDrag1(q3_arr, q3_data, 'checkbox3')
       }
       if (result) {
         if (isScore.indexOf(current_question) == -1) {
@@ -441,8 +461,9 @@
         q2_arr = [];
         // $('.question-con .checkbox').children().remove()
       })
-      // $('.q2-bottom').html('<div class="mobile_box" data-list="1"></div><div class="mobile_box" data-list="2"></div><div class="mobile_box" data-list="3"></div><div class="mobile_box" data-list="4"></div><div class="mobile_box" data-list="5"></div><div class="mobile_box" data-list="6"></div><div class="mobile_box" data-list="7"></div><div class="mobile_box" data-list="8"></div>')
+      $('.q3-bottom').html('<div class="move_box3" data-list="1"></div><div class="move_box3" data-list="2"></div><div class="move_box3" data-list="3"></div><div class="move_box3" data-list="4"></div><div class="move_box3" data-list="5"></div><div class="move_box3" data-list="6"></div>')
       $('.question-con .checkbox2').children() && $('.question-con .checkbox2').children().remove()
+      $('.question-con .checkbox3').children() && $('.question-con .checkbox3').children().remove()
       $('.q1-select-change img').attr("src", '')
     }
 
@@ -522,10 +543,15 @@
         }, animate_duration)
       }
       setTimeout(function () {
-        if (current_question == 3) {
+        if (current_question == 2) {
           getDrag('u8-zs2', 'checkbox2', 'move_box2')
           window.onresize = function () {
             getDrag('u8-zs2', 'checkbox2', 'move_box2')
+          }
+        } else if (current_question == 3) {
+          newDrag('u8-zs3', 'checkbox3', 'move_box3')
+          window.onresize = function () {
+            newDrag('u8-zs3', 'checkbox3', 'move_box3')
           }
         }
       }, 4000);
@@ -592,7 +618,31 @@
       }
     }
 
-
+    function goDrag1(m_arr, right_arr, checkBox) {
+      var checkBox = document.getElementsByClassName(checkBox)
+      var step = 0
+      for (var i = 0; i < checkBox.length; i++) {
+        if (checkBox[i].children) {
+          var new_arr = []
+          for (var j = 0; j < checkBox[i].children.length; j++){
+            new_arr.push(checkBox[i].children[j].dataset.list)
+          }
+          m_arr.push(new_arr)
+        }
+      }
+      console.log(m_arr)
+      for (let j = 0; j < m_arr.length; j++) {
+        if (m_arr[j].sort().toString() == right_arr[j].sort().toString()) {
+          step++
+        }
+      }
+      console.log(step)
+      if (step === right_arr.length) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   </script>
 </body>
 

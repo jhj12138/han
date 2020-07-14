@@ -247,7 +247,7 @@
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
       audioPlay()
-      setTimeout(() => {
+      setTimeout(function(){
         toDrag('u5-cm1', 'checkbox1', 'move_box1')
         // window.onresize = function () {
         //   toDrag('u5-cm1', 'checkbox1', 'move_box1')
@@ -338,7 +338,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             
             toDrag('u5-cm1', 'checkbox1', 'move_box1')
           }, 1000);
@@ -351,7 +351,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             toDrag('u5-cm4', 'checkbox4', 'move_box4')
           }, 1000);
           // window.onresize = function () {
@@ -382,7 +382,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             
             toDrag('u5-cm1', 'checkbox1', 'move_box1')
           }, 1000);
@@ -393,7 +393,7 @@
           // removeDrag(total_question_num,current_question)
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function(){
             // removeDrag(total_question_num,current_question)
             toDrag('u5-cm4', 'checkbox4', 'move_box4')
           }, 1000);
@@ -614,11 +614,11 @@
       }
       setTimeout(function () {
         if (current_question == 1) {
+          removeMyDrag(total_question_num)
           toDrag('u5-cm1', 'checkbox1', 'move_box1')
-          removeMyDrag(total_question_num)
         } else if(current_question == 4){
-          toDrag('u5-cm4', 'checkbox4', 'move_box4')
           removeMyDrag(total_question_num)
+          toDrag('u5-cm4', 'checkbox4', 'move_box4')
         }
       }, 4000);
     }

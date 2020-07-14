@@ -219,7 +219,7 @@
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
       audioPlay();
-      setTimeout(() => {
+      setTimeout(function(){
         toDrag('u4-zs1','checkbox1','move_box1')
         // window.onresize = function () {
         //   toDrag('u4-zs1','checkbox1','move_box1')
@@ -323,7 +323,7 @@
         if(current_question == 1) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function() {
             // removeDrag(total_question_num,current_question)
             toDrag('u4-zs1','checkbox1','move_box1')
           }, 1000);
@@ -333,7 +333,7 @@
         } else if (current_question == 2) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function() {
             // removeDrag(total_question_num,current_question)
             toDrag('u4-zs2','checkbox2','move_box2')
           }, 1000);
@@ -364,7 +364,7 @@
         if(current_question == 1) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function() {
             // removeDrag(total_question_num,current_question)
             toDrag('u4-zs1','checkbox1','move_box1')
           }, 1000);
@@ -374,7 +374,7 @@
         } else if (current_question == 2) {
           removeMyDrag(total_question_num)
           newFlag = false
-          setTimeout(() => {
+          setTimeout(function() {
             // removeDrag(total_question_num,current_question)
             toDrag('u4-zs2','checkbox2','move_box2')
           }, 1000);
@@ -548,11 +548,11 @@
       }
       setTimeout(function () {
           if (current_question == 1) {
+            removeMyDrag(total_question_num)
             toDrag('u4-zs1','checkbox1','move_box1')
-            removeMyDrag(total_question_num)
           } else if (current_question == 2){
-            toDrag('u4-zs2','checkbox2','move_box2')
             removeMyDrag(total_question_num)
+            toDrag('u4-zs2','checkbox2','move_box2')
           }
       }, 4000);
     }

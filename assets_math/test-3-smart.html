@@ -328,7 +328,7 @@
       autoFocus();    //自动对焦
       // audioPlay()
 
-      setTimeout(() => {
+      setTimeout(function() {
         getDrag('u3-cm1')
         window.onresize = function () {
           getDrag('u3-cm1')
@@ -407,9 +407,9 @@
     //上一题
     function lastButton() {
       window.clearInterval(newTimer)
-      removeMyDrag(total_question_num)
+      // removeMyDrag(total_question_num)
       if (!flag) return
-      if (!newFlag) return
+      // if (!newFlag) return
       // q3Gif(1)
       delInputValue()
       // pauseAll()
@@ -458,9 +458,9 @@
     //下一题
     function nextButton() {
       window.clearInterval(newTimer)
-      removeMyDrag(total_question_num)
+      // removeMyDrag(total_question_num)
       if (!flag) return
-      if (!newFlag) return
+      // if (!newFlag) return
       // q3Gif(1)
       delInputValue()
       // pauseAll()
@@ -577,7 +577,7 @@
         if(newCheck[1].children[0]) {
           var symbal_2 = newCheck[1].children[0].dataset.list == 2 ? true : false
         }
-        var finalResult = getUserObj(['num1-1', 'num1-2'], 'num1-3', 1, false, rightObj,)
+        var finalResult = getUserObj(['num1-1', 'num1-2'], 'num1-3', 1, false, rightObj)
         var finalResult1 = getUserObj(['num2-1', 'num2-2'], 'num2-3', 1, false, rightObj1)
         result = finalResult && finalResult1 && symbal_1 && symbal_2
       } else if (current_question == 5) {
@@ -716,10 +716,10 @@
           }
         } else if (current_question == 4) {
           toDrag('u3-cm4', 'checkbox4', 'move_box4')
-          removeMyDrag(total_question_num)
+          // removeMyDrag(total_question_num)
         } else if (current_question == 5) {
           toDrag('u3-cm5', 'checkbox5', 'move_box5')
-          removeMyDrag(total_question_num)
+          // removeMyDrag(total_question_num)
         }
       }, 4000);
     }
