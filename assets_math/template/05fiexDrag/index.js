@@ -153,6 +153,10 @@ function toDrag(domName,checkBox,moveClass) {
                     clonedNode.style.cssText = "background: url('./images/"+ getIndexs(activeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if(domName == 'u21-cm2') {
                     clonedNode.style.cssText = "background: url('./images/"+ getIndexs(activeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if(domName == 'u21-cm4') {
+                    clonedNode.style.cssText = "background: url('./images/"+ getIndexs(activeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'cs3-q11') {
+                    clonedNode.style.cssText = "background: url('./images/"+ getIndexs(activeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   }
                   checkBoxs[k].appendChild(clonedNode)
                   activeBoxs.target.style.cssText = 'display:block'
@@ -224,6 +228,10 @@ function toDrag(domName,checkBox,moveClass) {
                   } else if(domName == 'u21-cm1') {
                     clonedNode.style.cssText = "background: url('./images/"+ getIndexs(activeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if(domName == 'u21-cm2') {
+                    clonedNode.style.cssText = "background: url('./images/"+ getIndexs(activeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if(domName == 'u21-cm4') {
+                    clonedNode.style.cssText = "background: url('./images/"+ getIndexs(activeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'cs3-q11') {
                     clonedNode.style.cssText = "background: url('./images/"+ getIndexs(activeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   }
                   checkBoxs[k].appendChild(clonedNode)
@@ -364,6 +372,10 @@ function toDrag(domName,checkBox,moveClass) {
                   } else if(domName == 'u21-cm1') {
                     clonedNode.style.cssText = "background: url('./images/"+ getPicInTopBoxs(removeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   } else if(domName == 'u21-cm2') {
+                    clonedNode.style.cssText = "background: url('./images/"+ getPicInTopBoxs(removeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if(domName == 'u21-cm4') {
+                    clonedNode.style.cssText = "background: url('./images/"+ getPicInTopBoxs(removeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
+                  } else if (domName == 'cs3-q11') {
                     clonedNode.style.cssText = "background: url('./images/"+ getPicInTopBoxs(removeBoxs.target) + ".png');background-repeat: no-repeat;background-size: cover ;width: 44%;height: 49%;position: absolute;left: 50%; top: 50%; transform: translate(-50%, -50%);background-position: center;"
                   }
                   checkBoxs[i].appendChild(clonedNode)

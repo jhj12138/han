@@ -169,7 +169,7 @@
                 <div class="checkbox4"></div>
                 <!-- 输入框部分开始 -->
                 <div class="q4-input"><input id="num4-1" type="text" maxlength="1" /></div>
-                <div class="q4-input"><input id="num4-2" type="text" maxlength="1" /></div>
+                <div class="q4-input"><input id="num4-2" type="text" maxlength="10" /></div>
                 <div class="q4-input"><input id="num4-3" type="text" maxlength="2" /></div>
               </div>
               <div class="q4-bottom">
@@ -179,8 +179,8 @@
                 <div class="cheng move_box4" data-list="3"></div>
               </div>
               <div class="q4-select-con">
-                <div class="q4-select-item" data-right="1" data-index="0"></div>
                 <div class="q4-select-item" data-right="0" data-index="0"></div>
+                <div class="q4-select-item" data-right="1" data-index="0"></div>
               </div>
               <!-- 背景声音 -->
               <audio src="../assets_math/audio/lyl.mp3" id = "q1-audio"></audio>
@@ -266,17 +266,12 @@
     var q3_data = [[6,9,7,61],[2,9,2,20]]
     var q3_arr1 = []
 
-    var rightObj4_1 = { //第四题答案
+    var rightObj4 = { //第四题答案
       type: '2',
-      data: [8,9],
+      data: [4,10],
       sort: false
     }
-
-    var rightObj4_2 = { //第四题答案
-      type: '1',
-      data: [10,8],
-      sort: true
-    }
+    var q4_arr1 = []
 
     var total_question_num = 4;    //一共有多少题
     var current_question = 1;       //当前是第几题
@@ -397,7 +392,7 @@
           removeMyDrag(total_question_num)
           newFlag = false
           setTimeout(function(){
-            toDrag('u20-cm4', 'checkbox4', 'move_box4')
+            toDrag('u21-cm4', 'checkbox4', 'move_box4')
           }, 1000);
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
@@ -429,6 +424,12 @@
           newFlag = false
           setTimeout(function(){
             toDrag('u21-cm2', 'checkbox2', 'move_box2')
+          }, 1000);
+        } else if (current_question == 4) {
+          removeMyDrag(total_question_num)
+          newFlag = false
+          setTimeout(function(){
+            toDrag('u21-cm4', 'checkbox4', 'move_box4')
           }, 1000);
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
@@ -540,11 +541,10 @@
         answers_num = fewAnswer()
         var newCheck = document.getElementsByClassName('checkbox4')
         if(newCheck[0].children[0]) {
-          var q4_c = newCheck[0].children[0].dataset.list == 2 ? true : false
+          var q4_a = newCheck[0].children[0].dataset.list == 3 ? true : false
         }
-        var q4_a = getUserObj(['num4-1', 'num4-2'], 'num4-3', 2, false, rightObj4_1)
-        var q4_b = getUserObj(['num5-1', 'num5-2'], 'num5-3', 1, true, rightObj4_2)
-        console.log(q4_a,q4_b,q4_c)
+        var q4_c = (q4_arr1.indexOf(0) == -1 && q4_arr1.length == 1) ? true : false;
+        var q4_b = getUserObj(['num4-1', 'num4-2'], 'num4-3', 2, false, rightObj4)
         result = q4_a && q4_b && q4_c
       } 
       if (result) {
@@ -570,10 +570,24 @@
       $('.question-con input').each(function () {
         this.value = '';
         q1_arr = [];
+        q1_arr1 = [];
+        q2_arr = []
+        q2_arr1 = []
         q3_arr = [];
+        q3_arr1 = [];
         // $('.question-con .checkbox').children().remove()
       })
+      $('.question-con .checkbox1').children() && $('.question-con .checkbox1').children().remove() 
+      $('.question-con .checkbox2').children() && $('.question-con .checkbox2').children().remove() 
       $('.question-con .checkbox4').children() && $('.question-con .checkbox4').children().remove()  
+      $('.q3-select-item ').each(function () {
+        $(this).css('background', 'none');
+        $(this).css('color', '#000');
+      })
+      $('.q4-select-item ').each(function () {
+        $(this).css('background', 'none');
+        $(this).css('color', '#000');
+      })
     }
 
     //踢足球  status = 0答错      status = 1答对 
@@ -653,6 +667,9 @@
         } else if (current_question == 2) {
           removeMyDrag(total_question_num)
           toDrag('u21-cm2', 'checkbox2', 'move_box2')
+        } else if (current_question == 4) {
+          removeMyDrag(total_question_num)
+          toDrag('u21-cm4', 'checkbox4', 'move_box4')
         }
       }, 4000);
     }
@@ -706,6 +723,16 @@
       var index = parseInt($(this).attr('data-index'));
       var right = parseInt($(this).attr('data-right'));
       q3_arr1[index] = right;
+      $(this).css('background', 'rgba(245, 29, 29, 0.6)');
+      $(this).siblings().css('background', 'none');
+    })
+
+    $('.q4-select-item').on('click', function () {
+      var select_word = null
+      // var select_index = $(this).index()
+      var index = parseInt($(this).attr('data-index'));
+      var right = parseInt($(this).attr('data-right'));
+      q4_arr1[index] = right;
       $(this).css('background', 'rgba(245, 29, 29, 0.6)');
       $(this).siblings().css('background', 'none');
     })

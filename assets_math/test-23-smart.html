@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="unit u16-2 u16">
+  <div class="unit u23-2 u2">
     <!-- 背景 -->
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
@@ -34,16 +34,16 @@
       <!-- 指示牌 -->
       <div class="unit-sign">
         <img src="./images/commen/unit-ladder.png" alt="" class="unit-ladder">
-        <a href="./test-16-clear.html">
+        <a href="./test-23-clear.html">
           <div class="study-zhashi"><img src="./images/commen/clear-box.png" alt=""></div>
         </a>
-        <a href="./test-16-strong.html">
+        <a href="./test-23-strong.html">
           <div class="study-clear"><img src="./images/commen/solid-box.png" alt=""></div>
         </a>
         <div class="study-smart unit-select">
           <img src="./images/commen/smart-box.png" alt="">
         </div>
-        <a href="./test-16-ks.html">
+        <a href="./test-23-ks.html">
           <div class="kousuan"><img src="./images/commen/oral-box.png" alt=""></div>
         </a>
       </div>
@@ -54,16 +54,15 @@
         <!-- 背景动画 -->
         <div class="answer-ani">
           <div class="answer-ani-imgs">
-            <img src="./images/animbg/bowlingball.png" alt="" class="answer-ani-img">
+            <img src="./images/animbg/football-bg.png" alt="" class="answer-ani-img">
           </div>
           <div class="ani-gif">
-            <!-- <img src="./images/animbg/bowling-success.gif" alt=""> -->
+            <!-- <img src="./images/animbg/football-success.gif" alt=""> -->
           </div>
           <div class="ani-gif-2">
-            <!-- <img src="./images/animbg/bowling-fail.gif" alt=""> -->
+            <!-- <img src="./images/animbg/football-fail.gif" alt=""> -->
           </div>
           <div class="ani-gif-3">
-            <!-- <img src="./images/animbg/girl-cry.gif" alt=""> -->
           </div>
           <div class="ani-gif-4"></div>
           <!-- 答对了的声音 -->
@@ -72,9 +71,10 @@
           <audio src="../assets_math/audio/sound_fail.mp3" id="ani-audio-fail"></audio>
           <!-- 时间快到了的声音 -->
           <audio src="../assets_math/audio/time_end.mp3" id="ani-audio-end"></audio>
-          <!-- 保龄球 -->
-          <div class="bowling"><img src="./images/animbg/bowling.png" alt=""></div>
-          <div class="bowlings"><img src="./images/animbg/bowlings.png" alt=""></div>
+          <!-- 足球 -->
+          <div class="football"><img src="./images/animbg/football.png" alt=""></div>
+          <!-- 守门员 -->
+          <div class="goalkeeper"><img src="./images/animbg/person.png" alt=""></div>
         </div>
         <!-- 内边框 -->
         <div class="inner-border slidein">
@@ -87,47 +87,58 @@
           <div class="question-con">
             <!-- 第一题 -->
             <div class="question q1">
-              <img src="../assets_math/images/commen/unitElev/cm-q1.png" alt="">
+              <div class="q1-top">
+                <div class="checkbox1"></div>
+                <div class="checkbox1"></div>
+                <div class="checkbox1"></div>
+              </div>
+              <div class="q1-bottom">
+                <div class="mobile_box1" data-list="1"></div>
+                <div class="mobile_box1" data-list="2"></div>
+                <div class="mobile_box1" data-list="3"></div>
+                <div class="mobile_box1" data-list="4"></div>
+              </div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/zhaoyizhao.mp3" id="q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitTwtyT/cm-q1.png" alt="">
             </div>
             <!-- 第二题 -->
             <div class="question q2">
-              <div class="q2-top">
-                <div class="checkbox2"></div>
-                <div class="checkbox2"></div>
-                <div class="checkbox2"></div>
-              </div>
-              <div class="q2-bottom">
-                <div class="mobile_box2" data-list="1"></div>
-                <div class="mobile_box2" data-list="2"></div>
-                <div class="mobile_box2" data-list="3"></div>
-              </div>
-              <img src="../assets_math/images/commen/unitSixte/cm-q2.png" alt="">
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 0)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 1)"></div>
+              <div class="q2-input"><input type="text" maxlength="2" onchange="setInputArr(q2_arr, event, 2)"></div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/zhaoyizhao.mp3" id="q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitTwtyT/cm-q2.png" alt="">
             </div>
             <!-- 第三题 -->
             <div class="question q3">
-              <div class="q3-input"><input type="text" maxlength="1" onchange="setInputArr(q3_arr, event, 0)"></div>
-              <div class="q3-input"><input type="text" maxlength="1" onchange="setInputArr(q3_arr, event, 1)"></div>
-              <div class="q3-input"><input type="text" maxlength="1" onchange="setInputArr(q3_arr, event, 2)"></div>
-              <img src="../assets_math/images/commen/unitSixte/cm-q3.png" alt="">
+              <div class="q3-top">
+                <div class="checkbox3"></div>
+                <div class="checkbox3"></div>
+                <div class="checkbox3"></div>
+                <div class="checkbox3"></div>
+              </div>
+              <div class="q3-bottom">
+                <div class="mobile_box3" data-list="1"></div>
+                <div class="mobile_box3" data-list="2"></div>
+                <div class="mobile_box3" data-list="3"></div>
+                <div class="mobile_box3" data-list="4"></div>
+              </div>
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/zhaoyizhao.mp3" id="q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitTwtyT/cm-q3.png" alt="">
             </div>
             <!-- 第四题 -->
             <div class="question q4">
-              
-              <img src="../assets_math/images/commen/unitSixte/cm-q4.png" alt="">
-            </div>
-            <!-- 第五题 -->
-            <div class="question q5">
-              <div class="q5-top">
-                <div class="checkbox5"></div>
-                <div class="checkbox5"></div>
-                <div class="checkbox5"></div>
+              <div class="q4-select-con">
+                <div class="q4-select-item" data-right="0" data-index="0"></div>
+                <div class="q4-select-item" data-right="1" data-index="0"></div>
+                <div class="q4-select-item" data-right="0" data-index="0"></div>
               </div>
-              <div class="q5-bottom">
-                <div class="mobile_box5" data-list="1"></div>
-                <div class="mobile_box5" data-list="2"></div>
-                <div class="mobile_box5" data-list="3"></div>
-              </div>
-              <img src="../assets_math/images/commen/unitSixte/cm-q5.png" alt="">
+              <!-- 背景声音 -->
+              <audio src="../assets_math/audio/zhaoyizhao.mp3" id="q1-audio"></audio>
+              <img src="../assets_math/images/commen/unitTwtyT/cm-q4.png" alt="">
             </div>
           </div>
         </div>
@@ -158,11 +169,9 @@
   <script type='text/javascript' src='./js/jquery-1.11.3.min.js'></script>
   <!-- 引入全局js -->
   <script type='text/javascript' src='./js/index.js'></script>
-  <!-- 引入固定拖动 -->
-  <!-- <script type="text/javascript" src="" id = "doScript"></script> -->
-  <!-- <script type="text/javascript" src="../assets_math/template/04fixeDrag/index.js"></script> -->
-  <script type="text/javascript" src="../assets_math/template/06fixeDrag/index.js"></script>
-  <!-- <script type="text/javascript" src="../assets_math/template/cssesa.js"></script> -->
+  <!-- 拖拽 -->
+  <script type="text/javascript" src='./template/05fiexDrag/index.js'></script>
+  <script type="text/javascript" src='./template/06fixeDrag/index.js'></script>
   <!-- 引入兔子树和返回 -->
   <script type="text/javascript">
     // 鼠标移动上去改变
@@ -182,17 +191,18 @@
     }
   </script>
   <script type="text/javascript">
-
+    var q1_arr = []
+    var q1_data = [4,1,3]
+    
     var q2_arr = []
-    var q2_data = [3,2,1]
-    var q3_arr = []
-    var q3_data = [3,1,2]
-    var q4_arr = []
-    var q4_data = []
-    var q5_arr = []
-    var q5_data = [3,2,1]
+    var q2_data = [9,9,40]
 
-    var total_question_num = 5;    //一共有多少题
+    var q3_arr = []
+    var q3_data = [4,1,2,3]
+
+    var q4_arr = []
+
+    var total_question_num = 4;    //一共有多少题
     var current_question = 1;       //当前是第几题
     var animate_duration = 3000   //动画时长
     var sorce = 0;   //当前得分，
@@ -204,22 +214,17 @@
     var answers = [] //答了几道
     var answers_num = 0 //答题的数量
     var set = null //清除定时器
-    var newTimer = null
     var newFlag = true
     $(function () {
+      // showOverPop('.out-border', 3, 6, 5) 
       setisScoreArr();
       startTimer();      //开始正计时
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
       // audioPlay()
-
       setTimeout(function(){
-        getDrag('u6-cm1', 'check_box1', 'mobile_box1')
-        // window.onresize = function () {
-        //   getDrag('u6-zs1','check_box1','mobile_box1')
-        //   console.log('执行了')
-        // }
-      }, 2000);
+        getDrag('u23-cm1', 'checkbox1', 'mobile_box1')
+      }, 1000);
     })
 
     //设置已经得分的数组
@@ -292,10 +297,8 @@
 
     //上一题
     function lastButton() {
-      window.clearInterval(newTimer)
       if (!flag) return
       if (!newFlag) return
-      // q3Gif(1)
       delInputValue()
       // pauseAll()
       if (current_question == 1) {
@@ -303,23 +306,18 @@
       } else if (current_question) {
         current_question--;
         if (current_question == 1) {
-          newFlag = false
-
-        } else if (current_question == 2) {
-          newFlag = false
           removeMyDrag(total_question_num)
-          setTimeout(function () {
-            getDrag('u16-cm2', 'checkbox2', 'mobile_box2')
-          }, 1000)
-        } else if (current_question == 4) {
           newFlag = false
-        } else if (current_question == 5) {
-          newFlag = false
+          setTimeout(function(){
+            getDrag('u23-cm1', 'checkbox1', 'mobile_box1')
+          }, 1000);
+        } else if (current_question == 3) {
           removeMyDrag(total_question_num)
-          setTimeout(function () {
-            getDrag('u16-cm5', 'checkbox5', 'mobile_box5')
-          }, 1000)
-        }
+          newFlag = false
+          setTimeout(function(){
+            getDrag('u23-cm3', 'checkbox3', 'mobile_box3')
+          }, 1000);
+        } 
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
           // audioPlay()
@@ -333,33 +331,24 @@
 
     //下一题
     function nextButton() {
-      window.clearInterval(newTimer)
-      if (!newFlag) return
       if (!flag) return
-      // q3Gif(1)
       delInputValue()
       // pauseAll()
       if (current_question < total_question_num) {
         current_question++;
         if (current_question == 1) {
-          newFlag = false
-
-        } else if (current_question == 2) {
-          newFlag = false
           removeMyDrag(total_question_num)
-          setTimeout(function () {
-            getDrag('u16-cm2', 'checkbox2', 'mobile_box2')
-          }, 1000)
-        } else if (current_question == 4) {
           newFlag = false
-
-        } else if (current_question == 5) {
-          newFlag = false
+          setTimeout(function(){
+            getDrag('u23-cm1', 'checkbox1', 'mobile_box1')
+          }, 1000);
+        } else if (current_question == 3) {
           removeMyDrag(total_question_num)
-          setTimeout(function () {
-            getDrag('u16-cm5', 'checkbox5', 'mobile_box5')
-          }, 1000)
-        }
+          newFlag = false
+          setTimeout(function(){
+            getDrag('u23-cm3', 'checkbox3', 'mobile_box3')
+          }, 1000);
+        } 
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
           // audioPlay()
@@ -430,22 +419,16 @@
       var result = null;
       if (current_question == 1) {    //第一题
         answers_num = fewAnswer()
-        var q1_a = changeFormula(q1_arr, q1_right1, 3);
-        var q1_b = changeFormula(q1_arr2, q1_right2, 3);
-        var q1_c = changeFormula(q1_arr3, q1_right3, 3);
-        result = q1_a && q1_b && q1_c;
+        result = goDrag(q1_arr, q1_data, 'checkbox1')
       } else if (current_question == 2) {
         answers_num = fewAnswer()
-        result = goDrag(q2_arr, q2_data, 'checkbox2')
+        result = calcQuestion(q2_arr, q2_data)
       } else if (current_question == 3) {
         answers_num = fewAnswer()
-        result = calcQuestion(q3_arr, q3_data)
+        result = goDrag(q3_arr, q3_data, 'checkbox3')
       } else if (current_question == 4) {
         answers_num = fewAnswer()
-        result = calcQuestion(q4_arr, q4_data)
-      } else if (current_question == 5) {
-        answers_num = fewAnswer()
-        result = goDrag(q5_arr, q5_data, 'checkbox5')
+        result = (q4_arr.indexOf(0) == -1 && q4_arr.length == 1) ? true : false;
       } 
       if (result) {
         if (isScore.indexOf(current_question) == -1) {
@@ -453,12 +436,12 @@
           isScore[current_question - 1] = current_question;   //添加到已回答数组
           setScoreBoard()   //设置计分板
         }
+        // console.log('111111111')
         showFootballAnimation(1);   //播放答对动画
       } else {
         showFootballAnimation(0);   //播放答错动画
       }
       setTimeout(function () {
-        // q3Gif(1)
         delInputValue()  //删除所有input中的值，清空输入的数组
         autoFocus()  //自动对焦
       }, 3200);
@@ -470,23 +453,17 @@
       $('.question-con input').each(function () {
         this.value = '';
         q1_arr = [];
-        q2_arr = [];
+        q2_arr = []
         q3_arr = [];
-        q4_arr = [];
-        q1_arr2 = [];
-        q1_arr3 = [];
-        q5_arr = [];
-        q6_arr = [];
         // $('.question-con .checkbox').children().remove()
       })
-      $('.q2-bottom').html('<div class="mobile_box2" data-list="1"></div><div class="mobile_box2" data-list="2"></div><div class="mobile_box2" data-list="3"></div>')
-      $('.question-con .checkbox2').children() && $('.question-con .checkbox2').children().remove()
-      $('.q5-bottom').html('<div class="mobile_box5" data-list="1"></div><div class="mobile_box5" data-list="2"></div><div class="mobile_box5" data-list="3"></div>')
-      $('.question-con .checkbox5').children() && $('.question-con .checkbox5').children().remove()
+      $('.q1-bottom').html('<div class="mobile_box1" data-list="1"></div><div class="mobile_box1" data-list="2"></div><div class="mobile_box1" data-list="3"></div><div class="mobile_box1" data-list="4"></div>')
+      $('.question-con .checkbox1').children() && $('.question-con .checkbox1').children().remove()
+      $('.q3-bottom').html('<div class="mobile_box3" data-list="1"></div><div class="mobile_box3" data-list="2"></div><div class="mobile_box3" data-list="3"></div><div class="mobile_box3" data-list="4"></div>')
+      $('.question-con .checkbox3').children() && $('.question-con .checkbox3').children().remove()
     }
 
-
-    //推保龄球动画  status = 0答错      status = 1答对 
+    //踢足球  status = 0答错      status = 1答对 
     function showFootballAnimation(status) {
       flag = false
       $('.cant-click').show()
@@ -498,11 +475,11 @@
       }
       if (status == 1) {  //答对的动画
         setTimeout(function () {
-          $('.answer-ani .ani-gif').html('<img src="./images/animbg/bowling-success.gif?' + new Date().getTime() + '" alt="">')
+          $('.answer-ani .ani-gif').html('<img src="./images/animbg/football-success.gif?' + new Date().getTime() + '" alt="">')
           // $('.answer-ani .ani-gif-3').html('<img src="./images/animbg/girl-laughed.gif?' + new Date().getTime() + '" alt="">')
           setTimeout(function () {
-            $('.bowling').hide();
-            $('.bowlings').hide();
+            $('.football').hide();
+            $('.goalkeeper').hide();
           }, 30)
           $('#ani-audio-success')[0].play()
         }, 500)
@@ -521,21 +498,17 @@
           $('.cant-click').hide();
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
           setTimeout(function () {
-            $('.bowling').show();
-            $('.bowlings').show();
+            $('.football').show();
+            $('.goalkeeper').show();
           }, 50)
           flag = true
-
         }, animate_duration)
-        setTimeout(function () {
-          // audioPlay()
-        }, animate_duration + 500)
       } else if (status == 0) { //答错的动画
         setTimeout(function () {
-          $('.answer-ani .ani-gif-2').html('<img src="./images/animbg/bowling-fail.gif?' + new Date().getTime() + '" alt="">')
+          $('.answer-ani .ani-gif-2').html('<img src="./images/animbg/football-fail.gif?' + new Date().getTime() + '" alt="">')
           setTimeout(function () {
-            $('.bowling').hide();
-            $('.bowlings').hide();
+            $('.football').hide();
+            $('.goalkeeper').hide();
           }, 50)
           $('#ani-audio-fail')[0].play()
           // $('.answer-ani .ani-gif-4').html('<img src="./images/animbg/girl-cry.gif?' + new Date().getTime() + '" alt="">')
@@ -554,25 +527,20 @@
           $('.cant-click').hide();
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
           setTimeout(function () {
-            $('.bowling').show();
-            $('.bowlings').show();
+            $('.football').show();
+            $('.goalkeeper').show();
           }, 50)
           flag = true
-          // audioPlay()
         }, animate_duration)
       }
       setTimeout(function () {
-        if (current_question == 2) {
-          getDrag('u16-cm2', 'checkbox2', 'mobile_box2')
-          window.onresize = function () {
-            getDrag('u16-cm2', 'checkbox2', 'mobile_box2')
-          }
-        } else if (current_question == 5) {
-          getDrag('u16-cm5', 'checkbox5', 'mobile_box5')
-          window.onresize = function () {
-            getDrag('u16-cm5', 'checkbox5', 'mobile_box5')
-          }
-        }
+        if (current_question == 1) {
+          removeMyDrag(total_question_num)
+          getDrag('u23-cm1', 'checkbox1', 'mobile_box1')
+        } else if (current_question == 3) {
+          removeMyDrag(total_question_num)
+          getDrag('u23-cm3', 'checkbox3', 'mobile_box3')
+        } 
       }, 4000);
     }
 
@@ -583,10 +551,10 @@
     }
     //监听输入框事件
     function setInputArr(m_arr, e, i) {
-      m_arr[i] = e.target.value;
+      m_arr[i] = parseInt(e.target.value);
     }
 
-
+    //判断输入是否正确
     function calcQuestion(m_arr, right_arr) {
       var step = 0;
       for (let i = 0; i < m_arr.length; i++) {
@@ -594,15 +562,74 @@
           step++
         }
       }
-      console.log(step)
       if (step === right_arr.length) {
         return true;
       } else {
         return false;
       }
     }
-    //判断第一题是否正确
 
+    //    第二题选择
+    $('.q2-select-item img').on('click', function () {
+      var select_word = null
+      // var select_index = $(this).index()
+      var index = parseInt($(this).parent().attr('data-index'));
+      var right = parseInt($(this).parent().attr('data-right'));
+      q2_arr1[index] = right;
+      console.log(right)
+      if (right == 0) {
+        $(this).attr('src','../assets_math/images/commen/unitTwtyO/cm-q2-r2.png');
+        $(this).parent().siblings().children().attr('src','../assets_math/images/commen/unitTwtyO/cm-q2-b1.png');
+      } else if (right == 1){
+        $(this).attr('src','../assets_math/images/commen/unitTwtyO/cm-q2-r1.png');
+        $(this).parent().siblings().children().attr('src','../assets_math/images/commen/unitTwtyO/cm-q2-b2.png');
+      }
+    })
+
+    //    第四题选择
+
+    $('.q4-select-item').on('click', function () {
+      var select_word = null
+      // var select_index = $(this).index()
+      var index = parseInt($(this).attr('data-index'));
+      var right = parseInt($(this).attr('data-right'));
+      q4_arr[index] = right;
+      $(this).css({
+        "border-width":"2px",
+        "border-style":"solid",
+        "border-color":"red"
+      });
+      $(this).siblings().css('border', 'none');
+    })
+
+
+    // 判断乘和加减
+    function changeEr(arr, size) {  // arr是一维数组 size是二维数组包含几条数据
+      var arr2 = []
+      for (var i = 0; i < arr.length; i = i + size) {
+        arr2.push(arr.slice(i, i + size))
+      }
+      return arr2 // 新的二维数组
+    }
+
+    function OneQuestion(m_arr,right_arr) {
+      var step = 0;
+      var listArr = changeEr(m_arr, 3)
+      var listArr1 = listArr
+      // if (listArr)
+      if (listArr1[0].sort().toString() == listArr1[1].sort().toString()){
+        return false
+      }
+      // for (var j = 0; j < listArr1.length; j++){
+      //   if(listArr[j].sort().toString() ==  listArr[j].sort().toString())
+      // }
+      if(listArr[0].sort().toString() ==  right_arr[0].sort().toString() && listArr[1].sort().toString() ==  right_arr[1].sort().toString()){
+        return true
+      }
+      if(listArr[0].sort().toString() ==  right_arr[1].sort().toString() && listArr[1].sort().toString() ==  right_arr[0].sort().toString()){
+        return true
+      }
+    }
 
     function goDrag(m_arr, right_arr, checkBox) {
       var checkBox = document.getElementsByClassName(checkBox)
@@ -624,27 +651,29 @@
         return false;
       }
     }
-    //    第三题选择
-    $('.q3-select-item').on('click', function () {
-      console.log($(this))
-      var index = parseInt($(this).attr('data-index'));
-      var right = parseInt($(this).attr('data-right'));
-      console.log(index, right);
-      q3_arr.push(right);
-      console.log(q3_arr)
-      $(this).css('background', 'rgba(245, 29, 29, 0.6)');
-      $(this).css('color', '#fff');
-    })
 
-    $('.q3-reclick').on('click', function () {
-      $('.q3-select-item ').each(function () {
-        $(this).css('background', 'none');
-        $(this).css('color', '#000');
-      })
-      q3_arr = [];
-    })
-
-
+    function FourQuestion(m_arr,right_arr) {
+      var step = 0;
+      var newList = changeEr(m_arr, 4)
+      console.log(newList)
+      for (var j = 0; j < newList.length; j++){
+        if ((newList[j][0] == right_arr[j][0] && newList[j][1] == right_arr[j][1]) || (newList[j][0] == right_arr[j][1] && newList[j][1] == right_arr[j][0])){
+          step ++
+        }
+        if (newList[j][2] == right_arr[j][2]){
+          step ++
+        }
+        if (newList[j][3] == right_arr[j][3]){
+          step ++
+        }
+      }
+      console.log(step)
+      if (step === 6){
+        return true;
+      } else {
+        return false;
+      }
+    }
   </script>
 </body>
 
