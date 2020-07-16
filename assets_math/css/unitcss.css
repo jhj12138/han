@@ -1541,22 +1541,55 @@ body::-webkit-scrollbar-track{ background:#fff;}
   background-size: cover; */
 }
 
-.question .q2-btn{
- position: absolute;
- top: 50%;
- transform: translateY(-50%);
- right: 5%; 
- width: 11% !important;
- height: 11% !important;
- cursor: pointer;
+.u2-2 .q2-input input {
+  background:none; 
+  border: none; 
+  outline: none;
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 1.8vw;
+}
+
+.u2-2 .q2 .q2-input{
+  position: absolute;
+  width: 7.8%;
+  height: 6%;
+}
+
+.u2-2 .q2-input:nth-of-type(1){
+  top: 47.4%;
+  left: 14.8%;
+}
+
+.u2-2 .q2-input:nth-of-type(2){
+  top: 47.4%;
+  left: 32.5%;
+}
+
+.u2-2 .q2-input:nth-of-type(3){
+  top: 47.4%;
+  left: 50%;
+}
+
+.u2-2 .q2-input:nth-of-type(4){
+  top: 47.4%;
+  left: 67.5%;
+}
+
+.u2-2 .q2-btn{
+  width: 11%;
+  height: 10%;
+  top: 45%;
+  left: 83%;
+  position: absolute;
+  cursor: pointer;
 }
 
 /* 学的更聪明第三题 */
 
 .u2-2 .question-con .q3{
   display: none;
-  /* background: url('../images/commen/unitTwo/cm-q3.png') no-repeat center; 
-  background-size: cover; */
 }
 
 .u2-2 .q3-input input {
@@ -4470,6 +4503,89 @@ body::-webkit-scrollbar-track{ background:#fff;}
 /* 第三题 */
 .cs-1 .question-con .q3{
   display: none;
+}
+
+.cs-1 .q3-top .check_box3{
+  width: 7%;
+  height: 8%;
+  /* background: rgba(111,111,111,0.1); */
+  position: absolute;
+}
+
+.cs-1 .q3-top .check_box3:nth-of-type(1){
+  left: 41.7%;
+  top: 23.4%;
+}
+
+.cs-1 .q3-bottom .mobile_box3{
+  width: 6%;
+  height: 6%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cs-1 .q3-bottom .mobile_box3:nth-of-type(1) {
+  left: 15%;
+  top: 65%;
+  background-image: url('../images/commen/ceshiOne/csThree1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cs-1 .q3-bottom .mobile_box3:nth-of-type(2) {
+  left: 25%;
+  top: 75%;
+  background-image: url('../images/commen/ceshiOne/csThree2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cs-1 .q3-bottom .mobile_box3:nth-of-type(3) {
+  left: 25%;
+  top: 75%;
+  background-image: url('../images/commen/ceshiOne/csThree3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cs-1 .q3-bottom .mobile_box3:nth-of-type(4) {
+  left: 25%;
+  top: 75%;
+  background-image: url('../images/commen/ceshiOne/csThree4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cs-1 .q3-bottom .mobile_box3:nth-of-type(5) {
+  left: 25%;
+  top: 75%;
+  background-image: url('../images/commen/ceshiOne/csThree5.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cs-1 .q3-bottom .mobile_box3:nth-of-type(6) {
+  left: 25%;
+  top: 75%;
+  background-image: url('../images/commen/ceshiOne/csThree6.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cs-1 .q3-bottom .mobile_box3:nth-of-type(7) {
+  left: 25%;
+  top: 75%;
+  background-image: url('../images/commen/ceshiOne/csThree7.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cs-1 .q3-bottom .mobile_box3:nth-of-type(8) {
+  left: 25%;
+  top: 75%;
+  background-image: url('../images/commen/ceshiOne/csThree8.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* 第四题 */

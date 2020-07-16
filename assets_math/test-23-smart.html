@@ -457,6 +457,9 @@
         q3_arr = [];
         // $('.question-con .checkbox').children().remove()
       })
+      $('.q4-select-item').each(function() {
+        $(this).css('border', 'none');
+      })
       $('.q1-bottom').html('<div class="mobile_box1" data-list="1"></div><div class="mobile_box1" data-list="2"></div><div class="mobile_box1" data-list="3"></div><div class="mobile_box1" data-list="4"></div>')
       $('.question-con .checkbox1').children() && $('.question-con .checkbox1').children().remove()
       $('.q3-bottom').html('<div class="mobile_box3" data-list="1"></div><div class="mobile_box3" data-list="2"></div><div class="mobile_box3" data-list="3"></div><div class="mobile_box3" data-list="4"></div>')

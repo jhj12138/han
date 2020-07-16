@@ -87,7 +87,11 @@
           <div class="question-con">
             <!-- 第一题 -->
             <div class="question q1">
-              <img src="../assets_math/images/commen/unitElev/cm-q1.png" alt="">
+              <div class="q1-input"><input type="text" maxlength="1" onchange="setInputArr(q1_arr, event, 0)"></div>
+              <div class="q1-input"><input type="text" maxlength="1" onchange="setInputArr(q1_arr, event, 1)"></div>
+              <div class="q1-input"><input type="text" maxlength="1" onchange="setInputArr(q1_arr, event, 2)"></div>
+              <div class="q1-input"><input type="text" maxlength="1" onchange="setInputArr(q1_arr, event, 3)"></div>
+              <img src="../assets_math/images/commen/unitSixte/cm-q1.png" alt="">
             </div>
             <!-- 第二题 -->
             <div class="question q2">
@@ -112,7 +116,10 @@
             </div>
             <!-- 第四题 -->
             <div class="question q4">
-              
+              <div class="q4-input"><input type="text" maxlength="1" onchange="setInputArr(q4_arr, event, 0)"></div>
+              <div class="q4-input"><input type="text" maxlength="1" onchange="setInputArr(q4_arr, event, 1)"></div>
+              <div class="q4-input"><input type="text" maxlength="1" onchange="setInputArr(q4_arr1, event, 0)"></div>
+              <div class="q4-input"><input type="text" maxlength="1" onchange="setInputArr(q4_arr1, event, 1)"></div>
               <img src="../assets_math/images/commen/unitSixte/cm-q4.png" alt="">
             </div>
             <!-- 第五题 -->
@@ -182,13 +189,16 @@
     }
   </script>
   <script type="text/javascript">
-
+    var q1_arr = []
+    var q1_data = [3,1,2,4]
     var q2_arr = []
     var q2_data = [3,2,1]
     var q3_arr = []
     var q3_data = [3,1,2]
     var q4_arr = []
-    var q4_data = []
+    var q4_data = [2,3]
+    var q4_arr1 = []
+    var q4_data1 = [1,4]
     var q5_arr = []
     var q5_data = [3,2,1]
 
@@ -430,10 +440,7 @@
       var result = null;
       if (current_question == 1) {    //第一题
         answers_num = fewAnswer()
-        var q1_a = changeFormula(q1_arr, q1_right1, 3);
-        var q1_b = changeFormula(q1_arr2, q1_right2, 3);
-        var q1_c = changeFormula(q1_arr3, q1_right3, 3);
-        result = q1_a && q1_b && q1_c;
+        result = calcQuestion(q1_arr, q1_data)
       } else if (current_question == 2) {
         answers_num = fewAnswer()
         result = goDrag(q2_arr, q2_data, 'checkbox2')
@@ -442,7 +449,9 @@
         result = calcQuestion(q3_arr, q3_data)
       } else if (current_question == 4) {
         answers_num = fewAnswer()
-        result = calcQuestion(q4_arr, q4_data)
+        var q4_a = q4_arr.sort().toString() == q4_data.sort().toString() ? true : false
+        var q4_b = q4_arr1.sort().toString() == q4_data1.sort().toString() ? true : false
+        result = q4_a && q4_b
       } else if (current_question == 5) {
         answers_num = fewAnswer()
         result = goDrag(q5_arr, q5_data, 'checkbox5')

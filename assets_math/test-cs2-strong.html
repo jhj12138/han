@@ -160,15 +160,47 @@
             </div>
             <!-- 第四题 -->
             <div class="question q4">
+              <div class="q4-input"><input type="text" maxlength="1" onchange="setInputArr(q4_arr, event, 0)"></div>
+              <div class="q4-input"><input type="text" maxlength="1" onchange="setInputArr(q4_arr, event, 1)"></div>
+              <div class="q4-input"><input type="text" maxlength="1" onchange="setInputArr(q4_arr, event, 2)"></div>
+              <div class="q4-input"><input type="text" maxlength="1" onchange="setInputArr(q4_arr, event, 3)"></div>
               <!-- 背景声音 -->
               <audio src="../assets_math/audio/tuoyituo.mp3" id = "q3-audio"></audio>
-              <img src="../assets_math/images/commen/ceshiTwo/ceshi3.png" alt="">
+              <img src="../assets_math/images/commen/ceshiTwo/ceshi4.png" alt="">
             </div>
             <!-- 第五题 -->
             <div class="question q5">
+              <div class="q5-select-con">
+                <div class="q5-select-item" data-right="1" data-index="0">
+                  <div class="q5-select-img">
+                    <img src="../assets_math/images/commen/ceshiTwo/cs5_bt1.png" alt="">
+                  </div>
+                </div>
+                <div class="q5-select-item" data-right="0" data-index="0">
+                  <div class="q5-select-img">
+                    <img src="../assets_math/images/commen/ceshiTwo/cs5_bt2.png" alt="">
+                  </div>
+                </div>
+                <div class="q5-select-item" data-right="1" data-index="0">
+                  <div class="q5-select-img">
+                    <img src="../assets_math/images/commen/ceshiTwo/cs5_bt3.png" alt="">
+                  </div>
+                </div>
+                <div class="q5-select-item" data-right="1" data-index="0">
+                  <div class="q5-select-img">
+                    <img src="../assets_math/images/commen/ceshiTwo/cs5_bt4.png" alt="">
+                  </div>
+                </div>
+                <div class="q5-select-item" data-right="0" data-index="0">
+                  <div class="q5-select-img">
+                    <img src="../assets_math/images/commen/ceshiTwo/cs5_bt5.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="q5-reclick"></div>
               <!-- 背景声音 -->
               <audio src="../assets_math/audio/tuoyituo.mp3" id = "q3-audio"></audio>
-              <img src="../assets_math/images/commen/ceshiTwo/ceshi3.png" alt="">
+              <img src="../assets_math/images/commen/ceshiTwo/ceshi5.png" alt="">
             </div>
             <!-- 第六题 -->
             <div class="question q6">
@@ -325,9 +357,9 @@
     var q3_data1 = [3,1,3,3,2,1,1,3]
 
     var q4_arr = [] //第四题值
-    var q4_data = [47,50,25,15,90,47,88,82,42,17,22,41,13,85,69,70,14,80] //第四题正确答案
+    var q4_data = [2,1,3,4] //第四题正确答案
+
     var q5_arr = [] //第五题值
-    var q5_data = [72,37,61,7,2,3,7,3,3,6,1]
 
     var q6_arr = []
     var q6_right = ["3", "6", "18"]
@@ -622,7 +654,7 @@
         result = calcQuestion(q4_arr, q4_data)
       } else if (current_question == 5) {
         answers_num = fewAnswer()
-        result = calcQuestion(q5_arr, q5_data)
+        result = (q5_arr.indexOf(0) == -1 && q5_arr.length == 3) ? true : false
       } else if (current_question == 6) {
         answers_num = fewAnswer()
         result = changeFormula(q6_arr, q6_right, 3)
@@ -678,6 +710,7 @@
           q1_arr = [];
           q2_arr = [];
           q3_arr = [];
+          q4_arr = [];
           q5_arr = [];
           q8_arr = [];
           q9_arr = [];
@@ -696,6 +729,10 @@
       $('.question-con .checkbox9').children() && $('.question-con .checkbox9').children().remove()
       $('.question-con .checkbox10').children() && $('.question-con .checkbox10').children().remove()
       $('.q2-select-change img').attr("src", '')
+      $('.q5-select-item ').each(function () {
+        $(this).css('background', 'rgba(255, 220,168, .5)');
+        $(this).attr('data-index','0')
+      })
     }
 
 
@@ -880,6 +917,25 @@
       }
       q2_arr[index] = right;
     })
+
+    $('.q5-select-item').on('click', function () {
+      var index = parseInt($(this).attr('data-index'));
+      var right = parseInt($(this).attr('data-right'));
+      if (index == 0){
+        $(this).attr('data-index','1')
+        q5_arr.push(right)
+      } 
+      $(this).css('background', 'rgba(245, 29, 29, 0.6)');
+    })
+
+    $('.q5-reclick').on('click', function () {
+      $('.q5-select-item ').each(function () {
+        $(this).attr('data-index','0')
+        $(this).css('background', 'rgba(255, 220,168, .5)');
+      })
+      q5_arr = [];
+    })
+    
 
     //判断第8题是否正确
     function changeEr(arr, size) {  // arr是一维数组 size是二维数组包含几条数据

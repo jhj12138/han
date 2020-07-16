@@ -99,10 +99,13 @@
             </div>
             <!-- 第二题 -->
             <div class="question q2">
-              <div class="question q2-btn">
-                <img src="./images/commen/unitTwo/cm-q2-btn.png" alt="">
-              </div>
+              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 0)" maxlength="1"></div>
+              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 1)" maxlength="1"></div>
+              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 2)" maxlength="1"></div>
+              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 3)" maxlength="1"></div>
+              <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 4)" maxlength="1"></div>
               <img src="./images/commen/unitTwo/cm-q2.png" alt="">
+              <div class="q2-btn"></div>
             </div>
             <!-- 第三题 -->
             <div class="question q3">
@@ -192,6 +195,8 @@
   <script type="text/javascript">
     var q1_arr = [] //第一题输入的input的值
     var q1_data = [95,92,36,92,100,60] //正确答案
+    var q2_arr = []
+    var q2_data = [1,4,3,2]
     var q3_arr = [] //第三题输入的input的值
     var q3_data = [37,46,55,64,73,82] //第三题的正确答案
     var q4_arr = [] //第四题输入的input的值
@@ -370,6 +375,8 @@
         answers_num = fewAnswer()
         result = calcQuestion(q1_arr, q1_data)
       } else if (current_question == 2) {
+        answers_num = fewAnswer()
+        result = calcQuestion(q2_arr, q2_data)
       } else if (current_question == 3) {
         answers_num = fewAnswer()
         result = calcQuestion(q3_arr, q3_data)
@@ -404,7 +411,7 @@
       $('.question-con input').each(function () {
           this.value = '';
           q1_arr = [];
-          // q2_arr = [];
+          q2_arr = [];
           q3_arr = [];
           q4_arr = [];
           // $('.question-con .checkbox').children().remove()
@@ -545,8 +552,6 @@
       }
 
       return newFlag
-      console.log('newArr',newArr)
-      console.log('right_arr',right_arr)
       for (var i = 0; i < newArr.length; i++) {
         for (var j = 0; j < right_arr.length; j++){
           if (newArr[i].toString() == right_arr[j].toString()) {
@@ -561,6 +566,13 @@
           return false;
       }
     }
+
+    $('.q2-btn').on('click', function () {
+      $('.question-con input').each(function () {
+          this.value = '';
+          q2_arr = [];
+      })
+    })
   </script>
 </body>
 

@@ -170,79 +170,45 @@
 
 /* 练习十二学的更聪明 */
 /* 第一题 */
-.u12-2 .q1 .q1-top .checkbox1{
-  width: 70%;
-  height: 13%;
+.u12-2 .out-border .inner-border .q1{
+}
+.q1-select-con .q1-select-item{
   position: absolute;
-  left: 15%;
-  top: 58%;
-  /* background-color: rgba(200, 255, 155, .8); */
 }
 
-
-.u12-2 .q1 .q1-bottom .mobile_box1{
-  position: absolute;
-  height: 10%;
+.q1-select-con .q1-select-item:nth-of-type(1){
+  width: 8.4%;
+  height: 6.4%;
+  left: 15.9%;
+  top: 67%;
 }
 
-.u12-2 .q1-bottom .mobile_box1:nth-of-type(1){
-  left: 10%;
-  top: 76%;
-  background: url('../images/commen/unitTwel/cmOne1.png') no-repeat center; 
-  background-size: cover;
+.q1-select-con .q1-select-item:nth-of-type(2){
+  width: 11.2%;
+  height: 6.4%;
+  left: 25.8%;
+  top: 67%;
 }
 
-.u12-2 .q1 .boxType:nth-of-type(1){
-  height: 7.3%;
-  width: 9.2%;
+.q1-select-con .q1-select-item:nth-of-type(3){
+  width: 22%;
+  height: 6.4%;
+  left: 38.4%;
+  top: 67%;
 }
 
-.u12-2 .q1-bottom .mobile_box1:nth-of-type(2){
-  left: 22%;
-  top: 76%;
-  background: url('../images/commen/unitTwel/cmOne2.png') no-repeat center; 
-  background-size: cover;
+.q1-select-con .q1-select-item:nth-of-type(4){
+  width: 12.5%;
+  height: 6.4%;
+  left: 61.9%;
+  top: 67%;
 }
 
-.u12-2 .q1 .boxType:nth-of-type(2){
-  height: 7.3%;
-  width: 12.2%;
-}
-
-.u12-2 .q1-bottom .mobile_box1:nth-of-type(3){
-  left: 37%;
-  top: 76%;
-  background: url('../images/commen/unitTwel/cmOne3.png') no-repeat center; 
-  background-size: cover;
-}
-
-.u12-2 .q1 .boxType:nth-of-type(3){
-  height: 7.5%;
-  width: 24.2%;
-}
-
-.u12-2 .q1-bottom .mobile_box1:nth-of-type(4){
-  left: 64%;
-  top: 76%;
-  background: url('../images/commen/unitTwel/cmOne4.png') no-repeat center; 
-  background-size: cover;
-}
-
-.u12-2 .q1 .boxType:nth-of-type(4){
-  height: 7.3%;
-  width: 13.6%;
-}
-
-.u12-2 .q1-bottom .mobile_box1:nth-of-type(5){
-  left: 80%;
-  top: 76%;
-  background: url('../images/commen/unitTwel/cmOne5.png') no-repeat center; 
-  background-size: cover;
-}
-
-.u12-2 .q1 .boxType:nth-of-type(5){
-  height: 7.3%;
-  width: 9.2%;
+.q1-select-con .q1-select-item:nth-of-type(5){
+  width: 8.4%;
+  height: 6.4%;
+  left: 75.7%;
+  top: 67%;
 }
 
 /* 第二题 */
@@ -2583,12 +2549,102 @@
 .cs-2 .inner-border .q4{
   display: none;
 }
+.cs-2 .q4-input input {
+  background:none; 
+  border: none; 
+  outline: none; 
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 2vw;
+}
+.cs-2 .q4-input{
+  width: 9%;
+  height: 8%;
+  position: absolute;
+}
+
+.cs-2 .q4-input:nth-of-type(1){
+  left: 16.9%;
+  top: 40%;
+}
+
+.cs-2 .q4-input:nth-of-type(2){
+  left: 36.2%;
+  top: 40%;
+}
+
+.cs-2 .q4-input:nth-of-type(3){
+  left: 55.6%;
+  top: 40%;
+}
+
+.cs-2 .q4-input:nth-of-type(4){
+  left: 75%;
+  top: 40%;
+}
 
 /* 第五题 */
 .cs-2 .inner-border .q5{
   display: none;
 }
 
+.cs-2 .q5-select-con .q5-select-item{
+  width: 14%;
+  height: 12%;
+  position: absolute;
+  border: 2px solid #bfbfbf;
+  background-color: rgba(255, 220,168, .5);
+  cursor: pointer;
+}
+
+.cs-2 .q5-select-con .q5-select-item .q5-select-img{
+  left: 50%;
+  top: 50%;
+  width: 72%;
+  height: 38%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+.cs-2 .q5-select-con .q5-select-item:nth-of-type(1){
+  left: 66%;
+  top: 15%;
+}
+
+.cs-2 .q5-select-con .q5-select-item:nth-of-type(2){
+  left: 66%;
+  top: 30%;
+}
+
+.cs-2 .q5-select-con .q5-select-item:nth-of-type(3){
+  left: 66%;
+  top: 45%;
+}
+
+
+.cs-2 .q5-select-con .q5-select-item:nth-of-type(4){
+  left: 66%;
+  top: 60%;
+}
+
+.cs-2 .q5-select-con .q5-select-item:nth-of-type(5){
+  left: 66%;
+  top: 75%;
+}
+
+.cs-2 .q5-select-con .q5-select-item:nth-of-type(6){
+  left: 66%;
+  top: 90%;
+}
+
+.cs-2 .q5-reclick{
+  left: 43%;
+  top: 80%;
+  position: absolute;
+  width: 13%;
+  height: 12%;
+}
 /* 第六题 */
 .cs-2 .inner-border .q6{
   display: none;
@@ -2973,8 +3029,119 @@
   background-size: cover;
 }
 
+/* 练习十六学的更扎实 */
+/* 第一题 */
+.u16-1 .inner-border .q1{
+  /* display: none; */
+}
+.u16-1 .q1-input input {
+  background:none; 
+  border: none; 
+  outline: none;
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 2vw;
+}
 
+.u16-1 .q1-input{
+  position: absolute;
+  width: 7.6%;
+  height: 8%;
+  /* background-color: rgba(108, 220, 155, .4); */
+}
+
+.u16-1 .q1-input:nth-of-type(1){
+  left: 51.5%;
+  top: 29.5%;
+}
+
+.u16-1 .q1-input:nth-of-type(2){
+  left: 69%;
+  top: 29.5%;
+}
+
+.u16-1 .q1-input:nth-of-type(3){
+  left: 86.2%;
+  top: 29.5%;
+}
+
+/* 第二题 */
+.u16-1 .inner-border .q2{
+  display: none;
+}
+
+.u16-1 .q2-input input {
+  background:none; 
+  border: none; 
+  outline: none;
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 2vw;
+}
+
+.u16-1 .q2-input{
+  position: absolute;
+  width: 7.6%;
+  height: 8%;
+}
+
+.u16-1 .q2-input:nth-of-type(1){
+  left: 45%;
+  top: 26%;
+}
+
+.u16-1 .q2-input:nth-of-type(2){
+  left: 66.3%;
+  top: 26%;
+}
+
+.u16-1 .q2-input:nth-of-type(3){
+  left: 87.3%;
+  top: 26%;
+}
 /* 练习十六学的更聪明 */
+/* 第一题 */
+.u16-2 .inner-border .q1{
+  /* display: none; */
+}
+.u16-2 .q1-input input {
+  background:none; 
+  border: none; 
+  outline: none;
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 2vw;
+}
+
+.u16-2 .q1-input{
+  position: absolute;
+  width: 7.6%;
+  height: 8%;
+  /* background-color: rgba(108, 220, 155, .4); */
+}
+
+.u16-2 .q1-input:nth-of-type(1){
+  left: 83.9%;
+  top: 29.5%;
+}
+
+.u16-2 .q1-input:nth-of-type(2){
+  left: 83.9%;
+  top: 40.5%;
+}
+
+.u16-2 .q1-input:nth-of-type(3){
+  left: 83.9%;
+  top: 52%;
+}
+
+.u16-2 .q1-input:nth-of-type(4){
+  left: 83.9%;
+  top: 63.3%;
+}
 /* 第二题 */
 .u16-2 .inner-border .q2{
   display: none;
@@ -3077,6 +3244,42 @@
   display: none;
 }
 
+.u16-2 .q4-input input {
+  background:none; 
+  border: none; 
+  outline: none;
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 2vw;
+}
+
+.u16-2 .q4-input{
+  position: absolute;
+  width: 5.4%;
+  height: 9%;
+  /* background-color: rgba(108, 220, 155, .4); */
+}
+
+.u16-2 .q4-input:nth-of-type(1){
+  left: 75.4%;
+  top: 54.6%;
+}
+
+.u16-2 .q4-input:nth-of-type(2){
+  left: 82.3%;
+  top: 54.6%;
+}
+
+.u16-2 .q4-input:nth-of-type(3){
+  left: 75.4%;
+  top: 67%;
+}
+
+.u16-2 .q4-input:nth-of-type(4){
+  left: 82.3%;
+  top: 67%;
+}
 /* 第五题 */
 .u16-2 .inner-border .q5{
   display: none;
@@ -3206,6 +3409,126 @@
   display: none;
 }
 
+.u17-1 .q2-top .checkbox2{
+  width: 8%;
+  height: 9%;
+  /* background-color: rgba(108, 220, 155, .4); */
+  position: absolute;
+}
+
+.u17-1 .q2-top .checkbox2:nth-of-type(1) {
+  left: 7%;
+  top: 47%;
+}
+
+.u17-1 .q2-top .checkbox2:nth-of-type(2) {
+  left: 17.7%;
+  top: 47%;
+}
+
+.u17-1 .q2-top .checkbox2:nth-of-type(3) {
+  left: 29.7%;
+  top: 47%;
+}
+
+.u17-1 .q2-top .checkbox2:nth-of-type(4) {
+  left: 41.2%;
+  top: 47%;
+}
+
+.u17-1 .q2-top .checkbox2:nth-of-type(5) {
+  left: 50.5%;
+  top: 47%;
+}
+
+.u17-1 .q2-top .checkbox2:nth-of-type(6) {
+  left: 58.9%;
+  top: 47%;
+}
+
+.u17-1 .q2-top .checkbox2:nth-of-type(7) {
+  left: 68.1%;
+  top: 47%;
+}
+
+.u17-1 .q2-top .checkbox2:nth-of-type(8) {
+  left: 76.9%;
+  top: 47%;
+}
+
+.u17-1 .q2-top .checkbox2:nth-of-type(9) {
+  left: 87.2%;
+  top: 47%;
+}
+.u17-1 .q2-bottom .move_box2{
+  width: 5%;
+  height: 7%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.u17-1 .q2-bottom .move_box2:nth-of-type(1){
+  left: 21.7%;
+  top: 80%;
+  background-image: url('../images/commen/unitSevete/zsTwo1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u17-1 .q2-bottom .move_box2:nth-of-type(2){
+  left: 30%;
+  top: 80%;
+  background-image: url('../images/commen/unitSevete/zsTwo2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u17-1 .q2-bottom .move_box2:nth-of-type(3){
+  left: 38.5%;
+  top: 80%;
+  background-image: url('../images/commen/unitSevete/zsTwo3.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u17-1 .q2-bottom .move_box2:nth-of-type(4){
+  left: 48%;
+  top: 80%;
+  background-image: url('../images/commen/unitSevete/zsTwo4.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u17-1 .q2-bottom .move_box2:nth-of-type(5){
+  left: 57.4%;
+  top: 80%;
+  background-image: url('../images/commen/unitSevete/zsTwo5.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u17-1 .q2-bottom .move_box2:nth-of-type(6){
+  left: 65.4%;
+  top: 80%;
+  background-image: url('../images/commen/unitSevete/zsTwo6.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u17-1 .q2-bottom .move_box2:nth-of-type(7){
+  left: 74.4%;
+  top: 80%;
+  background-image: url('../images/commen/unitSevete/zsTwo7.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 /* 学的更聪明第一题 */
 /* 第一题 */
 .u17-2 .inner-border .q1{
@@ -4387,6 +4710,90 @@
 /* 第二题 */
 .u20-2 .inner-border .q2{
   display: none;
+}
+
+.u20-2 .q2-top .checkbox2{ 
+  /* background: rgba(0, 0, 0, 0.2); */
+  width: 11%; 
+  height: 10%;
+  position: absolute; 
+}
+
+.u20-2 .checkbox2:nth-of-type(1){
+  left: 79.1%;
+  top: 21.2%;
+}
+
+.u20-2 .checkbox2:nth-of-type(2){
+  left: 79.1%;
+  top: 32.8%;
+}
+
+.u20-2 .checkbox2:nth-of-type(3){
+  left: 79.1%;
+  top: 45%;
+}
+
+.u20-2 .checkbox2:nth-of-type(4){
+  left: 79.1%;
+  top: 56.6%;
+}
+
+.u20-2 .checkbox2:nth-of-type(5){
+  left: 79.1%;
+  top: 68.6%;
+}
+
+.u20-2 .q2-bottom .mobile_box2{
+  width: 7%;
+  height: 6%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.u20-2 .q2-bottom .mobile_box2:nth-of-type(1){
+  left: 20%;
+  top: 23%;
+  background-image: url('../images/commen/unitTwty/cmTwo1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u20-2 .q2-bottom .mobile_box2:nth-of-type(2){
+  left: 20%;
+  top: 34.5%;
+  background-image: url('../images/commen/unitTwty/cmTwo2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u20-2 .q2-bottom .mobile_box2:nth-of-type(3){
+  left: 20%;
+  top: 46.5%;
+  background-image: url('../images/commen/unitTwty/cmTwo3.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u20-2 .q2-bottom .mobile_box2:nth-of-type(4){
+  left: 20%;
+  top: 58.5%;
+  background-image: url('../images/commen/unitTwty/cmTwo4.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.u20-2 .q2-bottom .mobile_box2:nth-of-type(5){
+  left: 20%;
+  top: 70%;
+  background-image: url('../images/commen/unitTwty/cmTwo5.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* 第三题 */
@@ -6178,6 +6585,204 @@
 }
 
 /* 单元自测四 */
+/* 第一题 */
+.cs-4 .inner-border .q1{
+  /* display: none; */
+}
+
+.cs-4 .q1-input input {
+  background:none; 
+  border: none; 
+  outline: none;
+  width: 100%; 
+  height: 100%; 
+  text-align: center; 
+  font-size: 2vw;
+  /* background-color: rgba(108, 220, 155, .4); */
+}
+
+.cs-4  .q1 .q1-input{
+  width: 6.4%;
+  height: 9.2%;
+  position: absolute;
+  /* background-color: rgba(108, 220, 155, .4) */
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(1){
+  left: 38.6%;
+  top: 19.7%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(2){
+  left: 76%;
+  top: 19.7%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(3){
+  left: 85.6%;
+  top: 19.7%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(4){
+  left: 56.6%;
+  top: 30.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(5){
+  left: 66.4%;
+  top: 30.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(6){
+  left: 76.1%;
+  top: 30.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(7){
+  left: 85.7%;
+  top: 30.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(8){
+  left: 27.6%;
+  top: 38.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(9){
+  left: 48.4%;
+  top: 38.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(10){
+  left: 73.2%;
+  top: 48.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(11){
+  left: 83%;
+  top: 48.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(12){
+  left: 11%;
+  top: 56.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(13){
+  left: 20.7%;
+  top: 56.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(14){
+  left: 30.3%;
+  top: 56.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(15){
+  left: 40%;
+  top: 56.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(16){
+  left: 49.7%;
+  top: 56.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(17){
+  left: 59.4%;
+  top: 56.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(18){
+  left: 69.2%;
+  top: 56.3%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(19){
+  left: 74.7%;
+  top: 66%;
+}
+
+.cs-4  .q1 .q1-input:nth-of-type(20){
+  left: 66.4%;
+  top: 76.5%;
+}
+/* 第二题 */
+.cs-4 .inner-border .q2{
+  display: none;
+}
+
+.cs-4 .q2-top .checkbox2{ 
+  /* background: rgba(0, 0, 0, 0.2); */
+  width: 11%; 
+  height: 10%;
+  position: absolute; 
+}
+
+.cs-4 .checkbox2:nth-of-type(1){
+  left: 16.9%;
+  top: 46.7%;
+}
+
+.cs-4 .checkbox2:nth-of-type(2){
+  left: 35.2%;
+  top: 46.7%;
+}
+
+.cs-4 .checkbox2:nth-of-type(3){
+  left: 53.6%;
+  top: 46.7%;
+}
+
+.cs-4 .checkbox2:nth-of-type(4){
+  left: 72.2%;
+  top: 46.7%;
+}
+
+.cs-4 .q2-bottom .mobile_box2{
+  width: 7.5%;
+  height: 7%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cs-4 .q2-bottom .mobile_box2:nth-of-type(1){
+  left: 20%;
+  top: 70%;
+  background-image: url('../images/commen/ceshiFour/csTwo1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cs-4 .q2-bottom .mobile_box2:nth-of-type(2){
+  left: 40%;
+  top: 70%;
+  background-image: url('../images/commen/ceshiFour/csTwo2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cs-4 .q2-bottom .mobile_box2:nth-of-type(3){
+  left: 60%;
+  top: 70%;
+  background-image: url('../images/commen/ceshiFour/csTwo3.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cs-4 .q2-bottom .mobile_box2:nth-of-type(4){
+  left: 80%;
+  top: 70%;
+  background-image: url('../images/commen/ceshiFour/csTwo4.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* 第三题 */
 .cs-4 .inner-border .q3{
   display: none;
 }
@@ -6197,7 +6802,7 @@
   width: 6.4%;
   height: 9.2%;
   position: absolute;
-  background-color: rgba(108, 220, 155, .4)
+  /* background-color: rgba(108, 220, 155, .4) */
 }
 
 .cs-4  .q3 .q3-input:nth-of-type(1) {
@@ -6205,7 +6810,124 @@
   top: 18.1%;
 }
 
+/* 第四题 */
+.cs-4 .inner-border .q4{
+  display: none;
+}
+.cs-4 .q4-top .checkbox4{
+  width: 8%;
+  height: 10%;
+  position: absolute;
+  /* background-color: rgba(108, 220, 155, .4) */
+}
 
+.cs-4 .q4-top .checkbox4:nth-of-type(1){
+  left: 29.7%;
+  top: 29%;
+}
+
+.cs-4 .q4-top .checkbox4:nth-of-type(2){
+  left: 35.8%;
+  top: 39.6%;
+}
+
+.cs-4 .q4-top .checkbox4:nth-of-type(3){
+  left: 34.3%;
+  top: 49.6%;
+}
+
+.cs-4 .q4-top .checkbox4:nth-of-type(4){
+  left: 41.9%;
+  top: 60%;
+}
+
+.cs-4 .q4-bottom .move_box4{
+  width: 3%;
+  height: 6%;
+  position: absolute;
+}
+
+.cs-4 .q4-bottom .move_box4:nth-of-type(1){
+  left: 67%;
+  top: 30%;
+  background-image: url('../images/commen/ceshiFour/csFour1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cs-4 .q4-bottom .move_box4:nth-of-type(2){
+  left: 67%;
+  top: 50%;
+  background-image: url('../images/commen/ceshiFour/csFour2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* 第五题 */
+.cs-4 .inner-border .q5{
+  display: none;
+}
+
+.cs-4 .q5-top .checkbox5{ 
+  /* background: rgba(0, 0, 0, 0.2); */
+  width: 11%; 
+  height: 10%;
+  position: absolute; 
+}
+
+.cs-4 .checkbox5:nth-of-type(1){
+  left: 12.1%;
+  top: 64.7%;
+}
+
+.cs-4 .checkbox5:nth-of-type(2){
+  left: 31.5%;
+  top: 64.7%;
+}
+
+.cs-4 .checkbox5:nth-of-type(3){
+  left: 50.9%;
+  top: 64.7%;
+}
+
+.cs-4 .q5-bottom .mobile_box5{
+  width: 3.5%;
+  height: 6%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cs-4 .q5-bottom .mobile_box5:nth-of-type(1){
+  left: 70%;
+  top: 42%;
+  background-image: url('../images/commen/ceshiFour/csFive1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cs-4 .q5-bottom .mobile_box5:nth-of-type(2){
+  left: 80%;
+  top: 42%;
+  background-image: url('../images/commen/ceshiFour/csFive2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cs-4 .q5-bottom .mobile_box5:nth-of-type(3){
+  left: 90%;
+  top: 42%;
+  background-image: url('../images/commen/ceshiFour/csFive3.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* 第六题 */
 .cs-4 .inner-border .q6{
   display: none;
 }
@@ -6236,4 +6958,26 @@
 .cs-4  .q6 .q6-input:nth-of-type(2) {
   left: 63.5%;
   top: 42.3%;
+}
+
+/* 第七题 */
+.cs-4 .inner-border .q7{
+  display: none;
+}
+
+.cs-4 .q7-select-con .q7-select-item{
+  width: 9%;
+  height: 16%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.cs-4 .q7-select-con .q7-select-item:nth-of-type(1) {
+  left: 47%;
+  top: 50%;
+}
+
+.cs-4 .q7-select-con .q7-select-item:nth-of-type(2) {
+  left: 63.7%;
+  top: 50%;
 }

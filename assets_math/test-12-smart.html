@@ -87,16 +87,12 @@
           <div class = "question-con">
             <!-- 第一题 -->
             <div class="question q1">
-              <div class="q1-top">
-                <div class="checkbox1"></div>
-              </div>
-              <div class="q1-bottom">
-                <!-- 运算符号 -->
-                <div class="mobile_box1 boxType" data-list="1"></div>
-                <div class="mobile_box1 boxType" data-list="1"></div>
-                <div class="mobile_box1 boxType" data-list="1"></div>
-                <div class="mobile_box1 boxType" data-list="1"></div>
-                <div class="mobile_box1 boxType" data-list="1"></div>
+              <div class="q1-select-con">
+                <div class="q1-select-item" data-right="0" data-index="0"></div>
+                <div class="q1-select-item" data-right="1" data-index="0"></div>
+                <div class="q1-select-item" data-right="1" data-index="0"></div>
+                <div class="q1-select-item" data-right="1" data-index="0"></div>
+                <div class="q1-select-item" data-right="0" data-index="0"></div>
               </div>
               <!-- 背景声音 -->
               <audio src="../assets_math/audio/zhaoyizhao.mp3" id = "q1-audio"></audio>
@@ -202,7 +198,7 @@
     }
   </script>
   <script type="text/javascript">
-
+    var q1_arr = []
     var q2_arr = []; //第二题答案
     var q2_data = [[3,5,2,17],[4,4,1,17],[3,5,2,17]]
 
@@ -459,7 +455,8 @@
       var result = null;
       removeMyDrag(total_question_num)
       if (current_question == 1) {    //第一题
-
+        answers_num = fewAnswer()
+        result = (q1_arr.indexOf(0) == -1 && q1_arr.length == 3) ? true : false
       } else if (current_question == 2) {
         answers_num = fewAnswer()
         result = FourQuestion(q2_arr, q2_data, 9)
@@ -503,6 +500,10 @@
       })
       $('.question-con .checkbox1').children() && $('.question-con .checkbox1').children().remove()
       $('.question-con .checkbox4').children() && $('.question-con .checkbox4').children().remove()
+      $('.q1-select-item ').each(function () {
+        $(this).css('background', '');
+        $(this).attr('data-index','0')
+      })
     }
 
     //踢足球  status = 0答错      status = 1答对 
@@ -619,6 +620,18 @@
           q2_flag = true
         }
       })
+
+      $('.q1-select-item').on('click', function () {
+      var select_word = null
+      // var select_index = $(this).index()
+      var index = parseInt($(this).attr('data-index'));
+      var right = parseInt($(this).attr('data-right'));
+      if (index == 0) {
+        $(this).attr('data-index','1')
+        q1_arr.push(right)
+      }
+      $(this).css('background', 'rgba(245, 29, 29, 0.6)');
+    })
 
     // 判断第四题下是否正确
    // 判断乘和加减

@@ -527,6 +527,7 @@
       $('.q3-select-item ').each(function () {
         $(this).css('background', 'none');
         $(this).css('color', '#000');
+        $(this).attr('data-index','0')
       })
     }
 
@@ -679,9 +680,10 @@
       console.log($(this))
       var index = parseInt($(this).attr('data-index'));
       var right = parseInt($(this).attr('data-right'));
-      console.log(index, right);
-      q3_arr.push(right);
-      console.log(q3_arr)
+      if (index == 0){
+        $(this).attr('data-index','1')
+        q3_arr.push(right);
+      } 
       $(this).css('background', 'rgba(245, 29, 29, 0.6)');
       $(this).css('color', '#fff');
     })
@@ -690,6 +692,7 @@
       $('.q3-select-item ').each(function () {
         $(this).css('background', 'none');
         $(this).css('color', '#000');
+        $(this).attr('data-index','0')
       })
       q3_arr = [];
     })

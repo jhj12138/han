@@ -99,6 +99,20 @@
             </div>
             <!-- 第二题 -->
             <div class="question q2">
+              <div class="q2-top">
+                <div class="checkbox2"></div>
+                <div class="checkbox2"></div>
+                <div class="checkbox2"></div>
+                <div class="checkbox2"></div>
+                <div class="checkbox2"></div>
+              </div>
+              <div class="q2-bottom">
+                <div class="mobile_box2" data-list="1"></div>
+                <div class="mobile_box2" data-list="2"></div>
+                <div class="mobile_box2" data-list="3"></div>
+                <div class="mobile_box2" data-list="4"></div>
+                <div class="mobile_box2" data-list="5"></div>
+              </div>
               <!-- 背景声音 -->
               <audio src="../assets_math/audio/zhaoyizhao.mp3" id="q1-audio"></audio>
               <img src="../assets_math/images/commen/unitTwty/cm-q2.png" alt="">
@@ -165,6 +179,7 @@
   <script type='text/javascript' src='./js/index.js'></script>
   <!-- 拖拽 -->
   <script type="text/javascript" src='./template/05fiexDrag/index.js'></script>
+  <script type="text/javascript" src='./template/06fixeDrag/index.js'></script>
   <!-- 引入兔子树和返回 -->
   <script type="text/javascript">
     // 鼠标移动上去改变
@@ -187,6 +202,8 @@
     var q1_arr = []
     var q1_data = [2,3,4,9,6,8]
 
+    var q2_arr = []
+    var q2_data = [3,1,2,5,4]
     var q3_arr = []
     var q3_data = [27,81]
 
@@ -311,7 +328,11 @@
         if (current_question == 1) {
           
         } else if (current_question == 2) {
-          // removeDrag(total_question_num,current_question)
+          removeMyDrag(total_question_num)
+          newFlag = false
+          setTimeout(function(){
+            getDrag('u20-cm2', 'checkbox2', 'mobile_box2')
+          }, 1000);
         } else if (current_question == 4) {
           removeMyDrag(total_question_num)
           newFlag = false
@@ -348,6 +369,12 @@
           // window.onresize = function () {
           //   toDrag('u5-cm1', 'checkbox1', 'move_box1')
           // }
+        } else if (current_question == 2) {
+          removeMyDrag(total_question_num)
+          newFlag = false
+          setTimeout(function(){
+            getDrag('u20-cm2', 'checkbox2', 'mobile_box2')
+          }, 1000);
         } else if (current_question == 4) {
           removeMyDrag(total_question_num)
           newFlag = false
@@ -428,7 +455,7 @@
         result = calcQuestion(q1_arr, q1_data);
       } else if (current_question == 2) {
         answers_num = fewAnswer()
-        result = getUserObj(['num2-1', 'num2-2'], 'num2-3', 2, false, rightObj2)
+        result = goDrag(q2_arr, q2_data, 'checkbox2')
       } else if (current_question == 3) {
         answers_num = fewAnswer()
         result = calcQuestion(q3_arr, q3_data);
@@ -466,9 +493,12 @@
       $('.question-con input').each(function () {
         this.value = '';
         q1_arr = [];
+        q2_arr = [];
         q3_arr = [];
         // $('.question-con .checkbox').children().remove()
       })
+      $('.q2-bottom').html('<div class="mobile_box2" data-list="1"></div><div class="mobile_box2" data-list="2"></div><div class="mobile_box2" data-list="3"></div><div class="mobile_box2" data-list="4"></div>')
+      $('.question-con .checkbox2').children() && $('.question-con .checkbox2').children().remove()
       $('.question-con .checkbox4').children() && $('.question-con .checkbox4').children().remove()  
     }
 
@@ -546,7 +576,10 @@
         if (current_question == 4) {
           removeMyDrag(total_question_num)
           toDrag('u20-cm4', 'checkbox4', 'move_box4')
-        } 
+        } else if (current_question == 2) {
+          removeMyDrag(total_question_num)
+          getDrag('u20-cm2', 'checkbox2', 'mobile_box2')
+        }
       }, 4000);
     }
 
@@ -568,6 +601,27 @@
           step++
         }
       }
+      if (step === right_arr.length) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function goDrag(m_arr, right_arr, checkBox) {
+      var checkBox = document.getElementsByClassName(checkBox)
+      var step = 0
+      for (var i = 0; i < checkBox.length; i++) {
+        if (checkBox[i].children[0]) {
+          m_arr.push(checkBox[i].children[0].dataset.list)
+        }
+      }
+      for (let j = 0; j < m_arr.length; j++) {
+        if (m_arr[j] == right_arr[j]) {
+          step++
+        }
+      }
+      console.log(step)
       if (step === right_arr.length) {
         return true;
       } else {
