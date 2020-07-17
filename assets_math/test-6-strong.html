@@ -19,13 +19,13 @@
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
       <!-- 背景上的图片 -->
-      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/practice-title6.png" alt="" class="practice-title1">
       <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
       <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
       <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
       <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
       <!-- 返回按钮-->
-      <a href="../index.html">
+      <a href="../index.html?data=2">
         <div class="index-return">
           <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
           <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
@@ -98,7 +98,7 @@
                 <div class="mobile_box1" data-list="2">
                 </div>
               </div>
-
+              <audio src="../assets_math/audio/two/lieshijisuan.mp3" id = "q1-audio"></audio>
               <img src="../assets_math/images/commen/unitSix/zs-q1.png" alt="">
             </div>
             <!-- 第二题 -->
@@ -113,7 +113,7 @@
                 <div class="mobile_box2" data-list="2">
                 </div>
               </div>
-
+              <audio src="../assets_math/audio/two/lieshijisuan.mp3" id = "q2-audio"></audio>
               <img src="../assets_math/images/commen/unitSix/zs-q2.png" alt="">
             </div>
           </div>
@@ -192,7 +192,7 @@
       startTimer();      //开始正计时
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
-      // audioPlay();
+      audioPlay();
       setTimeout(function(){
         getDrag('u6-zs1', 'check_box1', 'mobile_box1')
         // window.onresize = function () {
@@ -215,10 +215,6 @@
         $("#q1-audio")[0].play()
       } else if (current_question == 2) {
         $("#q2-audio")[0].play()
-      } else if (current_question == 3) {
-        $("#q3-audio")[0].play()
-      } else if (current_question == 4) {
-        $("#q4-audio")[0].play()
       }
     }
 
@@ -289,7 +285,7 @@
       if (!flag) return
       if (!newFlag) return
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question == 1) { //第一题无法上一题
         return false;
       } else if (current_question) {
@@ -299,34 +295,15 @@
           setTimeout(function () {
             getDrag('u6-zs1', 'check_box1', 'mobile_box1')
           }, 1000)
-          // if (!coming1) {
-          //   coming1 = true
-          //   setTimeout(function () {
-          //     console.log('1111')
-          //     getDrag('u6-zs1', 'check_box1', 'mobile_box1')
-          //     // window.onresize = function () {
-          //     //   getDrag('u6-zs1', 'check_box1', 'mobile_box1')
-          //     // }
-          //   }, 1000)
-          // }
         } else if (current_question == 2) {
           newFlag = false
           setTimeout(function () {
             getDrag('u6-zs2', 'check_box2', 'mobile_box2')
           }, 1000)
-          // if (!coming2) {
-          //   coming2 = true
-          //   setTimeout(function () {
-          //     getDrag('u6-zs2', 'check_box2', 'mobile_box2')
-          //     // window.onresize = function () {
-          //     //   getDrag('u6-zs2', 'check_box2', 'mobile_box2')
-          //     // }
-          //   }, 1000)
-          // }
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
           autoFocus();    //自动对焦
@@ -340,7 +317,7 @@
       if (!flag) return
       if (!newFlag) return
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question < total_question_num) {
         current_question++;
         if (current_question == 1) {
@@ -378,7 +355,7 @@
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
           autoFocus();    //自动对焦
@@ -501,7 +478,7 @@
           flag = true
         }, animate_duration)
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
         }, animate_duration + 500)
       } else if (status == 0) { //答错的动画
         setTimeout(function () {
@@ -531,7 +508,7 @@
             $('.bowlings').show();
           }, 50)
           flag = true
-          // audioPlay()
+          audioPlay()
         }, animate_duration)
       }
       setTimeout(function () {

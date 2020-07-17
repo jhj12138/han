@@ -18,13 +18,13 @@
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
       <!-- 背景上的图片 -->
-      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/practice-title4.png" alt="" class="practice-title1">
       <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
       <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
       <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
       <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
       <!-- 返回按钮-->
-      <a href="../index.html">
+      <a href="../index.html?data=2">
         <div class="index-return">
           <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
           <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
@@ -101,7 +101,7 @@
                 <div class="chu move_box1" data-list="4"></div>
               </div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/zhaoyizhao.mp3" id="q1-audio"></audio>
+              <audio src="../assets_math/audio/two/u4-cm1.mp3" id="q1-audio"></audio>
               <img src="../assets_math/images/commen/unitFour/cm-1.png" alt="">
             </div>
             <!-- 第二题 -->
@@ -125,7 +125,7 @@
                 <div class="chu move_box2" data-list="4"></div>
               </div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/tianyitian.mp3" id="q2-audio"></audio>
+              <audio src="../assets_math/audio/two/u4-cm2.mp3" id="q2-audio"></audio>
               <img src="../assets_math/images/commen/unitFour/cm-q2.png" alt="">
             </div>
             <!-- 第三题 -->
@@ -149,7 +149,7 @@
                 <div class="chu move_box3" data-list="4"></div>
               </div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/shuyishu.mp3" id="q3-audio"></audio>
+              <audio src="../assets_math/audio/two/u4-cm3.mp3" id="q3-audio"></audio>
               <img src="../assets_math/images/commen/unitFour/cm-3.png" alt="">
             </div>
             <!-- 第四题 -->
@@ -173,7 +173,7 @@
                 <div class="chu move_box4" data-list="4"></div>
               </div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/biyibi.mp3" id="q4-audio"></audio>
+              <audio src="../assets_math/audio/two/u4-cm4.mp3" id="q4-audio"></audio>
               <img src="../assets_math/images/commen/unitFour/cm-4.png" alt="">
             </div>
             <!-- 第五题 -->
@@ -182,7 +182,7 @@
               <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 1)" maxlength="3"></div>
               <div class="q5-input"><input type="text" onchange="setInputArr(q5_arr, event, 2)" maxlength="3"></div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/shuyishu.mp3" id="q5-audio"></audio>
+              <audio src="../assets_math/audio/two/u4-cm5.mp3" id="q5-audio"></audio>
               <img src="../assets_math/images/commen/unitFour/cm-5.png" alt="">
             </div>
           </div>
@@ -383,7 +383,7 @@
       if (!newFlag) return
       q3Gif(1)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question == 1) {
         return false;
       } else if (current_question) {
@@ -443,7 +443,7 @@
       if (!newFlag) return
       q3Gif(1)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question < total_question_num) {
         current_question++;
         if (current_question == 1) {

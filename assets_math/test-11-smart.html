@@ -18,13 +18,13 @@
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
       <!-- 背景上的图片 -->
-      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/practice-title11.png" alt="" class="practice-title1">
       <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
       <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
       <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
       <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
       <!-- 返回按钮-->
-      <a href="../index.html">
+      <a href="../index.html?data=4">
         <div class="index-return">
           <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
           <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
@@ -104,6 +104,7 @@
               <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr3, event, 3)"></div>
               <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr3, event, 4)"></div>
               <div class="q1-input"><input type="text" maxlength="3" onchange="setInputArr(q1_arr3, event, 5)"></div>
+              <audio src="../assets_math/audio/u11-cm1.mp3" id="q1-audio"></audio>
               <img src="../assets_math/images/commen/unitElev/cm-q1.png" alt="">
             </div>
             <!-- 第二题 -->
@@ -114,6 +115,7 @@
               <div class="q2-input"><input type="text" maxlength="3" onchange="setInputArr(q2_arr, event, 3)"></div>
               <div class="q2-input"><input type="text" maxlength="3" onchange="setInputArr(q2_arr, event, 4)"></div>
               <div class="q2-input"><input type="text" maxlength="3" onchange="setInputArr(q2_arr, event, 5)"></div>
+              <audio src="../assets_math/audio/u11-cm2.mp3" id="q2-audio"></audio>
               <img src="../assets_math/images/commen/unitElev/cm-q2.png" alt="">
             </div>
             <!-- 第三题 -->
@@ -141,12 +143,14 @@
                 <div class="q3-select-item" data-right="0" data-index="0">20</div>
               </div>
               <div class="q3-reclick"><img src="./images/commen/unitElev/cm-q3-btn.png" alt=""></div>
+              <audio src="../assets_math/audio/u11-cm3.mp3" id="q3-audio"></audio>
               <img src="../assets_math/images/commen/unitElev/cm-q3.png" alt="">
             </div>
             <!-- 第四题 -->
             <div class="question q4">
               <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 0)"></div>
               <div class="q4-input"><input type="text" maxlength="3" onchange="setInputArr(q4_arr, event, 1)"></div>
+              <audio src="../assets_math/audio/tianyitian.mp3" id="q4-audio"></audio>
               <img src="../assets_math/images/commen/unitElev/cm-q4.png" alt="">
             </div>
             <!-- 第五题 -->
@@ -160,6 +164,7 @@
               <div class="q5-input"><input type="text" maxlength="3" onchange="setInputArr(q5_arr, event, 6)"></div>
               <div class="q5-input"><input type="text" maxlength="3" onchange="setInputArr(q5_arr, event, 7)"></div>
               <div class="q5-input"><input type="text" maxlength="3" onchange="setInputArr(q5_arr, event, 8)"></div>
+              <audio src="../assets_math/audio/tianyitian.mp3" id="q5-audio"></audio>
               <img src="../assets_math/images/commen/unitElev/cm-q5.png" alt="">
             </div>
             <!-- 第六题 -->
@@ -173,6 +178,7 @@
               <div class="q6-input"><input type="text" maxlength="1" onchange="setInputArr(q6_arr, event, 6)"></div>
               <div class="q6-input"><input type="text" maxlength="1" onchange="setInputArr(q6_arr, event, 7)"></div>
               <div class="q6-input"><input type="text" maxlength="1" onchange="setInputArr(q6_arr, event, 8)"></div>
+              <audio src="../assets_math/audio/u11-cm6.mp3" id="q6-audio"></audio>
               <img src="../assets_math/images/commen/unitElev/cm-q6.png" alt="">
             </div>
           </div>
@@ -270,7 +276,7 @@
       startTimer();      //开始正计时
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
-      // audioPlay()
+      audioPlay()
 
       setTimeout(function(){
         getDrag('u6-cm1', 'check_box1', 'mobile_box1')
@@ -356,7 +362,7 @@
       if (!newFlag) return
       // q3Gif(1)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question == 1) {
         return false;
       } else if (current_question) {
@@ -373,7 +379,7 @@
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
           autoFocus();    //自动对焦
@@ -389,7 +395,7 @@
       if (!flag) return
       // q3Gif(1)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question < total_question_num) {
         current_question++;
         if (current_question == 1) {
@@ -404,7 +410,7 @@
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
           autoFocus();    //自动对焦
@@ -454,6 +460,8 @@
         $("#q4-audio")[0].play()
       } else if (current_question == 5) {
         $("#q5-audio")[0].play()
+      } else if (current_question == 6) {
+        $("#q6-audio")[0].play()
       }
     }
 
@@ -574,7 +582,7 @@
 
         }, animate_duration)
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
         }, animate_duration + 500)
       } else if (status == 0) { //答错的动画
         setTimeout(function () {
@@ -604,7 +612,7 @@
             $('.bowlings').show();
           }, 50)
           flag = true
-          // audioPlay()
+          audioPlay()
         }, animate_duration)
       }
       setTimeout(function () {

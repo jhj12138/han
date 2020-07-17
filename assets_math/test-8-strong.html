@@ -19,13 +19,13 @@
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
       <!-- 背景上的图片 -->
-      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/practice-title8.png" alt="" class="practice-title1">
       <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
       <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
       <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
       <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
       <!-- 返回按钮-->
-      <a href="../index.html">
+      <a href="../index.html?data=3">
         <div class="index-return">
           <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
           <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
@@ -123,6 +123,7 @@
                 <div class="q1-select-item" data-right="1" data-index="4" data-num="1"></div>
                 <div class="q1-select-item" data-right="2" data-index="4" data-num="0"></div>
               </div>
+              <audio src="../assets_math/audio/u8-zs1.mp3" id="q1-audio"></audio>
               <img src="../assets_math/images/commen/unitEight/zs-q1.png" alt="">
             </div>
             <!-- 第二题 -->
@@ -138,6 +139,7 @@
                 <div class="move_box2" data-list="2">
                 </div>
               </div>
+              <audio src="../assets_math/audio/u8-zs2.mp3" id="q2-audio"></audio>
               <img src="../assets_math/images/commen/unitEight/zs-q2.png" alt="">
             </div>
             <!-- 第三题 -->
@@ -161,6 +163,7 @@
                 <div class="move_box3" data-list="6">
                 </div>
               </div>
+              <audio src="../assets_math/audio/u8-zs3.mp3" id="q3-audio"></audio>
               <img src="../assets_math/images/commen/unitEight/zs-q3.png" alt="">
             </div>
           </div>
@@ -241,7 +244,7 @@
       startTimer();      //开始正计时
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
-      // audioPlay();
+      audioPlay();
     })
 
     //设置已经得分的数组
@@ -259,8 +262,6 @@
         $("#q2-audio")[0].play()
       } else if (current_question == 3) {
         $("#q3-audio")[0].play()
-      } else if (current_question == 4) {
-        $("#q4-audio")[0].play()
       }
     }
 
@@ -332,7 +333,7 @@
       if (!newFlag) return
       removeMyDrag(total_question_num)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question == 1) { //第一题无法上一题
         return false;
       } else if (current_question) {
@@ -352,7 +353,7 @@
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
           autoFocus();    //自动对焦
@@ -367,7 +368,7 @@
       if (!newFlag) return
       removeMyDrag(total_question_num)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question < total_question_num) {
         current_question++;
         if (current_question == 2) {
@@ -385,7 +386,7 @@
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
           autoFocus();    //自动对焦
@@ -509,7 +510,7 @@
           flag = true
         }, animate_duration)
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
         }, animate_duration + 500)
       } else if (status == 0) { //答错的动画
         setTimeout(function () {
@@ -539,7 +540,7 @@
             $('.bowlings').show();
           }, 50)
           flag = true
-          // audioPlay()
+          audioPlay()
         }, animate_duration)
       }
       setTimeout(function () {

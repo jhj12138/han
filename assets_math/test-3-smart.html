@@ -18,13 +18,13 @@
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
       <!-- 背景上的图片 -->
-      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/practice-title3.png" alt="" class="practice-title1">
       <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
       <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
       <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
       <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
       <!-- 返回按钮-->
-      <a href="../index.html">
+      <a href="../index.html?data=2">
         <div class="index-return">
           <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
           <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
@@ -103,7 +103,7 @@
                 </div>
               </div>
               <!-- 背景声音 -->
-              <!-- <audio src="../assets_math/audio/zhaoyizhao.mp3" id = "q1-audio"></audio> -->
+              <audio src="../assets_math/audio/two/dafangzi.mp3" id = "q1-audio"></audio>
               <img src="../assets_math/images/commen/unitThree/cm-q1.png" alt="">
             </div>
             <!-- 第二题 -->
@@ -112,7 +112,7 @@
               <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 1)" maxlength="3" /></div>
               <div class="q2-input"><input type="text" onchange="setInputArr(q2_arr, event, 2)" maxlength="3" /></div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/tianyitian.mp3" id="q2-audio"></audio>
+              <audio src="../assets_math/audio/two/huoyanjj.mp3" id = "q2-audio"></audio>
               <img src="../assets_math/images/commen/unitThree/cm-q2.png" alt="">
             </div>
             <!-- 第三题 -->
@@ -166,7 +166,7 @@
                 <div class="q3-select-item" data-right="3" data-index="5" data-num="0"></div>
               </div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/shuyishu.mp3" id="q3-audio"></audio>
+              <audio src="../assets_math/audio/two/xuanyixuan.mp3" id="q3-audio"></audio>
               <img src="../assets_math/images/commen/unitThree/cm-q3.png" alt="">
             </div>
             <!-- 第四题 -->
@@ -190,7 +190,7 @@
                 <div class="chu move_box4" data-list="4"></div>
               </div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/biyibi.mp3" id="q4-audio"></audio>
+              <audio src="../assets_math/audio/two/u3-cm4.mp3" id="q4-audio"></audio>
               <img src="../assets_math/images/commen/unitThree/cm-q4.png" alt="">
             </div>
             <!-- 第五题 -->
@@ -218,7 +218,7 @@
                 <div class="chu move_box5" data-list="4"></div>
               </div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/shuyishu.mp3" id="q5-audio"></audio>
+              <audio src="../assets_math/audio/two/u3-cm5.mp3" id="q5-audio"></audio>
               <img src="../assets_math/images/commen/unitThree/cm-q5.png" alt="">
             </div>
           </div>
@@ -326,7 +326,7 @@
       startTimer();      //开始正计时
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
-      // audioPlay()
+      audioPlay()
 
       setTimeout(function() {
         getDrag('u3-cm1')
@@ -412,7 +412,7 @@
       // if (!newFlag) return
       // q3Gif(1)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question == 1) {
         return false;
       } else if (current_question) {
@@ -446,7 +446,7 @@
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
           autoFocus();    //自动对焦
@@ -463,7 +463,7 @@
       // if (!newFlag) return
       // q3Gif(1)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question < total_question_num) {
         current_question++;
         if (current_question == 1) {
@@ -494,7 +494,7 @@
         }
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
           autoFocus();    //自动对焦
@@ -567,8 +567,10 @@
         answers_num = fewAnswer()
         result = calcQuestion(q2_arr, q2_data)
       } else if (current_question == 3) {
+        answers_num = fewAnswer()
         result = (q3_arr.indexOf('0') == -1 && q3_arr.length == 6) ? true : false
       } else if (current_question == 4) {
+        answers_num = fewAnswer()
         removeMyDrag(current_question)
         var newCheck = document.getElementsByClassName('checkbox4')
         if(newCheck[0].children[0]) {
@@ -581,6 +583,7 @@
         var finalResult1 = getUserObj(['num2-1', 'num2-2'], 'num2-3', 1, false, rightObj1)
         result = finalResult && finalResult1 && symbal_1 && symbal_2
       } else if (current_question == 5) {
+        answers_num = fewAnswer()
         removeMyDrag(current_question)
         var newCheck = document.getElementsByClassName('checkbox5')
         if(newCheck[0].children[0]) {
@@ -675,7 +678,7 @@
 
         }, animate_duration)
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
         }, animate_duration + 500)
       } else if (status == 0) { //答错的动画
         setTimeout(function () {
@@ -705,7 +708,7 @@
             $('.bowlings').show();
           }, 50)
           flag = true
-          // audioPlay()
+          audioPlay()
         }, animate_duration)
       }
       setTimeout(function () {

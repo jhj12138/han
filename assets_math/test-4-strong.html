@@ -19,13 +19,13 @@
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
       <!-- 背景上的图片 -->
-      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/practice-title4.png" alt="" class="practice-title1">
       <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
       <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
       <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
       <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
       <!-- 返回按钮-->
-      <a href="../index.html">
+      <a href="../index.html?data=2">
         <div class="index-return">
           <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
           <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
@@ -104,7 +104,7 @@
               </div>
               <img src="../assets_math/images/commen/unitFour/zs-q1.png" alt="">
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/lyl.mp3" id = "q1-audio"></audio>
+              <audio src="../assets_math/audio/two/u4-zs1.mp3" id = "q1-audio"></audio>
             </div>
             <!-- 第二题 -->
             <div class="question q2">
@@ -128,7 +128,7 @@
               </div>
               <img src="../assets_math/images/commen/unitFour/zs-q2.png" alt="">
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/lyl.mp3" id = "q2-audio"></audio>
+              <audio src="../assets_math/audio/two/u4-zs2.mp3" id = "q2-audio"></audio>
             </div>
           </div>
           <!-- 答题部分结束 -->
@@ -240,10 +240,6 @@
         $("#q1-audio")[0].play()
       } else if (current_question == 2) {
         $("#q2-audio")[0].play()
-      } else if (current_question == 3) {
-        $("#q3-audio")[0].play()
-      } else if (current_question == 4) {
-        $("#q4-audio")[0].play()
       }
     }
 
@@ -315,7 +311,7 @@
       if (!newFlag) return
       removeMyDrag(total_question_num)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question == 1) { //第一题无法上一题
         return false;
       } else if (current_question) { 
@@ -358,7 +354,7 @@
       if (!newFlag) return
       removeMyDrag(total_question_num)
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question < total_question_num) {
         current_question++;
         if(current_question == 1) {

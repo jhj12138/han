@@ -20,13 +20,13 @@
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
       <!-- 背景上的图片 -->
-      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/practice-title17.png" alt="" class="practice-title1">
       <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
       <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
       <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
       <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
       <!-- 返回按钮-->
-      <a href="../index.html">
+      <a href="../index.html?data=6">
         <div class="index-return">
           <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
           <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
@@ -99,7 +99,7 @@
               <div class="q1-input"><input type="text" maxlength="1" onchange="setInputArr(q1_arr, event, 6)"></div>
               <div class="q1-input"><input type="text" maxlength="1" onchange="setInputArr(q1_arr, event, 7)"></div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/lyl.mp3" id="q1-audio"></audio>
+              <audio src="../assets_math/audio/tianyitian.mp3" id="q1-audio"></audio>
               <img src="../assets_math/images/commen/unitSevete/zs-q1.png" alt="">
             </div>
             <!-- 第二题 -->
@@ -125,7 +125,7 @@
                 <div class="move_box2" data-list="7"></div>
               </div>
               <!-- 背景声音 -->
-              <audio src="../assets_math/audio/lyl.mp3" id="q2-audio"></audio>
+              <audio src="../assets_math/audio/u17-zs2.mp3" id="q2-audio"></audio>
               <img src="../assets_math/images/commen/unitSevete/zs-q2.png" alt="">
             </div>
           </div>
@@ -219,11 +219,7 @@
         $("#q1-audio")[0].play()
       } else if (current_question == 2) {
         $("#q2-audio")[0].play()
-      } else if (current_question == 3) {
-        $("#q3-audio")[0].play()
-      } else if (current_question == 4) {
-        $("#q4-audio")[0].play()
-      }
+      } 
     }
 
     //自动计时
@@ -292,7 +288,7 @@
     function lastButton() {
       if (!flag) return
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question == 1) { //第一题无法上一题
         return false;
       } else if (current_question) {
@@ -318,7 +314,7 @@
     function nextButton() {
       if (!flag) return
       delInputValue()
-      // pauseAll()
+      pauseAll()
       if (current_question < total_question_num) {
         current_question++;
         if (current_question == 2) {
@@ -445,6 +441,9 @@
           }, 50)
           flag = true
         }, animate_duration)
+        setTimeout(function () {
+          audioPlay()
+        }, animate_duration + 500)
       } else if (status == 0) { //答错的动画
         setTimeout(function () {
           $('.answer-ani .ani-gif-2').html('<img src="./images/animbg/football-fail.gif?' + new Date().getTime() + '" alt="">')
@@ -473,6 +472,7 @@
             $('.goalkeeper').show();
           }, 50)
           flag = true
+          audioPlay()
         }, animate_duration)
       }
       setTimeout(function () {

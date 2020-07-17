@@ -19,13 +19,13 @@
     <img src="./images/commen/unit-bg.png" alt="数学">
     <div class="unit-container">
       <!-- 背景上的图片 -->
-      <img src="./images/commen/practice-title1.png" alt="" class="practice-title1">
+      <img src="./images/commen/practice-title2.png" alt="" class="practice-title1">
       <img src="./images/commen/unit-timbo.png" alt="" class="unit-timbo">
       <img src="./images/commen/unit-rabbit.png" alt="" class="unit-rabbit">
       <img src="./images/commen/unit-leave.png" alt="" class="unit-leave">
       <img src="./images/commen/unit-leave1.png" alt="" class="unit-leaves">
       <!-- 返回按钮-->
-      <a href="../index.html">
+      <a href="../index.html?data=2">
         <div class="index-return">
           <img src="./images/commen/unit-returns.png" alt="" class="index-return-img1">
           <img src="./images/index/index_return_txt.png" alt="" class="index-return-txt">
@@ -105,6 +105,7 @@
               <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 13)" maxlength="1"/></div>
               <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 14)" maxlength="1"/></div>
               <div class="q1-input"><input type="text" onchange="setInputArr(q1_arr, event, 15)" maxlength="1"/></div>
+              <audio src="../assets_math/audio/two/zs-q1.mp3" id = "q1-audio"></audio>
               <img src="./images/commen/unitTwo/zs-q1.png" alt="">
             </div>
             <!-- 第二题 -->
@@ -125,7 +126,7 @@
                 <div class="mobile_box" data-list="4">
                 </div>
               </div>
-              <!-- <audio src="../assets_math/audio/shuyishu.mp3" id = "q5-audio"></audio> -->
+              <audio src="../assets_math/audio/two/zs-q1.mp3" id = "q2-audio"></audio>
               <img src="./images/commen/unitTwo/zs-q2.png" alt="">
             </div>
           </div>
@@ -200,7 +201,7 @@
       startTimer();      //开始正计时
       initTimer(total_answer_time, handTimeleOver);  //开始倒计时
       autoFocus();    //自动对焦
-      // $("#q1-audio")[0].play()
+      $("#q1-audio")[0].play()
     })
 
     //设置已经得分的数组
@@ -216,11 +217,7 @@
         $("#q1-audio")[0].play()
       } else if (current_question == 2) {
         $("#q2-audio")[0].play()
-      } else if (current_question == 3) {
-        $("#q3-audio")[0].play()
-      } else if (current_question == 4) {
-        $("#q4-audio")[0].play()
-      }
+      } 
     }
 
     //自动计时
@@ -286,6 +283,7 @@
 
     //上一题
     function lastButton() {
+      pauseAll()
       if (!flag) return
       delInputValue()
       if (current_question == 1) { //第一题无法上一题
@@ -302,7 +300,7 @@
         }, 2000);
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-          // audioPlay()
+          audioPlay()
           $('.inner-border').removeClass('slideout').addClass('slidein');
           $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();   //隐藏其他题目
           autoFocus();    //自动对焦
@@ -312,6 +310,7 @@
 
     //下一题
     function nextButton() {
+      pauseAll()
       if (!flag) return
       delInputValue()
       if (current_question < total_question_num) {
@@ -326,7 +325,7 @@
         }, 2000);
         $('.inner-border').removeClass('slidein').addClass('slideout');
         setTimeout(function () {
-            // audioPlay()
+            audioPlay()
             $('.inner-border').removeClass('slideout').addClass('slidein');
             $(".unit .out-border .inner-border .q" + current_question).show().siblings().hide();
             autoFocus();    //自动对焦
@@ -441,6 +440,9 @@
             }, 50)
             flag = true
         }, animate_duration)
+        setTimeout(function() {
+          audioPlay()
+        },animate_duration+500)
       }else if(status == 0){ //答错的动画
         setTimeout(function () {
             $('.answer-ani .ani-gif-2').html('<img src="./images/animbg/football-fail.gif?' + new Date().getTime() + '" alt="">')
@@ -469,6 +471,7 @@
                 $('.goalkeeper').show();
             }, 50)
             flag = true
+            audioPlay()
         }, animate_duration)
       }
       setTimeout(function () {

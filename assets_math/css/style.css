@@ -425,10 +425,10 @@ body::-webkit-scrollbar-track{ background:#fff;}
 }
 
 .u_list_txt5{
-  width: 53%;
+  width: 48%;
   position: absolute;
-  top: 78%;
-  left: 24%;
+  top: 76%;
+  left: 30%;
   z-index: 10;
 }
 
@@ -524,10 +524,10 @@ body::-webkit-scrollbar-track{ background:#fff;}
 }
 
 .u_list_txt8{
-  width: 50%;
+  width: 58%;
   position: absolute;
   top: 68%;
-  left: 34%;
+  left: 28%;
   z-index: 10;
 }
 
