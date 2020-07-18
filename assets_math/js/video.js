@@ -189,12 +189,14 @@ function createVideo(dn,obj){
 	this.createDom  = function(){
 		if( this.D("fz-videoBox") == null ){
 			this.D(dn).innerHTML 	= FZFVIDEO;
-			this.videoDOM 			= this.D("fz-videoAct");
+			this.videoDOM = this.D("fz-videoAct");
 			saveDom();
 			this.init();
 		} else {
-			console.log("播放器节点已存在");
-			return;
+			this.D(dn).innerHTML 	= FZFVIDEO;
+			this.videoDOM = this.D("fz-videoAct");
+			saveDom();
+			this.init();
 		}
 	}
 

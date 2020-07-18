@@ -210,7 +210,7 @@
   var  titleNum = 0 //题数
   var set = null //用来清除定时器
   var times = null //答题结束时获取使用的时间
-  var setTime = 30 //设置倒计时的时间
+  var setTime = 90 //设置倒计时的时间
   initTimer(setTime, handleOver)
   
   $(function() {
@@ -286,20 +286,28 @@
   var symbolBox = document.getElementById('symbol')
   var scoreBox = document.getElementsByClassName('score')[0]
   var degree = document.getElementById('degree')
-  var symbolArr = ['+','-'] //符号
+  var symbolArr = ['+','-','x'] //符号
   var doRight = 0 //答对的题数
 
   
   function init() { //初始化题目
-    var symbol = Math.floor(Math.random()*2)
+    var symbol = Math.floor(Math.random()*3)
     clearVal()
     var firstNum = parseInt(Math.random()*100)
     var lastNum = parseInt(Math.random()*100)
+    var firstNumChen = parseInt(Math.random()*10)
+    var lastNumChen = parseInt(Math.random()*10)
     symbolBox.innerHTML = symbolArr[symbol]
     if(firstNum == 0 || lastNum == 0) {
       init()
       return
     } 
+
+    if(firstNumChen == 0 || lastNumChen == 0) {
+      init()
+      return
+    }
+
     if(symbol === 0){
       if(firstNum + lastNum > 100) {
         init()
@@ -315,6 +323,13 @@
         lastNumBox.innerHTML = a;
       }
       return;
+    }
+    if(symbol === 2){ //当符号为乘号时执行这段代码
+      console.log(firstNumChen)
+      console.log(lastNumChen)
+      firstNumBox.innerHTML = firstNumChen
+      lastNumBox.innerHTML = lastNumChen
+      return
     }
     if(symbol === 3){ //如果除数为0时执行这段代码
       firstNumBox.innerHTML = firstNum
@@ -385,6 +400,9 @@
         case '-':
           result = firstVal - lastVal 
           break;
+        case 'x':
+          result = firstVal * lastVal 
+          break
         default:
           break;
       }

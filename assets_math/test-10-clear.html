@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./css/unitcss.css">
   <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/video.css">
 </head>
 
 <body>
@@ -57,33 +58,66 @@
             <div class="vadio-switch-box1" onclick = "toChange(0)"></div>
             <div class="vadio-switch-box2" onclick = "toChange(1)"></div>
           </div>
-          <div class="vadio-border">
-            <video src="../assets_math/video/test-1.mp4" loop  muted id="clearVideo1"></video>
-          </div>
+          <div id="testBox"></div>
         </div>
       </div>
     </div>
   </div>
   <!-- 引入jq -->
   <script type='text/javascript' src='./js/jquery-1.11.3.min.js'></script>
+  <script type='text/javascript' src='./js/video.js'></script>
   <script type="text/javascript">
     //自动播放
-    setTimeout(function(){
-      $("#clearVideo1")[0].muted = false;
-      $("#clearVideo1")[0].play();
-    },0);
-    //两个视频切换
     function toChange(val) {
-      if(val == 0) {
-        $("#clearVideo1").attr('src','../assets_math/video/test-1.mp4')
-        $("#clearVideo1")[0].muted = false;
-        $("#clearVideo1")[0].play();
+      if (val == 0) {
+        changeVideo = 'video/10.1_batch.mp4'
+        var FZ_VIDEO = "";
+        FZ_VIDEO = new createVideo(
+          "testBox",	//容器的id
+          {
+            url: changeVideo, 	//视频地址
+            autoplay: true				//是否自动播放
+          }
+        );
+
+        $(".rec1 .ubox .box .video  #testBox video").on('ended', function () {
+          $(this).parents('#testBox').stop(true, false).addClass('act');
+        });
       } else if (val == 1) {
-        $("#clearVideo1").attr('src','../assets_math/video/test-2.mp4')
-        $("#clearVideo1")[0].muted = false;
-        $("#clearVideo1")[0].play();
+        changeVideo = 'video/10.2_batch.mp4'
+        var FZ_VIDEO = "";
+        FZ_VIDEO = new createVideo(
+          "testBox",	//容器的id
+          {
+            url: changeVideo, 	//视频地址
+            autoplay: true				//是否自动播放
+          }
+        );
+
+        $(".rec1 .ubox .box .video  #testBox video").on('ended', function () {
+          $(this).parents('#testBox').stop(true, false).addClass('act');
+        });
       }
     }
+
+
+    $(function () {
+      var changeVideo = 'video/10.1_batch.mp4'
+      //两个视频切换
+      // 视频
+      var FZ_VIDEO = "";
+      FZ_VIDEO = new createVideo(
+        "testBox",	//容器的id
+        {
+          url: changeVideo, 	//视频地址
+          autoplay: true				//是否自动播放
+        }
+      );
+
+      $(".rec1 .ubox .box .video  #testBox video").on('ended', function () {
+        $(this).parents('#testBox').stop(true, false).addClass('act');
+      });
+    })
   </script>
 </body>
 
